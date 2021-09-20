@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/hello-world/"/>
+      <url>/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="front-matter"><a href="#front-matter" class="headerlink" title="front-matter"></a>front-matter</h3><p><a href="https://volantis.js.org/v5/page-settings/">https://volantis.js.org/v5/page-settings/</a></p><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><h4 id="经典用法"><a href="#经典用法" class="headerlink" title="经典用法"></a>经典用法</h4><div class="note"><p>::可以在配置文件中设置默认样式，为简单的一句话提供最的简便写法。</p></div><div class="note"><p>quote::note quote 适合引用一段话</p></div><div class="note"><p>info::note info 默认主题色，适合中性的信息</p></div><div class="note"><p>warning::note warning 默认黄色，适合警告性的信息</p></div><div class="note"><p>danger::note error/danger 默认红色，适合危险性的信息</p></div><div class="note"><p>success::note done/success 默认绿色，适合正确操作的信息</p></div><h4 id="更多图标"><a href="#更多图标" class="headerlink" title="更多图标"></a>更多图标</h4><p>这些都是默认样式，可以手动加上颜色：</p><div class="note"><p>radiation::note radiation 默认样式</p></div><div class="note"><p>radiation yellow::note radiation yellow 可以加上颜色</p></div><div class="note"><p>bug red::note bug red 说明还存在的一些故障</p></div><div class="note"><p>link green::note link green 可以放置一些链接</p></div><div class="note"><p>paperclip blue::note paperclip blue 放置一些附件链接</p></div><div class="note"><p>todo::note todo 待办事项</p></div><div class="note"><p>guide clear::note guide clear 可以加上一段向导</p></div><div class="note"><p>download::note download 可以放置下载链接</p></div><div class="note"><p>message gray::note message gray 一段消息</p></div><div class="note"><p>up::note up 可以说明如何进行更新</p></div><div class="note"><p>undo light::note undo light 可以说明如何撤销或者回退</p></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 分类A </category>
+          
+          <category> 分类B </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 主题学习 </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

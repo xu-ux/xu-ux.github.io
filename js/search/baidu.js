@@ -246,71 +246,20 @@ var SearchService = '';
   var template = '<div id="u-search"><div class="modal"> <header class="modal-header" class="clearfix"><form id="u-search-modal-form" class="u-search-form" name="uSearchModalForm"> <input type="text" id="u-search-modal-input" class="u-search-input" /> <button type="submit" id="u-search-modal-btn-submit" class="u-search-btn-submit"> <span class="fas fa-search"></span> </button></form> <a class="btn-close"> <span class="fas fa-times"></span> </a><div class="modal-loading"><div class="modal-loading-bar"></div></div> </header> <main class="modal-body"><ul class="modal-results modal-ajax-content"></ul> </main> <footer class="modal-footer clearfix"><div class="modal-metadata modal-ajax-content"> <strong class="range"></strong> of <strong class="total"></strong></div><div class="modal-error"></div> <div class="logo"></div> <a class="nav btn-next modal-ajax-content"> <span class="text">NEXT</span> <span class="fal fa-chevron-right"></span> </a> <a class="nav btn-prev modal-ajax-content"> <span class="fal fa-chevron-left"></span> <span class="text">PREV</span> </a> </footer></div><div class="modal-overlay"></div></div>';
 })(jQuery);
 
-var HexoSearch;
+var BaiduSearch;
 (function($) {
   'use strict';
 
   /**
-  * Search by Hexo generator json content
-  * @param options : (object)
-  */
-  HexoSearch = function(options) {
+   * TODO
+   * Search by Baidu Search API
+   * @param options : (object)
+   */
+  BaiduSearch = function(options) {
     SearchService.apply(this, arguments);
     var self = this;
-    self.config.endpoint = ROOT + ((options || {}).endpoint || 'content.json');
-    self.config.endpoint = self.config.endpoint.replace('//', '/'); //make sure the url is correct
-    self.cache = '';
-
-    /**
-     * Search queryText in title and content of a post
-     * Credit to: http://hahack.com/codes/local-search-engine-for-hexo/
-     * @param post : the post object
-     * @param queryText : the search query
-     */
-    self.contentSearch = function(post, queryText) {
-      var post_title = post.title.trim().toLowerCase();
-      var post_content = post.text.trim().toLowerCase();
-      var keywords = queryText.trim().toLowerCase().split(' ');
-      var foundMatch = false;
-      var index_title = -1;
-      var index_content = -1;
-      var first_occur = -1;
-      if (post_title !== '' && post_content !== '') {
-        $.each(keywords, function(index, word) {
-          index_title = post_title.indexOf(word);
-          index_content = post_content.indexOf(word);
-          if (index_title < 0 && index_content < 0) {
-            foundMatch = false;
-          } else {
-            foundMatch = true;
-            if (index_content < 0) {
-              index_content = 0;
-            }
-            if (index === 0) {
-              first_occur = index_content;
-            }
-          }
-          if (foundMatch) {
-            post_content = post.text.trim();
-            var start = 0; var end = 0;
-            if (first_occur >= 0) {
-              start = Math.max(first_occur - 40, 0);
-              end = start === 0 ? Math.min(200, post_content.length) : Math.min(first_occur + 120, post_content.length);
-              var match_content = post_content.substring(start, end);
-              keywords.forEach(function(keyword) {
-                var regS = new RegExp(keyword, 'gi');
-                match_content = match_content.replace(regS, '<b mark>' + keyword + '</b>');
-              });
-              post.digest = match_content + '......';
-            } else {
-              end = Math.min(200, post_content.length);
-              post.digest = post_content.trim().substring(0, end);
-            }
-          }
-        });
-      }
-      return foundMatch;
-    };
+    var endpoint = '';
+    self.addLogo('baidu');
 
     /**
      * Generate result list html
@@ -320,7 +269,7 @@ var HexoSearch;
       var results = [];
       var html = '';
       $.each(data, function(index, post) {
-        if (self.contentSearch(post, queryText)) { html += self.buildResult(post.permalink, post.title, post.digest); }
+        if (self.contentSearch(post, queryText)) { html += self.buildResult(post.linkUrl, post.title, post.abstract); }
       });
       html += '<script>try{pjax.refresh(document.querySelector(\'#u-search\'));document.addEventListener(\'pjax:send\',function(){$(\'#u-search\').fadeOut(500);$(\'body\').removeClass(\'modal-active\')});}catch(e){$(\'#u-search\').fadeOut(500);}</script>';
       return html;
@@ -331,53 +280,59 @@ var HexoSearch;
      * @param data : (object) the raw google custom search response data
      */
     self.buildMetadata = function(data) {
-      self.dom.modal_footer.hide();
+
+    };
+
+    self.loadScript = function() {
+      self.dom.input.each(function(index, elem) {
+        $(elem).attr('disabled', true);
+      });
+      var script = '<script src=\'http://zhannei.baidu.com/api/customsearch/apiaccept?sid=' + self.config.apiId + '&v=2.0&callback=customSearch.initBaidu\' type=\'text/javascript\' charset=\'utf-8\'></script>';
+      self.dom.body.append(script);
+    };
+
+    self.initBaidu = function() {
+      self.cse = new BCse.Search(self.config.apiId);
+      //self.cse.setPageNum(self.config.per_page);
+      self.dom.input.each(function(index, elem) {
+        $(elem).attr('disabled', false);
+      });
     };
 
     /**
-     * Send a GET request
-     * @param queryText : (string) the query text
-     * @param startIndex : (int) the index of first item (start from 1)
-     * @param callback : (function)
+     * Get search results
+     * @param queryText {String}
+     * @param page {Integer}
+     * @param callback {Function}
      */
-    self.query = function(queryText, startIndex, callback) {
-      if (!self.cache) {
-        $.get(self.config.endpoint, {
-          key  : self.config.apiKey,
-          cx   : self.config.engineId,
-          q    : queryText,
-          start: startIndex,
-          num  : self.config.per_page
-        }, function(data, status) {
-          if (status !== 'success'
-              || !data
-              || (!data.posts && !data.pages)
-              || (data.posts.length < 1 && data.pages.length < 1)
-          ) {
-            self.onQueryError(queryText, status);
-          } else {
-            self.cache = data;
-            var results = '';
-            results += self.buildResultList(data.pages, queryText);
-            results += self.buildResultList(data.posts, queryText);
-            self.dom.modal_results.html(results);
-          }
-          self.buildMetadata(data);
-          if (callback) {
-            callback(data);
-          }
+    self.query = function(queryText, page, callback) {
+      self.cse.getResult(queryText, function(data) {
+        console.log('Searching: ' + queryText);
+        self.cse.getError(function(data) {
+          console.log(data);
         });
-      } else {
-        var results = '';
-        results += self.buildResultList(self.cache.pages, queryText);
-        results += self.buildResultList(self.cache.posts, queryText);
-        self.dom.modal_results.html(results);
-        self.buildMetadata(self.cache);
-        if (callback) {
-          callback(self.cache);
+        if (data.length > 0) {
+          self.buildResultList(data, queryText);
+          self.cse.getSearchInfo(queryText, function(data) {
+            console.log(data);
+            self.buildMetadata(data);
+          });
+        } else {
+          self.nav.total = 0;
+          self.nav.next = -1;
+          self.nav.prev = -1;
+          self.dom.modal_metadata.hide();
+          self.dom.btn_next.hide();
+          self.dom.btn_prev.hide();
+          self.onQueryError(queryText, 'success');
         }
-      }
+        if (callback instanceof Function) {
+          callback();
+        }
+      });
     };
+
+    self.loadScript();
 
     return self;
   };
