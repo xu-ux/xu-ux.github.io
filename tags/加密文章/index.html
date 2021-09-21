@@ -24,7 +24,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>归档 - 因吹斯汀</title>
+  <title>标签：加密文章 - 因吹斯汀</title>
   
 
   
@@ -134,7 +134,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -676,7 +676,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  featured' style="display: ;">
+        <div id="full" class='cover-wrapper  featured' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://bing.ioliu.cn/v1/rand?w=1920&h=1200"></div>
           
@@ -737,54 +737,71 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
+
 <div class='l_main'>
-	
-	  <article id="arc" class="post article white-box reveal shadow">
-			
-			
-				
-				
-					
-						
-						<h2>2021</h2>
-					
-						<div class='timenode'>
-								<a class="meta" href="/hello-world/">
-									<time>09-21</time>
-									
-										Hello World
-									
-									
-										&nbsp;<i class="fas fa-headphones-alt music" aria-hidden="true"></i>
-									
-									
-									
-										&nbsp;<i class="fas fa-fire red" aria-hidden="true"></i>
-									
-										&nbsp;<i class="fas fa-star green" aria-hidden="true"></i>
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/article10asdfwer3/">
-									<time>09-21</time>
-									
-										这是一篇加密文章
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-	  </article>
-	
+  
+    
+      
+  <section class="post-list">
+    
+      
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/article10asdfwer3/">
+        这是一篇加密文章
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      有东西被加密了, 请输入密码查看.
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-09-21</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/article10asdfwer3/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+    
+  </section>
+  
+    
+  
+
+
+    
+  
 </div>
 <aside class='l_side'>
   
@@ -1154,14 +1171,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="half";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>
