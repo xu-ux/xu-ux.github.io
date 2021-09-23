@@ -5003,3 +5003,10 @@ img.lazyload:not(.placeholder).loaded {
 #safearea {
   display: block;
 }
+.iziToast:after {
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1) !important;
+  border-radius: 8px !important;
+}
+.iziToast-message.slideIn {
+  margin-top: 5px !important;
+}

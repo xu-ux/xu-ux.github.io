@@ -32,6 +32,23 @@ function setAPlayerObserver() {
   try {
     APlayerController.player.on('play', function(e) {
       updateAPlayerControllerStatus();
+      var index = document.querySelector('meting-js').aplayer.list.index;
+      var title = document.querySelector('meting-js').aplayer.list.audios[index].title;
+      var artist = document.querySelector('meting-js').aplayer.list.audios[index].artist;
+      iziToast.info({
+        timeout: 4000,
+        icon: 'Fontawesome',
+        closeOnEscape: 'true',
+        transitionOut: 'fadeOutRight',
+        displayMode: 'replace',
+        layout: '2',
+        transitionIn: 'bounceInLeft',
+        position: 'topRight',
+        icon: 'fad fa-play-circle',
+        backgroundColor: '#fff',
+        title: '音乐通知',
+        message: '正在播放：' + title + ' - ' + artist
+      });
     });
     APlayerController.player.on('pause', function(e) {
       updateAPlayerControllerStatus();

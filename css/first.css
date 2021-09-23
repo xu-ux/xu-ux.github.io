@@ -1919,6 +1919,31 @@ ul.list-v >li>a:hover {
   :root:not([data-user-color-scheme]) .v[data-class=v] pre {
     background-color: #332828 !important;
   }
+  :root:not([data-user-color-scheme]) .iziToast:after {
+    border-radius: 8px !important;
+  }
+  :root:not([data-user-color-scheme]) .iziToast {
+    background: #333 none repeat scroll 0 0 !important;
+  }
+  :root:not([data-user-color-scheme]) .iziToast-title.slideIn {
+    color: #aaa !important;
+  }
+  :root:not([data-user-color-scheme]) .iziToast-message.slideIn {
+    color: #aaa !important;
+  }
+  :root:not([data-user-color-scheme]) .iziToast-icon {
+    color: #aaa !important;
+  }
+  :root:not([data-user-color-scheme]) .iziToast > .iziToast-progressbar {
+    background: #333 !important;
+  }
+  :root:not([data-user-color-scheme]) .iziToast > .iziToast-progressbar > div {
+    background: #aaa !important;
+  }
+  :root:not([data-user-color-scheme]) .iziToast > .iziToast-close {
+    background: url("https://cdn.jsdelivr.net/gh/imsyy/file/pic/close.png") no-repeat 50% 50% !important;
+    background-size: 8px !important;
+  }
 }
 [data-user-color-scheme='dark'] {
   --color-site-body: #000;
@@ -2098,6 +2123,31 @@ ul.list-v >li>a:hover {
 [data-user-color-scheme='dark'] .v[data-class=v] code,
 [data-user-color-scheme='dark'] .v[data-class=v] pre {
   background-color: #332828 !important;
+}
+[data-user-color-scheme='dark'] .iziToast:after {
+  border-radius: 8px !important;
+}
+[data-user-color-scheme='dark'] .iziToast {
+  background: #333 none repeat scroll 0 0 !important;
+}
+[data-user-color-scheme='dark'] .iziToast-title.slideIn {
+  color: #aaa !important;
+}
+[data-user-color-scheme='dark'] .iziToast-message.slideIn {
+  color: #aaa !important;
+}
+[data-user-color-scheme='dark'] .iziToast-icon {
+  color: #aaa !important;
+}
+[data-user-color-scheme='dark'] .iziToast > .iziToast-progressbar {
+  background: #333 !important;
+}
+[data-user-color-scheme='dark'] .iziToast > .iziToast-progressbar > div {
+  background: #aaa !important;
+}
+[data-user-color-scheme='dark'] .iziToast > .iziToast-close {
+  background: url("https://cdn.jsdelivr.net/gh/imsyy/file/pic/close.png") no-repeat 50% 50% !important;
+  background-size: 8px !important;
 }
 @media screen and (prefers-color-scheme: dark) and (max-width: 500px) {
   .l_header .m_search {
