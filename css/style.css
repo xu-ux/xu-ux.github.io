@@ -3436,7 +3436,7 @@ footer.footer a.social:hover {
   background: rgba(255,87,34,0.1);
 }
 footer.footer .copyright {
-  margin-top: 16px;
+  margin-top: 0px;
 }
 footer.footer .copyright p {
   font-size: 0.78125rem;
