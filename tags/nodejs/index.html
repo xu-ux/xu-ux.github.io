@@ -24,7 +24,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>归档：2021 - 因吹斯汀</title>
+  <title>标签：nodejs - 因吹斯汀</title>
   
 
   
@@ -141,7 +141,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -891,7 +891,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  featured' style="display: ;">
+        <div id="full" class='cover-wrapper  featured' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://api.xuux.top/open/bg?type=location"></div>
           
@@ -952,14 +952,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
+
 <div class='l_main'>
-	
-		
+  
+    
+      
   <section class="post-list">
     
       
-        
-          
         
           
             <div class='post-wrapper'>
@@ -1028,108 +1028,10 @@ npm config set reg...
             </div>
           
         
-          
-        
       
     
     
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/hello-world/">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-09-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%88%86%E7%B1%BBA/">分类A</a><span class="sep"></span><a class="category-link" href="/categories/%E5%88%86%E7%B1%BBA/%E5%88%86%E7%B1%BBB/">分类B</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/hello-world/'>
-              <span>
-                  <i class='far fa-book-spells'></i>
-                   阅读全文
-              </span>
-
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/article10asdfwer3/">
-        这是一篇加密文章
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      有东西被加密了, 请输入密码查看.
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-09-21</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/article10asdfwer3/'>
-              <span>
-                  <i class='far fa-book-spells'></i>
-                   阅读全文
-              </span>
-
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
         
       
     
@@ -1139,7 +1041,8 @@ Qu...
   
 
 
-	
+    
+  
 </div>
 <aside class='l_side'>
   
@@ -1490,14 +1393,14 @@ Qu...
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="half";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>
