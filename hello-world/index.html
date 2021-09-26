@@ -23,6 +23,7 @@
   <!-- 页面元数据 -->
   
   <title>Hello World - 因吹斯汀</title>
+  <meta name="title" content="Hello World - 因吹斯汀">
   
     <meta name="keywords" content="主题学习,hexo">
   
@@ -943,6 +944,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='top'>
     
     
+      <p class="title">Interesting</p>
+    
     
       <p class="subtitle">「为了明天而继续努力」</p>
     
@@ -1054,7 +1057,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2021年9月25日</p>
+    <p>发布于：2021年9月26日</p>
   </a>
 </div>
 
@@ -1153,10 +1156,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-09-25T12:48:16+00:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-09-26T03:39:32+00:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年9月25日</p>
+    <p>更新于：2021年9月26日</p>
   </a>
 </div>
 
@@ -1425,12 +1428,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
     window.onfocus = function () {
         document.title = "✧(≖ ◡ ≖✿)";
-        setTimeout(()=>{document.title="因吹斯汀";},2000)
+        let t = document.querySelector('meta[name="title"]').getAttribute('content');
+        setTimeout(()=>{document.title = t},1500)
     }
 
     window.onload  = function () {
         document.title="(๑•̀ㅂ•́)و✧";
-        setTimeout(()=>{document.title="因吹斯汀";},2000)
+        let t = document.querySelector('meta[name="title"]').getAttribute('content');
+        setTimeout(()=>{document.title = t},2000)
     }
 
 </script>

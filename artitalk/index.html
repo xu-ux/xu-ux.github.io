@@ -23,6 +23,7 @@
   <!-- 页面元数据 -->
   
   <title>说说 - 因吹斯汀</title>
+  <meta name="title" content="说说 - 因吹斯汀">
   
 
   
@@ -941,6 +942,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='top'>
     
     
+      <p class="title">Interesting</p>
+    
     
       <p class="subtitle">「为了明天而继续努力」</p>
     
@@ -1183,12 +1186,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
     window.onfocus = function () {
         document.title = "✧(≖ ◡ ≖✿)";
-        setTimeout(()=>{document.title="因吹斯汀";},2000)
+        let t = document.querySelector('meta[name="title"]').getAttribute('content');
+        setTimeout(()=>{document.title = t},1500)
     }
 
     window.onload  = function () {
         document.title="(๑•̀ㅂ•́)و✧";
-        setTimeout(()=>{document.title="因吹斯汀";},2000)
+        let t = document.querySelector('meta[name="title"]').getAttribute('content');
+        setTimeout(()=>{document.title = t},2000)
     }
 
 </script>

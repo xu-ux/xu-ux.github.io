@@ -25,6 +25,7 @@
   <!-- 页面元数据 -->
   
   <title>分类：分类A - 因吹斯汀</title>
+  <meta name="title" content="分类：分类A - 因吹斯汀">
   
 
   
@@ -943,6 +944,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='top'>
     
     
+      <p class="title">Interesting</p>
+    
     
       <p class="subtitle">「为了明天而继续努力」</p>
     
@@ -1037,7 +1040,7 @@ Qu...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2021-09-25</time>
+        <time>2021-09-26</time>
         
           <span class="dot"></span>
           <a class="category-link" href="/categories/%E5%88%86%E7%B1%BBA/">分类A</a><span class="sep"></span><a class="category-link" href="/categories/%E5%88%86%E7%B1%BBA/%E5%88%86%E7%B1%BBB/">分类B</a>
@@ -1342,8 +1345,8 @@ Qu...
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Sat Sep 25 2021 12:48:31 GMT+0000 (Coordinated Universal Time)</div>
-            <div id="last-update-show">2021-09-25 日</div>
+            <div id="last-update" style="display: none;">Sun Sep 26 2021 03:39:44 GMT+0000 (Coordinated Universal Time)</div>
+            <div id="last-update-show">2021-09-26 日</div>
           
         </div>
         
@@ -1393,7 +1396,7 @@ Qu...
           try {
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
           } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-09-25 日';
+            document.getElementById('last-update-show').innerHTML = '2021-09-26 日';
           }
         </script>
         
@@ -1542,12 +1545,14 @@ Qu...
 
     window.onfocus = function () {
         document.title = "✧(≖ ◡ ≖✿)";
-        setTimeout(()=>{document.title="因吹斯汀";},2000)
+        let t = document.querySelector('meta[name="title"]').getAttribute('content');
+        setTimeout(()=>{document.title = t},1500)
     }
 
     window.onload  = function () {
         document.title="(๑•̀ㅂ•́)و✧";
-        setTimeout(()=>{document.title="因吹斯汀";},2000)
+        let t = document.querySelector('meta[name="title"]').getAttribute('content');
+        setTimeout(()=>{document.title = t},2000)
     }
 
 </script>
