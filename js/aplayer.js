@@ -32,9 +32,9 @@ function setAPlayerObserver() {
   try {
     APlayerController.player.on('play', function(e) {
       updateAPlayerControllerStatus();
-      var index = document.querySelector('meting-js').aplayer.list.index;
-      var title = document.querySelector('meting-js').aplayer.list.audios[index].title;
-      var artist = document.querySelector('meting-js').aplayer.list.audios[index].artist;
+      let index = APlayerController.player.list.index;
+      let title = document.querySelector('meting-js').aplayer.list.audios[index].title;
+      let artist = document.querySelector('meting-js').aplayer.list.audios[index].artist;
       iziToast.info({
         timeout: 4000,
         icon: 'Fontawesome',

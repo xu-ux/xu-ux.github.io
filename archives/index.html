@@ -1383,7 +1383,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Mon Sep 27 2021 12:18:05 GMT+0000 (Coordinated Universal Time)</div>
+            <div id="last-update" style="display: none;">Mon Sep 27 2021 14:40:36 GMT+0000 (Coordinated Universal Time)</div>
             <div id="last-update-show">2021-09-27 日</div>
           
         </div>
@@ -1633,10 +1633,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     </script>
 
     <script>
-        var myDate = new Date;
-        var mon = myDate.getMonth() + 1;
-        var date = myDate.getDate();
-        var days = ['4.4', '5.12', '7.7', '9.9', '9.18', '12.13']; // 自定义纪念日
+        let myDate = new Date;
+        let mon = myDate.getMonth() + 1;
+        let date = myDate.getDate();
+        let days = ['4.4', '5.12', '7.7', '9.9', '9.18', '12.13']; // 自定义纪念日
         for (var day of days) {
             var d = day.split('.');
             if (mon == d[0] && date == d[1]) {
@@ -2571,7 +2571,7 @@ function setSearchService() {
 
 
   <!--自动夜间模式-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Colsrch/CDN@master/judge_time/js.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xu-ux/static@main/js/tools/calculateSunRise.js"></script>
 
 <script>
 const rootElement = document.documentElement;
@@ -2681,7 +2681,7 @@ const toggleCustomDarkMode = () => {
     if (navigator.geolocation) {   //获取地理位置 用于判断日出日落时间
         navigator.geolocation.getCurrentPosition(
             function (position) {
-                var res = computeSunRiseSunSet(position.coords.latitude, position.coords.longitude, 8);
+                let res = computeSunRiseSunSet(position.coords.latitude, position.coords.longitude, 8);
                 console.log(res.str)
                 adjust_time(res.strSunRise, res.strSunSet, "08:00", "12:00", "14:00", "23:00")
             },
@@ -2710,43 +2710,43 @@ const toggleCustomDarkMode = () => {
     }
     function adjust_time(beginTime, endTime, morningTime, noonTime, afternoonTime, nightTime) {
         const rootElement = document.documentElement;
-        var strb = beginTime.split(":");
+        let strb = beginTime.split(":");
         if (strb.length != 2) {
             return false;
         }
 
-        var stre = endTime.split(":");
+        let stre = endTime.split(":");
         if (stre.length != 2) {
             return false;
         }
 
-        var strmorning = morningTime.split(":");   //12点
+        let strmorning = morningTime.split(":");   //12点
         if (stre.length != 2) {
             return false;
         }
 
-        var strnoon = noonTime.split(":");   //12点
+        let strnoon = noonTime.split(":");   //12点
         if (stre.length != 2) {
             return false;
         }
 
-        var strafternoon = afternoonTime.split(":");   //13点
+        let strafternoon = afternoonTime.split(":");   //13点
         if (stre.length != 2) {
             return false;
         }
 
-        var strnight = nightTime.split(":");   //23点
+        let strnight = nightTime.split(":");   //23点
         if (stre.length != 2) {
             return false;
         }
 
-        var b = new Date();
-        var e = new Date();
-        var n = new Date();
-        var morning = new Date();
-        var noon = new Date();
-        var afternoon = new Date();
-        var night = new Date();
+        let b = new Date();
+        let e = new Date();
+        let n = new Date();
+        let morning = new Date();
+        let noon = new Date();
+        let afternoon = new Date();
+        let night = new Date();
 
         b.setHours(strb[0]);
         b.setMinutes(strb[1]);
@@ -2761,7 +2761,7 @@ const toggleCustomDarkMode = () => {
         night.setHours(strnight[0]);
         night.setMinutes(strnight[1]);
 
-
+        // 获取一言
         $.getJSON("https://v1.hitokoto.cn?max_length=15", function (hitokoto) {
             //在这里面处理获得的数据
             if (n.getTime() - b.getTime() > 0 && n.getTime() - e.getTime() < 0) {
@@ -2828,8 +2828,8 @@ const toggleCustomDarkMode = () => {
                 }
             } else {
                 // 晚上
-                var nighttitle = ''
-                var nightmessage = ''
+                let nighttitle = ''
+                let nightmessage = ''
                 if (night.getTime() - n.getTime() < 0 || n.getTime() - b.getTime() < 0) {
                     nighttitle = '夜深了'
                     nightmessage = '<br>该睡觉啦~'
