@@ -1317,7 +1317,7 @@ p.p.logo {
 }
 span.p.code,
 p.p.code {
-  font-family: Menlo, Monaco, monospace, courier, sans-serif;
+  font-family: JetBrainsMono, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace, monospace, courier, sans-serif;
 }
 span.p.left,
 p.p.left {
@@ -1747,7 +1747,7 @@ pre {
   display: block;
   background: var(--color-block);
   font-size: 0.8125rem;
-  font-family: Menlo, Monaco, monospace, courier, sans-serif;
+  font-family: JetBrainsMono, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace, monospace, courier, sans-serif;
   border-radius: 4px;
   line-height: 1.5;
   -webkit-font-smoothing: auto;
@@ -2095,7 +2095,7 @@ pre {
   color: #e24f5a;
 }
 .article mjx-container {
-  font-family: Menlo, Monaco, monospace, courier, sans-serif;
+  font-family: JetBrainsMono, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace, monospace, courier, sans-serif;
   padding: 16px 8px;
   border-radius: 4px;
   min-width: 0 !important;
@@ -2264,7 +2264,7 @@ div.fancybox .image-caption:empty {
   max-width: 500px;
   border-radius: 4px;
   color: var(--color-text);
-  font-family: UbuntuMono, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-family: Roboto, "Noto Serif SC", "Microsoft Yahei", sans-serif, Menlo, Monaco, monospace, sans-serif, Menlo, Monaco, monospace, sans-serif;
 }
 .aplayer .aplayer-list {
   text-align: left;
@@ -2290,7 +2290,7 @@ div.fancybox .image-caption:empty {
   -webkit-user-select: none;
   user-select: none;
   -webkit-appearance: none;
-  font-family: Menlo, Menlo, Monaco, monospace, courier, sans-serif;
+  font-family: Menlo, JetBrainsMono, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace, monospace, courier, sans-serif;
   font-size: 11px;
   font-weight: bold;
   padding: 4px 8px;
@@ -2531,7 +2531,7 @@ article#comments #valine_container .vcards .vcontent blockquote {
 }
 article#comments #valine_container .vcards .vcontent code {
   color: var(--color-p);
-  font-family: Menlo, Monaco, monospace, courier, sans-serif;
+  font-family: JetBrainsMono, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace, monospace, courier, sans-serif;
 }
 article#comments #valine_container .vcards .vcontent pre {
   background: var(--color-codeblock);
@@ -3130,7 +3130,7 @@ article#tag .all-tags ul li span:before {
   overflow: auto;
   background: var(--color-codeblock);
   font-size: 0.8125rem;
-  font-family: Menlo, Monaco, monospace, courier, sans-serif;
+  font-family: JetBrainsMono, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace, monospace, courier, sans-serif;
   border: 1px solid #ffebcb;
   padding: 16px;
   border-radius: 4px;
@@ -3148,7 +3148,7 @@ article#tag .all-tags ul li span:before {
   color: rgba(68,68,68,0.9);
 }
 .article code {
-  font-family: UbuntuMono, "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-family: Roboto, "Noto Serif SC", "Microsoft Yahei", sans-serif, Menlo, Monaco, monospace, sans-serif, Menlo, Monaco, monospace, sans-serif;
 }
 .article code:not([class]) {
   word-break: break-all;
@@ -3376,6 +3376,270 @@ article .readmore {
   display: block;
   margin-top: 24px;
   font-size: 0.875rem;
+}
+.fa.red,
+.fas.red,
+.far.red,
+.fad.red,
+.fal.red,
+.iziToast>.iziToast-body .iziToast-icon.red {
+  color: #f44336;
+}
+.fa.pink,
+.fas.pink,
+.far.pink,
+.fad.pink,
+.fal.pink,
+.iziToast>.iziToast-body .iziToast-icon.pink {
+  color: #e91e63;
+}
+.fa.purple,
+.fas.purple,
+.far.purple,
+.fad.purple,
+.fal.purple,
+.iziToast>.iziToast-body .iziToast-icon.purple {
+  color: #9c27b0;
+}
+.fa.indigo,
+.fas.indigo,
+.far.indigo,
+.fad.indigo,
+.fal.indigo,
+.iziToast>.iziToast-body .iziToast-icon.indigo {
+  color: #3f51b5;
+}
+.fa.light-blue,
+.fas.light-blue,
+.far.light-blue,
+.fad.light-blue,
+.fal.light-blue,
+.iziToast>.iziToast-body .iziToast-icon.light-blue {
+  color: #4ba7ee;
+}
+.fa.deep-blue,
+.fas.deep-blue,
+.far.deep-blue,
+.fad.deep-blue,
+.fal.deep-blue,
+.iziToast>.iziToast-body .iziToast-icon.deep-blue {
+  color: #3367d6;
+}
+.fa.teal,
+.fas.teal,
+.far.teal,
+.fad.teal,
+.fal.teal,
+.iziToast>.iziToast-body .iziToast-icon.teal {
+  color: #009688;
+}
+.fa.light-green,
+.fas.light-green,
+.far.light-green,
+.fad.light-green,
+.fal.light-green,
+.iziToast>.iziToast-body .iziToast-icon.light-green {
+  color: #8bc34a;
+}
+.fa.orange,
+.fas.orange,
+.far.orange,
+.fad.orange,
+.fal.orange,
+.iziToast>.iziToast-body .iziToast-icon.orange {
+  color: #ff9800;
+}
+.fa.deep-orange,
+.fas.deep-orange,
+.far.deep-orange,
+.fad.deep-orange,
+.fal.deep-orange,
+.iziToast>.iziToast-body .iziToast-icon.deep-orange {
+  color: #ff5722;
+}
+.fa.brown,
+.fas.brown,
+.far.brown,
+.fad.brown,
+.fal.brown,
+.iziToast>.iziToast-body .iziToast-icon.brown {
+  color: #795548;
+}
+.fa.blue-grey,
+.fas.blue-grey,
+.far.blue-grey,
+.fad.blue-grey,
+.fal.blue-grey,
+.iziToast>.iziToast-body .iziToast-icon.blue-grey {
+  color: #607d8b;
+}
+.fa.yellow,
+.fas.yellow,
+.far.yellow,
+.fad.yellow,
+.fal.yellow,
+.iziToast>.iziToast-body .iziToast-icon.yellow {
+  color: #fcec60;
+}
+.fa.TURQUOISE,
+.fas.TURQUOISE,
+.far.TURQUOISE,
+.fad.TURQUOISE,
+.fal.TURQUOISE,
+.iziToast>.iziToast-body .iziToast-icon.TURQUOISE {
+  color: #1abc9c;
+}
+.fa.EMERALD,
+.fas.EMERALD,
+.far.EMERALD,
+.fad.EMERALD,
+.fal.EMERALD,
+.iziToast>.iziToast-body .iziToast-icon.EMERALD {
+  color: #2ecc71;
+}
+.fa.PETERRIVE,
+.fas.PETERRIVE,
+.far.PETERRIVE,
+.fad.PETERRIVE,
+.fal.PETERRIVE,
+.iziToast>.iziToast-body .iziToast-icon.PETERRIVE {
+  color: #3498db;
+}
+.fa.AMETHYST,
+.fas.AMETHYST,
+.far.AMETHYST,
+.fad.AMETHYST,
+.fal.AMETHYST,
+.iziToast>.iziToast-body .iziToast-icon.AMETHYST {
+  color: #9b59b6;
+}
+.fa.WETASPHALT,
+.fas.WETASPHALT,
+.far.WETASPHALT,
+.fad.WETASPHALT,
+.fal.WETASPHALT,
+.iziToast>.iziToast-body .iziToast-icon.WETASPHALT {
+  color: #34495e;
+}
+.fa.GREENSEA,
+.fas.GREENSEA,
+.far.GREENSEA,
+.fad.GREENSEA,
+.fal.GREENSEA,
+.iziToast>.iziToast-body .iziToast-icon.GREENSEA {
+  color: #16a085;
+}
+.fa.NEPHRITIS,
+.fas.NEPHRITIS,
+.far.NEPHRITIS,
+.fad.NEPHRITIS,
+.fal.NEPHRITIS,
+.iziToast>.iziToast-body .iziToast-icon.NEPHRITIS {
+  color: #27ae60;
+}
+.fa.BELIZEHOLE,
+.fas.BELIZEHOLE,
+.far.BELIZEHOLE,
+.fad.BELIZEHOLE,
+.fal.BELIZEHOLE,
+.iziToast>.iziToast-body .iziToast-icon.BELIZEHOLE {
+  color: #2980b9;
+}
+.fa.WISTERIA,
+.fas.WISTERIA,
+.far.WISTERIA,
+.fad.WISTERIA,
+.fal.WISTERIA,
+.iziToast>.iziToast-body .iziToast-icon.WISTERIA {
+  color: #8e44ad;
+}
+.fa.MIDNIGHTBLUE,
+.fas.MIDNIGHTBLUE,
+.far.MIDNIGHTBLUE,
+.fad.MIDNIGHTBLUE,
+.fal.MIDNIGHTBLUE,
+.iziToast>.iziToast-body .iziToast-icon.MIDNIGHTBLUE {
+  color: #2c3e50;
+}
+.fa.SUNFLOWER,
+.fas.SUNFLOWER,
+.far.SUNFLOWER,
+.fad.SUNFLOWER,
+.fal.SUNFLOWER,
+.iziToast>.iziToast-body .iziToast-icon.SUNFLOWER {
+  color: #f1c40f;
+}
+.fa.CARROT,
+.fas.CARROT,
+.far.CARROT,
+.fad.CARROT,
+.fal.CARROT,
+.iziToast>.iziToast-body .iziToast-icon.CARROT {
+  color: #e67e22;
+}
+.fa.ALIZARIN,
+.fas.ALIZARIN,
+.far.ALIZARIN,
+.fad.ALIZARIN,
+.fal.ALIZARIN,
+.iziToast>.iziToast-body .iziToast-icon.ALIZARIN {
+  color: #e74c3c;
+}
+.fa.CLOUDS,
+.fas.CLOUDS,
+.far.CLOUDS,
+.fad.CLOUDS,
+.fal.CLOUDS,
+.iziToast>.iziToast-body .iziToast-icon.CLOUDS {
+  color: #ecf0f1;
+}
+.fa.CONCRETE,
+.fas.CONCRETE,
+.far.CONCRETE,
+.fad.CONCRETE,
+.fal.CONCRETE,
+.iziToast>.iziToast-body .iziToast-icon.CONCRETE {
+  color: #95a5a6;
+}
+.fa.ORANGE,
+.fas.ORANGE,
+.far.ORANGE,
+.fad.ORANGE,
+.fal.ORANGE,
+.iziToast>.iziToast-body .iziToast-icon.ORANGE {
+  color: #f39c12;
+}
+.fa.PUMPKIN,
+.fas.PUMPKIN,
+.far.PUMPKIN,
+.fad.PUMPKIN,
+.fal.PUMPKIN,
+.iziToast>.iziToast-body .iziToast-icon.PUMPKIN {
+  color: #d35400;
+}
+.fa.POMEGRANATE,
+.fas.POMEGRANATE,
+.far.POMEGRANATE,
+.fad.POMEGRANATE,
+.fal.POMEGRANATE,
+.iziToast>.iziToast-body .iziToast-icon.POMEGRANATE {
+  color: #c0392b;
+}
+.fa.SILVER,
+.fas.SILVER,
+.far.SILVER,
+.fad.SILVER,
+.fal.SILVER,
+.iziToast>.iziToast-body .iziToast-icon.SILVER {
+  color: #bdc3c7;
+}
+.fa.ASBESTOS,
+.fas.ASBESTOS,
+.far.ASBESTOS,
+.fad.ASBESTOS,
+.fal.ASBESTOS,
+.iziToast>.iziToast-body .iziToast-icon.ASBESTOS {
+  color: #7f8c8d;
 }
 footer.footer {
   position: relative;
