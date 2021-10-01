@@ -24,8 +24,8 @@
 
   <!-- 页面元数据 -->
   
-  <title>分类：博客 - 因吹斯汀</title>
-  <meta name="title" content="分类：博客 - 因吹斯汀">
+  <title>归档：2021/10 - 因吹斯汀</title>
+  <meta name="title" content="归档：2021/10 - 因吹斯汀">
   
 
   
@@ -144,7 +144,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -1006,7 +1006,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  featured' style="display: none;">
+        <div id="half" class='cover-wrapper  featured' style="display: ;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://api.xuux.top/open/bg?type=location"></div>
           
@@ -1069,15 +1069,65 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
-  
-    
-      
+	
+		
   <section class="post-list">
     
       
         
+          
+        
+          
+            <div class='post-wrapper'>
+              <div class="post post-v3 white-box reveal shadow">
+  
+  
+    <div class='pin'>
+      <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4cc.svg'/>
+    </div>
+  
+  
+  
+    
+    <h2 class="article-title" pin>
+      <a href="/post/2021/10/01/1b559a5909e9af1a/">
+        记录一次NPM发包，以及NPM账号邮箱验证问题
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <p>记录一次NPM发包，以及NPM账号邮箱验证问题</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-10-01</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%BC%80%E5%8F%91/">开发</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/post/2021/10/01/1b559a5909e9af1a/'>
+              <span>
+                  <i class='far fa-book-spells'></i>
+                   阅读全文
+              </span>
+
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+            </div>
           
         
       
@@ -1093,29 +1143,32 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title" >
-      <a href="/post/2021/09/27/8686122d46a23fb2/">
-        hexo使用grunt实现自动化
+      <a href="/post/2021/10/01/87e4c2e69a86bc27/">
+        Hello World
       </a>
     </h2>
   
   <div class='md'>
     
-      有东西被加密了, 请输入密码查看.
+      
+        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Qu...
+      
     
   </div>
   
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2021-09-27</time>
+        <time>2021-10-01</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a>
+          <a class="category-link" href="/categories/%E5%88%86%E7%B1%BBA/">分类A</a><span class="sep"></span><a class="category-link" href="/categories/%E5%88%86%E7%B1%BBA/%E5%88%86%E7%B1%BBB/">分类B</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/post/2021/09/27/8686122d46a23fb2/'>
+          <a class='readmore' href='/post/2021/10/01/87e4c2e69a86bc27/'>
               <span>
                   <i class='far fa-book-spells'></i>
                    阅读全文
@@ -1132,6 +1185,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           </div>
         
       
+        
+      
     
   </section>
   
@@ -1139,8 +1194,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-    
-  
+	
 </div>
 <aside class='l_side'>
   
@@ -1518,14 +1572,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.add("show");
+  l_header.classList.remove("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="none";
-    cover_wrapper.style.display="none";
+    cover_wrapper.id="half";
+    cover_wrapper.style.display="";
     
   
 </script>
