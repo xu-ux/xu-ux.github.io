@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-    
+    <meta name="robots" content="index, follow">
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -17,19 +17,23 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <link rel="preload" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/first.css" as="style">
+  <link rel="preload" href="/css/first.css" as="style">
   
+  
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/lib/languages/powershell.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/lib/languages/shell.js"></script>
+
 
   <!-- 页面元数据 -->
   
-  <title>记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀</title>
-  <meta name="title" content="记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀">
+  <title>SpringBoot集成Nacos2.0.3 - 因吹斯汀</title>
+  <meta name="title" content="SpringBoot集成Nacos2.0.3 - 因吹斯汀">
   
-    <meta name="keywords" content="npm,npm publish,npm发包,邮箱验证问题">
+    <meta name="keywords" content="Nacos,springboot,整合">
   
 
   
-    <meta name="description" content="记录一次NPM发包，以及NPM账号邮箱验证问题">
+    <meta name="description" content="关于Nacos-server2.0.3的搭建过程，以及SpringBoot整合Nacos">
   
 
   <!-- feed -->
@@ -71,8 +75,8 @@
   
 
   
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/style.css"></noscript>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   
 
   <script id="loadcss"></script>
@@ -141,13 +145,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script src='//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/debuggerSafe.js'></script>
+  <script src='/js/debuggerSafe.js'></script>
 </head>
 
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -1009,7 +1013,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper post featured' style="display: none;">
+        <div id="half" class='cover-wrapper post featured' style="display: ;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://api.xuux.top/open/bg?type=location"></div>
           
@@ -1080,32 +1084,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class='headimg-div'>
       <a class='headimg-a'>
-        <img class='headimg' src='https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110121006872.png'/>
+        <img class='headimg' src='https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110200914994.png'/>
       </a>
     </div>
   
   <div class="article-meta" id="top">
     
-      
-
-  
-    <meting-js
-      mini='true'
-      volume='0.7'
-      loop='all'
-      order='list'
-      server='netease'
-      type='song'
-      id='16846091'>
-    </meting-js>
-  
-
-
-    
     
     
       <h1 class="title">
-        记录一次NPM发包，以及NPM账号邮箱验证问题
+        SpringBoot集成Nacos2.0.3
       </h1>
       <div class='new-meta-box'>
         
@@ -1125,7 +1113,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E5%BC%80%E5%8F%91/">开发</a>
+      <a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="sep"></span><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%90%8E%E7%AB%AF/">后端</a>
     </a>
   </div>
 
@@ -1136,7 +1124,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2021年10月12日</p>
+    <p>发布于：2021年10月20日</p>
   </a>
 </div>
 
@@ -1147,7 +1135,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="记录一次NPM发包，以及NPM账号邮箱验证问题" data-path="/post/2021/10/12/1b559a5909e9af1a/">
+      <div id="lc-pv" data-title="SpringBoot集成Nacos2.0.3" data-path="/post/2021/10/20/ebe0fd672cfa55b6/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -1165,97 +1153,297 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <p>记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。</p>
-<span id="more"></span>
-
-<h2 id="一、发包"><a href="#一、发包" class="headerlink" title="一、发包"></a>一、发包</h2><h3 id="①切换仓库"><a href="#①切换仓库" class="headerlink" title="①切换仓库"></a>①切换仓库</h3><p>需要使用官方的仓库，而不是镜像仓库<code>https://registry.npm.taobao.org/</code>，需要设置<code>https</code>而不是<code>http</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry=https://registry.npmjs.org</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="②-发布"><a href="#②-发布" class="headerlink" title="② 发布"></a>② 发布</h3><ol>
-<li><p>登录</p>
-<p><code>npm login</code></p>
-</li>
-<li><p>发布命令</p>
-<p><code>npm publish</code></p>
-</li>
-<li><p>发布成功后切换为镜像</p>
-<p><code>npm config set registry=https://registry.npm.taobao.org/</code></p>
-</li>
-<li><p>最终报错<strong>403问题</strong></p>
-<p>结果如下：</p>
-</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">npm ERR! code E403</span><br><span class="line">npm ERR! 403 403 Forbidden - PUT https://registry.npmjs.org/hexo-tag-codepen-x - Forbidden</span><br><span class="line">npm ERR! 403 In most cases, you or one of your dependencies are requesting</span><br><span class="line">npm ERR! 403 a package version that is forbidden by your security policy.</span><br><span class="line"></span><br><span class="line">npm ERR! A complete log of this run can be found in:</span><br><span class="line">npm ERR!     D:\Program Files\nodejs\node_cache\_logs\2021-09-24T23_45_16_660Z-debug.log</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li><p>403问题：npm未完成邮箱验证</p>
-<p>百度了一下，应该是注册账户时，没有去激活邮箱导致的。</p>
-<p>所以我立马去<a target="_blank" rel="noopener" href="https://www.npmjs.com/">NPM</a>进行再次邮箱验证，npm发送了一封验证邮件（此时是在windows上操作的）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">邮件中存在激活地址：</span><br><span class="line">https://www.npmjs.com/verify/f932abfa-63f3-415c-9213-88236039af03</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="二、-NPM账户邮箱激活失败"><a href="#二、-NPM账户邮箱激活失败" class="headerlink" title="二、 NPM账户邮箱激活失败"></a>二、 NPM账户邮箱激活失败</h2><p>在手机的邮箱APP内找到邮件</p>
-<p>点击激活地址后出现</p>
-<img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903631.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903631.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210925075241731" style="zoom: 67%;" />
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">looks like something unexpected occurred!</span><br><span class="line">diagnostics id: 693fe9a57df761ac~2c11</span><br></pre></td></tr></table></figure>
-
-<p>实际时没有激活成功的，此时<code>npm publish</code>还是会失败</p>
-<h2 id="三、解决方案"><a href="#三、解决方案" class="headerlink" title="三、解决方案"></a>三、解决方案</h2><p>最终，将链接复制到已登录npm账户的windows浏览器中，才完成激活邮箱</p>
-<p>再次尝试<code>npm publish</code>，发布成功！</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">npm notice package: hexo-tag-codepen-x@1.0.0</span><br><span class="line">npm notice === Tarball Contents ===</span><br><span class="line">npm notice 1.1kB LICENSE</span><br><span class="line">npm notice 1.8kB index.js</span><br><span class="line">npm notice 675B  package.json</span><br><span class="line">npm notice 2.4kB README.md</span><br><span class="line">npm notice 2.3kB zh/README.md</span><br><span class="line">npm notice === Tarball Details ===</span><br><span class="line">npm notice name:          hexo-tag-codepen-x</span><br><span class="line">npm notice version:       1.0.0</span><br><span class="line">npm notice package size:  3.4 kB</span><br><span class="line">npm notice unpacked size: 8.3 kB</span><br><span class="line">npm notice shasum:        872e466bab2a7e8be9a3df9aca9431e847047160</span><br><span class="line">npm notice integrity:     sha512-GN9ssDQ/Uy7SG[...]kfrgF6YXiOodw==</span><br><span class="line">npm notice total files:   5</span><br><span class="line">npm notice</span><br><span class="line">+ hexo-tag-codepen-x@1.0.0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="四、其他，尝试发布到Github-Packages"><a href="#四、其他，尝试发布到Github-Packages" class="headerlink" title="四、其他，尝试发布到Github Packages"></a>四、其他，尝试发布到Github Packages</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://docs.github.com/cn/packages/working-with-a-github-packages-registry/working-with-the-npm-registry">Github发包</a></p>
-<p>注意： GitHub Packages 只支持作用域内的 npm 包。 作用域内的包具有名称格式 <code>@owner/name</code>。 作用域内的包总是以 <code>@</code> 符号开头。 您可能需要更新 <em>package.json</em> 中的名称以使用作用域内的名称。 例如，<code>&quot;name&quot;: &quot;@codertocat/hello-world-npm&quot;</code>。</p>
+  <p>本篇记录了关于Nacos-server2.0.3的搭建过程（VMware和CentOS7），以及SpringBoot整合Nacos，已搭建的可以跳过第一节看第三节的整合过程。</p>
+<p>记录和分享也是一种学习的方式，希望大家多多探讨相关技术问题。</p>
+<blockquote>
+<p>本文首发地址：<a target="_blank" rel="noopener" href="https://xu.vercel.app/post/2021/10/20/ebe0fd672cfa55b6/">https://xu.vercel.app/post/2021/10/20/ebe0fd672cfa55b6/</a></p>
 </blockquote>
-<h3 id="㈠-命令式发布"><a href="#㈠-命令式发布" class="headerlink" title="㈠ 命令式发布"></a>㈠ 命令式发布</h3><h4 id="首先需要配置package-json"><a href="#首先需要配置package-json" class="headerlink" title="首先需要配置package.json"></a>首先需要配置<code>package.json</code></h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;publishConfig&quot;</span>: &#123;</span><br><span class="line">　　<span class="attr">&quot;registry&quot;</span>: <span class="string">&quot;https://npm.pkg.github.com/&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h2 id="一、搭建nacos-server2-0-3"><a href="#一、搭建nacos-server2-0-3" class="headerlink" title="一、搭建nacos-server2.0.3"></a>一、搭建nacos-server2.0.3</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://nacos.io/zh-cn/docs/quick-start.html">官方搭建文档</a></p>
+</blockquote>
+<h3 id="下载编译好的包"><a href="#下载编译好的包" class="headerlink" title="下载编译好的包"></a>下载编译好的包</h3><pre><code class="shell">cd /opt
+
+wget https://github.com/alibaba/nacos/releases/download/2.0.3/nacos-server-2.0.3.tar.gz
+
+tar -xvf nacos-server-2.0.3.tar.gz
+
+cd nacos/bin
+</code></pre>
+<h3 id="启动命令"><a href="#启动命令" class="headerlink" title="启动命令"></a>启动命令</h3><pre><code class="shell"># Linux/Unix/Mac
+# 启动命令(standalone代表着单机模式运行，非集群模式):
+
+sh startup.sh -m standalone
+
+# 如果您使用的是ubuntu系统，或者运行脚本报错提示[[符号找不到，可尝试如下运行：
+
+bash startup.sh -m standalone
+
+# Windows
+# 启动命令(standalone代表着单机模式运行，非集群模式):
+
+startup.cmd -m standalone
+</code></pre>
+<h3 id="Centos7下启动提示"><a href="#Centos7下启动提示" class="headerlink" title="Centos7下启动提示"></a>Centos7下启动提示</h3><pre><code class="shell">[root@localhost bin]# sh startup.sh  -m standalone
+/usr/java/jdk1.8/bin/java -Djava.ext.dirs=/usr/java/jdk1.8/jre/lib/ext:/usr/java/jdk1.8/lib/ext  -Xms512m -Xmx512m -Xmn256m -Dnacos.standalone=true -Dnacos.member.list= -Xloggc:/opt/nacos2.0.3/nacos/logs/nacos_gc.log -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M -Dloader.path=/opt/nacos2.0.3/nacos/plugins/health,/opt/nacos2.0.3/nacos/plugins/cmdb -Dnacos.home=/opt/nacos2.0.3/nacos -jar /opt/nacos2.0.3/nacos/target/nacos-server.jar  --spring.config.additional-location=file:/opt/nacos2.0.3/nacos/conf/ --logging.config=/opt/nacos2.0.3/nacos/conf/nacos-logback.xml --server.max-http-header-size=524288
+nacos is starting with standalone
+nacos is starting，you can check the /opt/nacos2.0.3/nacos/logs/start.out
+</code></pre>
+<h3 id="关闭服务器"><a href="#关闭服务器" class="headerlink" title="关闭服务器"></a>关闭服务器</h3><pre><code class="shell"># Linux/Unix/Mac
+sh shutdown.sh
+
+# Windows
+shutdown.cmd
+
+# 或者双击shutdown.cmd运行文件
+# 或者kill -15 进程id
+</code></pre>
+<h3 id="请求测试"><a href="#请求测试" class="headerlink" title="请求测试"></a>请求测试</h3><pre><code class="shell">[root@localhost bin]# curl -v  http://127.0.0.1:8848/nacos
+* About to connect() to 127.0.0.1 port 8848 (#0)
+*   Trying 127.0.0.1...
+* Connected to 127.0.0.1 (127.0.0.1) port 8848 (#0)
+&gt; GET /nacos HTTP/1.1
+&gt; User-Agent: curl/7.29.0
+&gt; Host: 127.0.0.1:8848
+&gt; Accept: */*
+&gt; 
+&lt; HTTP/1.1 302 
+&lt; Location: http://127.0.0.1:8848/nacos/
+&lt; Transfer-Encoding: chunked
+&lt; Date: Wed, 20 Oct 2021 01:27:10 GMT
+&lt; 
+* Connection #0 to host 127.0.0.1 left intact
+</code></pre>
+<p>默认访问地址和密码</p>
+<pre><code>http://127.0.0.1:8848/nacos
+
+nacos/nacos
+</code></pre>
+<h3 id="VMware设置"><a href="#VMware设置" class="headerlink" title="VMware设置"></a>VMware设置</h3><p>由于我的CentOS7是安装在虚拟机内（需要设置静态IP），若要宿主机所在局域网其他用户访问使用，还需要使用NAT功能，<strong>如果仅仅是个人测试，可以忽略该步骤</strong></p>
+<p><strong>选择编辑-虚拟网络编辑器</strong></p>
+<p>选择<strong>更改设置</strong>，授权</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245433.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245433.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020093340398"></p>
+<p>选择<strong>NAT模式</strong>下的<strong>NAT</strong>设置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245998.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245998.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020093456456"></p>
+<p><strong>添加端口映射</strong></p>
+<p>使用添加按钮，增加端口映射，另外需要<strong>额外开放9848 9849端口</strong>，我的虚拟机是192.168.122.22，大家的可能有所不同，如果是动态分配的，还请将centos设置为静态ip，再尝试NAT</p>
+<blockquote>
+<p>当nacos客户端升级为2.x版本后，新增了gRPC的通信方式，新增了两个端口。这两个端口在nacos原先的端口上(默认8848)，进行一定偏移量自动生成.</p>
+<p>端口    与主端口的偏移量    描述<br>9848    1000    客户端gRPC请求服务端端口，用于客户端向服务端发起连接和请求<br>9849    1001    服务端gRPC请求服务端端口，用于服务间同步等</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245145.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245145.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020093629368"></p>
+<h2 id="二、Nacos简单使用"><a href="#二、Nacos简单使用" class="headerlink" title="二、Nacos简单使用"></a>二、Nacos简单使用</h2><p>登录上我们刚刚启动的nacos（nacos/nacos），大概界面如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245990.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245990.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020094818100"></p>
+<p>由于我们是单机版，所以集群列表里面只有一台服务器</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245031.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245031.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020094908090"></p>
+<h3 id="2-1-新建命名空间"><a href="#2-1-新建命名空间" class="headerlink" title="2.1 新建命名空间"></a>2.1 新建命名空间</h3><p>新建一个命名空间，待会儿，我们整合时就使用这个名为<code>springboot</code>的命名空间</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245246.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245246.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020095028546"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245209.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245209.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020095132408"></p>
+<h3 id="2-2-新增配置"><a href="#2-2-新增配置" class="headerlink" title="2.2 新增配置"></a>2.2 新增配置</h3><h4 id="Data-ID"><a href="#Data-ID" class="headerlink" title="Data ID"></a>Data ID</h4><p>在 Nacos Spring Cloud 中，<code>dataId</code> 的完整格式如下：</p>
+<pre><code class="yaml">$&#123;prefix&#125;-$&#123;spring.profiles.active&#125;.$&#123;file-extension&#125;
+</code></pre>
+<ul>
+<li><code>prefix</code> 默认为 <code>spring.application.name</code> 的值，也可以通过配置项 <code>spring.cloud.nacos.config.prefix</code>来配置。</li>
+<li><code>spring.profiles.active</code> 即为当前环境对应的 profile，详情可以参考 <a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html#boot-features-profiles">Spring Boot文档</a>。 <strong>注意：当 <code>spring.profiles.active</code> 为空时，对应的连接符 <code>-</code> 也将不存在，dataId 的拼接格式变成 <code>$&#123;prefix&#125;.$&#123;file-extension&#125;</code></strong></li>
+<li><code>file-exetension</code> 为配置内容的数据格式，可以通过配置项 <code>spring.cloud.nacos.config.file-extension</code> 来配置。目前只支持 <code>properties</code> 和 <code>yaml</code> 类型。</li>
+</ul>
+<h4 id="Group"><a href="#Group" class="headerlink" title="Group"></a>Group</h4><p>默认为DEFAULT_GROUP,可以对不同类型的微服务配置文件进行分组管理。配置文件通过，可以用作多环境、多模块、多版本之间区分配置。<br>SpringCloud<code>spring.cloud.nacos.config.group=GROUP</code></p>
+<p>SpringBoot<code>nacos.config.group=GROUP</code></p>
+<h4 id="Namespace"><a href="#Namespace" class="headerlink" title="Namespace"></a>Namespace</h4><p>推荐使用命名空间来区分不同环境的配置，因为使用<code>profiles</code>或<code>group</code>会是不同环境的配置展示到一个页面，而Nacos控制台对不同的<code>Namespace</code>做了Tab栏分组展示</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246414.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246414.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020100455356"></p>
+<p>添加如下配置：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246688.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246688.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020101502465"></p>
+<p>yaml文件如下：</p>
+<pre><code class="yaml">server:
+  port: 8082
+  servlet:
+    context-path: /demo
+    session:
+      timeout: 7200s
+  # 开启gzip
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css,text/javascript
+    min-response-size: 2KB
+</code></pre>
+<p>添加完成，为后面整合做准备</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246687.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246687.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020101601866"></p>
+<h2 id="三、SpringBoot整合Nacos2-0-3"><a href="#三、SpringBoot整合Nacos2-0-3" class="headerlink" title="三、SpringBoot整合Nacos2.0.3"></a>三、SpringBoot整合Nacos2.0.3</h2><blockquote>
+<p>[官方文档](<a target="_blank" rel="noopener" href="https://nacos.io/zh-cn/docs/quick-start-spring-boot.html">Nacos Spring Boot 快速开始</a>)</p>
+<p><a target="_blank" rel="noopener" href="https://nacos.io/zh-cn/blog/2.0.3-release.html">Nacos 2.0.3版本发布，继续提升集群稳定性及升级稳定性</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/nacos-group/nacos-examples/tree/master/nacos-spring-boot-example">官方demo</a></p>
+</blockquote>
+<p>注意官方博客中的【客户端支持2.0】，所以这次我们整合的的包应该是0.2.10，因为版本 <a target="_blank" rel="noopener" href="https://mvnrepository.com/artifact/com.alibaba.boot/nacos-config-spring-boot-starter">0.2.x.RELEASE</a> 对应的是 Spring Boot 2.x 版本，版本 <a target="_blank" rel="noopener" href="https://mvnrepository.com/artifact/com.alibaba.boot/nacos-config-spring-boot-starter">0.1.x.RELEASE</a> 对应的是 Spring Boot 1.x 版本。</p>
+<blockquote>
+<p>目前Golang、C#、Cpp、nacos-spring-boot，客户端已经支持了nacos2.0的grpc能力，欢迎大家试用</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/nacos-group/nacos-spring-boot-project/releases/tag/0.1.10">nacos-spring-boot v0.1.10</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/nacos-group/nacos-spring-boot-project/releases/tag/0.2.10">nacos-spring-boot v0.2.10</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/nacos-group/nacos-sdk-go/releases/tag/v2.0.0-Alpha.1">nacos-sdk-go v2.0.0-Alpha.1</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/nacos-group/nacos-sdk-csharp/releases/tag/v1.1.0">nacos-sdk-csharp v1.1.0</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/nacos-group/nacos-sdk-cpp/releases/tag/1.0.8">nacos-sdk-cpp v1.0.8</a></li>
+</ul>
+<p>Python的多语言客户端正在紧张开发中，相信很快能与大家见面。 Nodejs部分欢迎社区小伙伴一起参与建设~</p>
+</blockquote>
+<h3 id="3-1-注意事项"><a href="#3-1-注意事项" class="headerlink" title="3.1 注意事项"></a>3.1 注意事项</h3><h4 id="版本问题"><a href="#版本问题" class="headerlink" title="版本问题"></a>版本问题</h4><p>整合过程中发现nacos客户端在初始化<code>NacosBootConfigurationPropertiesBinder</code>时，如果spring-boot版本太高，可能报错，本人从2.5.x降级为2.3.12.RELEASE才正常</p>
+<pre><code>nested exception is java.lang.NoClassDefFoundError: org/springframework/boot/context/properties/ConfigurationBeanFactoryMetadata
+</code></pre>
+<h4 id="服务器读取nacos配置出错"><a href="#服务器读取nacos配置出错" class="headerlink" title="服务器读取nacos配置出错"></a>服务器读取nacos配置出错</h4><p>如果nacos的配置中有中文 直接运行jar可能会报错 编码不同导致的</p>
+<pre><code class="java">org.yaml.snakeyaml.error.YAMLException: java.nio.charset.MalformedInputExcept
+</code></pre>
+<p>解决方案是 java 命令增加 编码选项</p>
+<pre><code class="shell">-Dfile.encoding=utf-8 
+</code></pre>
+<h4 id="整合其他cloud的客户端"><a href="#整合其他cloud的客户端" class="headerlink" title="整合其他cloud的客户端"></a>整合其他cloud的客户端</h4><p>如果你并不是使用<code>nacos-spring-boot v-x.x.x</code>而是如下配置</p>
+<pre><code class="xml">         &lt;dependency&gt;
+            &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt;
+            &lt;version&gt;$&#123;nacos.version&#125;&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-config&lt;/artifactId&gt;
+            &lt;version&gt;$&#123;nacos.version&#125;&lt;/version&gt;
+        &lt;/dependency&gt;
+</code></pre>
+<p>注意bootstrap.yml不生效的问题，可通过以下方式解决</p>
+<p>在启动时增加环境变量的配置 </p>
+<pre><code>spring.cloud.bootstrap.enabled = true
+</code></pre>
+<p>或者</p>
+<pre><code>spring.config.use-legacy-processing = true
+</code></pre>
+<h3 id="3-2-配置管理"><a href="#3-2-配置管理" class="headerlink" title="3.2 配置管理"></a>3.2 配置管理</h3><p>demo项目地址：<a target="_blank" rel="noopener" href="https://github.com/xucux/nacos-config-discovery-demo/tree/main/nacos-config-discovery-springboot">https://github.com/xucux/nacos-config-discovery-demo/tree/main/nacos-config-discovery-springboot</a></p>
+<p><strong>注意：我这边没有配置启动类中的<code>@NacosPropertySource(dataId = &quot;example&quot;, autoRefreshed = true)</code>这个注解</strong></p>
+<p><strong>application.yml</strong></p>
+<pre><code class="yaml">spring:
+  application:
+    name: nacos-config-discovery
+  profiles:
+    active: dev
+  config:
+    use-legacy-processing: true
+</code></pre>
+<p><strong>application-dev.yml</strong></p>
+<p><code>namespace: 24373c8c-3894-419b-83eb-b6b9433a9721</code>就是上文中创建的名称为<code>springboot</code>的命名空间</p>
+<pre><code class="yaml">nacos:
+  discovery:
+    server-addr: 192.168.122.22:8848
+    username: nacos
+    password: nacos
+  config:
+    server-addr: 192.168.122.22:8848
+    username: nacos
+    password: nacos
+    namespace: 24373c8c-3894-419b-83eb-b6b9433a9721
+    data-id: nacos-config-discovery-dev.yaml
+    auto-refresh: true
+    group: TEST_GROUP
+    type: yaml
+    bootstrap:
+      enable: true
+      log-enable: true
+</code></pre>
+<p>启动项目，控制台输出</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246719.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246719.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020113255129"></p>
+<h3 id="3-3-服务注册"><a href="#3-3-服务注册" class="headerlink" title="3.3 服务注册"></a>3.3 服务注册</h3><p>使用注解@PostConstruct，在服务启动后自动向Nacos服务注册</p>
+<pre><code class="java">@Configuration
+public class NacosRegisterConfiguration &#123;
+
+    @Value(&quot;$&#123;server.port&#125;&quot;)
+    private int serverPort;
+
+    @Value(&quot;$&#123;spring.application.name&#125;&quot;)
+    private String applicationName;
+
+    @NacosInjected
+    private NamingService namingService;
+
+    @PostConstruct
+    public void registerInstance() throws NacosException &#123;
+        namingService.registerInstance(applicationName, &quot;127.0.0.1&quot;, serverPort, &quot;DEFAULT&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p>启动应用后，在Nacos管理界面可以看到新注册的服务实例</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246794.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246794.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020104109153"></p>
+<h3 id="3-4-服务调用"><a href="#3-4-服务调用" class="headerlink" title="3.4 服务调用"></a>3.4 服务调用</h3><p>模拟调用获取学生信息</p>
+<p>创建一个项目<code>nacos-config-discovery-producer</code></p>
+<p>详细工程地址：<a target="_blank" rel="noopener" href="https://github.com/xucux/nacos-config-discovery-demo">https://github.com/xucux/nacos-config-discovery-demo</a></p>
+<p>主要使用<code>nacos-config-discovery-springboot</code>调用<code>nacos-config-discovery-producer</code></p>
+<p>启动两个工程，可以发现nacos上已经出现了两个服务：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201247119.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201247119.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020123913609"></p>
+<p>在<code>nacos-config-discovery-springboot</code>中创建一个Controller，作为对外api和接口消费者</p>
+<pre><code class="java">@Slf4j
+@RestController
+@RequestMapping(&quot;/student&quot;)
+public class StudentController &#123;
+
+    @NacosInjected
+    private NamingService namingService;
 
 
-
-<h4 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h4><p>这里的密码是Personal access tokens</p>
-<p>需要的权限为：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903543.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903543.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210925084509943"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm login --registry=https://npm.pkg.github.com</span><br><span class="line">Username: [USERNAME] # 如：xu-ux</span><br><span class="line">Password: [TOKEN] # 如：****************</span><br><span class="line">Email: (this IS public) [PUBLIC-EMAIL-ADDRESS] # 如：xu_uxo@163.com</span><br><span class="line">Logged in as xu-ux on https://npm.pkg.github.com/.</span><br></pre></td></tr></table></figure>
-
-<h4 id="发布报错"><a href="#发布报错" class="headerlink" title="发布报错"></a>发布报错</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">npm ERR! code E404</span><br><span class="line">npm ERR! 404 Not Found - PUT https://npm.pkg.github.com/hexo-tag-codepen-x</span><br><span class="line">npm ERR! 404</span><br><span class="line">npm ERR! 404  &#x27;hexo-tag-codepen-x@1.0.0&#x27; is not in the npm registry.</span><br><span class="line">npm ERR! 404 You should bug the author to publish it (or use the name yourself!)</span><br><span class="line">npm ERR! 404</span><br><span class="line">npm ERR! 404 Note that you can also install from a</span><br><span class="line">npm ERR! 404 tarball, folder, http url, or git url.</span><br></pre></td></tr></table></figure>
+    private RestTemplate restTemplate = new RestTemplate();
 
 
+    /**
+     * 获取学生信息
+     * @param id
+     * @return
+     */
+    @GetMapping(&quot;/info/&#123;id&#125;&quot;)
+    public Object getStudentInfo(@PathVariable(&quot;id&quot;)Integer id)&#123;
+        Map&lt;String,Object&gt; info = new HashMap&lt;&gt;();
+        info.put(&quot;id&quot;,id);
+        info.put(&quot;info&quot;,queryStudentInfo(id));
 
-<h4 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h4><p><strong>GitHub Packages 只支持作用域内的 npm 包</strong></p>
-<p>所以修改包名</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;name&quot;: &quot;@xu-ux/hexo-tag-codepen-x&quot;,</span><br></pre></td></tr></table></figure>
+        return info;
+    &#125;
 
-<p>再次发布，成功</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">npm notice package: @xu-ux/hexo-tag-codepen-x@1.0.0</span><br><span class="line">npm notice === Tarball Contents ===</span><br><span class="line">npm notice 1.1kB LICENSE</span><br><span class="line">npm notice 1.8kB index.js</span><br><span class="line">npm notice 756B  package.json</span><br><span class="line">npm notice 2.5kB README.md</span><br><span class="line">npm notice 2.4kB zh/README.md</span><br><span class="line">npm notice === Tarball Details ===</span><br><span class="line">npm notice name:          @xu-ux/hexo-tag-codepen-x</span><br><span class="line">npm notice version:       1.0.0</span><br><span class="line">npm notice package size:  3.4 kB</span><br><span class="line">npm notice unpacked size: 8.5 kB</span><br><span class="line">npm notice shasum:        6a387fe4e65edeb8c8e2111fb267c1e4c3032313</span><br><span class="line">npm notice integrity:     sha512-bjL6fWv1AazIb[...]iIHOVQ7iefKVQ==</span><br><span class="line">npm notice total files:   5</span><br><span class="line">npm notice</span><br><span class="line">+ @xu-ux/hexo-tag-codepen-x@1.0.0</span><br></pre></td></tr></table></figure>
+    private JSONObject queryStudentInfo(Integer id) &#123;
+        try &#123;
+            if (namingService != null) &#123;
+                // 选择user_service服务的一个健康的实例（可配置负载均衡策略）
+                Instance instance = namingService.selectOneHealthyInstance(&quot;nacos-producer-service&quot;);
+                // 拼接请求接口url并请求选取的实例
+                String url = &quot;http://&quot; + instance.getIp() + &quot;:&quot; + instance.getPort() + &quot;/demo/student/detail/&quot;+id;
+                ResponseEntity&lt;JSONObject&gt; entity = restTemplate.getForEntity(url, JSONObject.class);
+                return entity.getBody();
+            &#125;
+        &#125; catch (Exception e) &#123;
+            log.error(&quot;查询学生数据失败&quot;, e);
+        &#125;
+        return null;
+    &#125;
+
+&#125;
+</code></pre>
+<p>在<code>nacos-config-discovery-producer</code>中创建一个Controller，作为服务生产者</p>
+<pre><code class="java">@Slf4j
+@RestController
+@RequestMapping(&quot;/student&quot;)
+public class StudentController &#123;
+
+    /**
+     * 获取学生信息
+     * @param id
+     * @return
+     */
+    @GetMapping(&quot;/detail/&#123;id&#125;&quot;)
+    public Object getStudentInfo(@PathVariable(&quot;id&quot;)Integer id)&#123;
+        Map&lt;String,Object&gt; info = new HashMap&lt;&gt;();
+        info.put(&quot;id&quot;,id);
+        info.put(&quot;userName&quot;,&quot;test&quot;);
+        info.put(&quot;nickName&quot;,&quot;小明&quot;);
+        return info;
+    &#125;
 
 
-
-<h3 id="㈡-配置发布"><a href="#㈡-配置发布" class="headerlink" title="㈡ 配置发布"></a>㈡ 配置发布</h3><p>除了使用命令式输入<code>Token</code>外(每次都要输入比较麻烦)</p>
-<ol>
-<li><p>还可以将<code>Token</code>添加至<code>~/.npmrc</code>，<code>win</code>用户是路径<code>C://users/current-user</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//npm.pkg.github.com/:_authToken=TOKEN</span><br></pre></td></tr></table></figure></li>
-<li><p>在<code>package.json</code>所在目录创建一个<code>.npmrc</code>文件，并添加以下内容</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">registry=https://npm.pkg.github.com/GitHub用户名</span><br></pre></td></tr></table></figure></li>
-<li><p>发布</p>
-<p>可以直接使用<code>npm publish</code>，也不用在<code>package.json</code>填写<code>publishConfig</code></p>
-</li>
-</ol>
-<h3 id="㈢-安装"><a href="#㈢-安装" class="headerlink" title="㈢ 安装"></a>㈢ 安装</h3><p>需要注意的是，无论发布包还是安装包都需要授权，也就是上述生成<code>Token</code>以及配置的过程，否则无法安装指定的包。</p>
-<h4 id="Ⅰ-已配置-npmrc"><a href="#Ⅰ-已配置-npmrc" class="headerlink" title="Ⅰ.已配置~/.npmrc"></a>Ⅰ.已配置<code>~/.npmrc</code></h4><p>已经配置了<code>.npmrc</code>文件的，可以直接使用如下命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @xu-ux/hexo-tag-codepen-x@1.0.0 --registry=https://npm.pkg.github.com/</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="Ⅱ-使用命令方式"><a href="#Ⅱ-使用命令方式" class="headerlink" title="Ⅱ.使用命令方式"></a>Ⅱ.使用命令方式</h4><p>首先登录</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm login --registry=https://npm.pkg.github.com</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Username: USERNAME</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Password: TOKEN</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> Email: PUBLIC-EMAIL-ADDRESS</span></span><br></pre></td></tr></table></figure>
-
-<p>再安装</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @xu-ux/hexo-tag-codepen-x@1.0.0</span><br></pre></td></tr></table></figure>
-
+&#125;
+</code></pre>
+<p>调用接口</p>
+<pre><code class="shell">[root@localhost bin]# curl -X GET http://192.168.1.212:8082/demo/student/info/1
+&#123;&quot;id&quot;:1,&quot;info&quot;:&#123;&quot;nickName&quot;:&quot;小明&quot;,&quot;id&quot;:1,&quot;userName&quot;:&quot;test&quot;&#125;&#125;
+</code></pre>
 
   
   
@@ -1273,7 +1461,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=https://xu-ux.github.io/post/2021/10/12/1b559a5909e9af1a/>https://xu-ux.github.io/post/2021/10/12/1b559a5909e9af1a/</a></p>
+                <p>本文永久链接是：<a href=https://xu-ux.github.io/post/2021/10/20/ebe0fd672cfa55b6/>https://xu-ux.github.io/post/2021/10/20/ebe0fd672cfa55b6/</a></p>
               
             
           </blockquote>
@@ -1290,10 +1478,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-10-12T03:00:08+00:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-10-20T06:33:36+00:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年10月12日</p>
+    <p>更新于：2021年10月20日</p>
   </a>
 </div>
 
@@ -1302,7 +1490,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/npm/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>npm</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/nodejs/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>nodejs</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%8A%80%E6%9C%AF/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>技术</p></a></div>
 
 
         
@@ -1315,7 +1503,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xu-ux.github.io/post/2021/10/12/1b559a5909e9af1a/&title=记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀&summary=记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xu-ux.github.io/post/2021/10/20/ebe0fd672cfa55b6/&title=SpringBoot集成Nacos2.0.3 - 因吹斯汀&summary="
           
           >
           
@@ -1327,7 +1515,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xu-ux.github.io/post/2021/10/12/1b559a5909e9af1a/&title=记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀&summary=记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xu-ux.github.io/post/2021/10/20/ebe0fd672cfa55b6/&title=SpringBoot集成Nacos2.0.3 - 因吹斯汀&summary="
           
           >
           
@@ -1339,7 +1527,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://xu-ux.github.io/post/2021/10/12/1b559a5909e9af1a/&title=记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀&summary=记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://xu-ux.github.io/post/2021/10/20/ebe0fd672cfa55b6/&title=SpringBoot集成Nacos2.0.3 - 因吹斯汀&summary="
           
           >
           
@@ -1368,6 +1556,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
     <div class="prev-next">
+      
+        <a class='prev' href='/post/2021/10/20/1b559a5909e9af1a/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>记录一次NPM发包，以及NPM账号邮箱验证问题</p>
+          <p class='content'>记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。
+
+
+一、发包①切换仓库需...</p>
+        </a>
       
       
         <a class='next' href='/post/2021/10/12/ecd6c7b9993a66f4/'>
@@ -1404,6 +1600,58 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
+<section class="widget grid shadow desktop mobile">
+  
+  <header>
+    
+      <a href='/'><i class="fad fa-map-signs fa-fw" aria-hidden="true"></i><span class='name'>导航</span></a>
+    
+  </header>
+
+
+  <div class='content'>
+    <div class="grid navigation">
+      
+        <a class="flat-box" title="/about/" href="/about/"
+          
+          
+          id="about">
+          
+            <i class="fad faa-ring faa-slow fa-address-card fa-fw" aria-hidden="true"></i>
+          
+          关于
+        </a>
+      
+        <a class="flat-box" title="/p/messages/" href="/p/messages/"
+          
+          
+          id="pmessages">
+          
+            <i class="fad fa-comment-alt-dots fa-fw" aria-hidden="true"></i>
+          
+          留言
+        </a>
+      
+        <a class="flat-box" title="/other/covid-19/" href="/other/covid-19/"
+          
+          
+          id="othercovid-19">
+          
+            <i class="fad fa-chart-line-down fa-fw" aria-hidden="true"></i>
+          
+          新冠
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
 
 
   <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
@@ -1416,7 +1664,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%8F%91%E5%8C%85"><span class="toc-text">一、发包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%91%A0%E5%88%87%E6%8D%A2%E4%BB%93%E5%BA%93"><span class="toc-text">①切换仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%91%A1-%E5%8F%91%E5%B8%83"><span class="toc-text">② 发布</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81-NPM%E8%B4%A6%E6%88%B7%E9%82%AE%E7%AE%B1%E6%BF%80%E6%B4%BB%E5%A4%B1%E8%B4%A5"><span class="toc-text">二、 NPM账户邮箱激活失败</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">三、解决方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%85%B6%E4%BB%96%EF%BC%8C%E5%B0%9D%E8%AF%95%E5%8F%91%E5%B8%83%E5%88%B0Github-Packages"><span class="toc-text">四、其他，尝试发布到Github Packages</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%88%A0-%E5%91%BD%E4%BB%A4%E5%BC%8F%E5%8F%91%E5%B8%83"><span class="toc-text">㈠ 命令式发布</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E9%9C%80%E8%A6%81%E9%85%8D%E7%BD%AEpackage-json"><span class="toc-text">首先需要配置package.json</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96token"><span class="toc-text">获取token</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%91%E5%B8%83%E6%8A%A5%E9%94%99"><span class="toc-text">发布报错</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3"><span class="toc-text">解决</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%88%A1-%E9%85%8D%E7%BD%AE%E5%8F%91%E5%B8%83"><span class="toc-text">㈡ 配置发布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%88%A2-%E5%AE%89%E8%A3%85"><span class="toc-text">㈢ 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%85%A0-%E5%B7%B2%E9%85%8D%E7%BD%AE-npmrc"><span class="toc-text">Ⅰ.已配置~&#x2F;.npmrc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%85%A1-%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E6%96%B9%E5%BC%8F"><span class="toc-text">Ⅱ.使用命令方式</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%90%AD%E5%BB%BAnacos-server2-0-3"><span class="toc-text">一、搭建nacos-server2.0.3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E7%BC%96%E8%AF%91%E5%A5%BD%E7%9A%84%E5%8C%85"><span class="toc-text">下载编译好的包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">启动命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Centos7%E4%B8%8B%E5%90%AF%E5%8A%A8%E6%8F%90%E7%A4%BA"><span class="toc-text">Centos7下启动提示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">关闭服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E6%B5%8B%E8%AF%95"><span class="toc-text">请求测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VMware%E8%AE%BE%E7%BD%AE"><span class="toc-text">VMware设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Nacos%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8"><span class="toc-text">二、Nacos简单使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%96%B0%E5%BB%BA%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="toc-text">2.1 新建命名空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%96%B0%E5%A2%9E%E9%85%8D%E7%BD%AE"><span class="toc-text">2.2 新增配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Data-ID"><span class="toc-text">Data ID</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Group"><span class="toc-text">Group</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Namespace"><span class="toc-text">Namespace</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81SpringBoot%E6%95%B4%E5%90%88Nacos2-0-3"><span class="toc-text">三、SpringBoot整合Nacos2.0.3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">3.1 注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98"><span class="toc-text">版本问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AF%BB%E5%8F%96nacos%E9%85%8D%E7%BD%AE%E5%87%BA%E9%94%99"><span class="toc-text">服务器读取nacos配置出错</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B4%E5%90%88%E5%85%B6%E4%BB%96cloud%E7%9A%84%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">整合其他cloud的客户端</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86"><span class="toc-text">3.2 配置管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C"><span class="toc-text">3.3 服务注册</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8"><span class="toc-text">3.4 服务调用</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -1435,20 +1683,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="记录一次NPM发包，以及NPM账号邮箱验证问题";
+  pdata.postTitle="SpringBoot集成Nacos2.0.3";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.add("show");
+  l_header.classList.remove("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="none";
-    cover_wrapper.style.display="none";
+    cover_wrapper.id="half";
+    cover_wrapper.style.display="";
     
   
 </script>
@@ -1781,6 +2029,8 @@ var loadCSS = function( href, before, media, attributes ){
   loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
   
   
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/styles/atom-one-dark.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -2251,7 +2501,7 @@ var loadCSS = function( href, before, media, attributes ){
   // rightmenu see: layout/_partial/rightmenu.ejs
 
   
-    loadScript("//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/aplayer.js")
+    loadScript("/js/aplayer.js")
   
 
 </script>
@@ -2261,7 +2511,7 @@ var loadCSS = function( href, before, media, attributes ){
 
   
   
-<script src="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/valine.js"></script>
+<script src="/js/valine.js"></script>
 
 
 <script>
@@ -2315,7 +2565,7 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-<script src="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/app.js"></script>
+<script src="/js/app.js"></script>
 
 
 
@@ -2351,6 +2601,20 @@ function setSearchService() {
 
 
 
+
+  
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+volantis.pjax.push(()=>{
+	document.querySelectorAll('pre code').forEach((block) => {
+	  hljs.highlightBlock(block);
+	});
+},"highlightjs")
+</script>
 
 
 

@@ -17,8 +17,12 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <link rel="preload" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/first.css" as="style">
+  <link rel="preload" href="/css/first.css" as="style">
   
+  
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/lib/languages/powershell.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/lib/languages/shell.js"></script>
+
 
   <!-- 页面元数据 -->
   
@@ -67,8 +71,8 @@
   
 
   
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/style.css"></noscript>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   
 
   <script id="loadcss"></script>
@@ -137,7 +141,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script src='//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/debuggerSafe.js'></script>
+  <script src='/js/debuggerSafe.js'></script>
 </head>
 
   <body>
@@ -1483,6 +1487,8 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
+  loadCSS("https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/styles/atom-one-dark.css", window.volantis.loadcss);
+  
 </script>
 <!-- required -->
 
@@ -1952,7 +1958,7 @@ var loadCSS = function( href, before, media, attributes ){
   // rightmenu see: layout/_partial/rightmenu.ejs
 
   
-    loadScript("//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/aplayer.js")
+    loadScript("/js/aplayer.js")
   
 
 </script>
@@ -1962,7 +1968,7 @@ var loadCSS = function( href, before, media, attributes ){
 
   
   
-<script src="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/valine.js"></script>
+<script src="/js/valine.js"></script>
 
 
 <script>
@@ -2016,7 +2022,7 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-<script src="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/app.js"></script>
+<script src="/js/app.js"></script>
 
 
 
@@ -2052,6 +2058,20 @@ function setSearchService() {
 
 
 
+
+  
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+volantis.pjax.push(()=>{
+	document.querySelectorAll('pre code').forEach((block) => {
+	  hljs.highlightBlock(block);
+	});
+},"highlightjs")
+</script>
 
 
 

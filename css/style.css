@@ -2954,6 +2954,7 @@ article#tag .all-tags ul li span:before {
 .article {
   color: var(--color-p);
   word-wrap: break-word;
+/* 修改代码字体 $fontfamily ->  $fontfamily-code */
 }
 .article a {
   word-break: break-word;
@@ -3161,7 +3162,7 @@ article#tag .all-tags ul li span:before {
   color: rgba(68,68,68,0.9);
 }
 .article code {
-  font-family: Roboto, "Noto Serif SC", "Microsoft Yahei", sans-serif, Menlo, Monaco, monospace, sans-serif, Menlo, Monaco, monospace, sans-serif;
+  font-family: JetBrainsMono, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace, monospace, courier, sans-serif;
 }
 .article code:not([class]) {
   word-break: break-all;

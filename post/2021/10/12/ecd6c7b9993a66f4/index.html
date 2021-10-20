@@ -17,8 +17,12 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <link rel="preload" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/first.css" as="style">
+  <link rel="preload" href="/css/first.css" as="style">
   
+  
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/lib/languages/powershell.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/lib/languages/shell.js"></script>
+
 
   <!-- 页面元数据 -->
   
@@ -72,8 +76,8 @@
   
 
   
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/style.css"></noscript>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   
 
   <script id="loadcss"></script>
@@ -142,7 +146,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script src='//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/debuggerSafe.js'></script>
+  <script src='/js/debuggerSafe.js'></script>
 </head>
 
   <body>
@@ -1158,8 +1162,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>首先1字节8位，还要加上符号位，这个好理解<br>比如：<br>0000 0001 表示10进制 1<br>1000 0001 表示10进制 -1</p>
 <p>但是上面的这个负数并不是计算机存在内存中的数据，存在内存中的数据是原码的补码，实际存的是:</p>
 <p><a href="#%E5%8E%9F%E7%A0%81%EF%BC%8C%E5%8F%8D%E7%A0%81%EF%BC%8C%E8%A1%A5%E7%A0%81">关于原码补码反码看这里</a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1000</span> <span class="number">0001</span> 原码</span><br><span class="line"><span class="number">1111</span> <span class="number">1110</span> 反码</span><br><span class="line"><span class="number">1111</span> <span class="number">1111</span> 补码 这个才是-<span class="number">1</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="java">1000 0001 原码
+1111 1110 反码
+1111 1111 补码 这个才是-1
+</code></pre>
 <p><strong>那最大的补码是：</strong></p>
 <p>byte的最大正数就是 01111111（最高位必须是0），也就是 127</p>
 <p><strong>那最小的补码是：</strong></p>
@@ -1168,10 +1174,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>1111 1111 (补码) 还原原码后 -1</p>
 <p>由此我们可以看出来二进制从 00000000 到01111111到10000000到 11111111</p>
 <p>即 十进制从 0 到 127 到 -128 到 -1。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> b = <span class="number">127</span>;</span><br><span class="line"><span class="keyword">int</span> c = -<span class="number">128</span>;</span><br><span class="line"><span class="keyword">int</span> d = -<span class="number">1</span>;</span><br><span class="line">System.out.println(String.format(<span class="string">&quot;%8s&quot;</span>, Integer.toBinaryString(a &amp; <span class="number">0xFF</span>)).replace(<span class="string">&#x27; &#x27;</span>, <span class="string">&#x27;0&#x27;</span>));</span><br><span class="line">System.out.println(String.format(<span class="string">&quot;%8s&quot;</span>, Integer.toBinaryString(b &amp; <span class="number">0xFF</span>)).replace(<span class="string">&#x27; &#x27;</span>, <span class="string">&#x27;0&#x27;</span>));</span><br><span class="line">System.out.println(String.format(<span class="string">&quot;%8s&quot;</span>, Integer.toBinaryString(c &amp; <span class="number">0xFF</span>)).replace(<span class="string">&#x27; &#x27;</span>, <span class="string">&#x27;0&#x27;</span>));</span><br><span class="line">System.out.println(String.format(<span class="string">&quot;%8s&quot;</span>, Integer.toBinaryString(d &amp; <span class="number">0xFF</span>)).replace(<span class="string">&#x27; &#x27;</span>, <span class="string">&#x27;0&#x27;</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="java">        int a = 0;
+        int b = 127;
+        int c = -128;
+        int d = -1;
+        System.out.println(String.format(&quot;%8s&quot;, Integer.toBinaryString(a &amp; 0xFF)).replace(&#39; &#39;, &#39;0&#39;));
+        System.out.println(String.format(&quot;%8s&quot;, Integer.toBinaryString(b &amp; 0xFF)).replace(&#39; &#39;, &#39;0&#39;));
+        System.out.println(String.format(&quot;%8s&quot;, Integer.toBinaryString(c &amp; 0xFF)).replace(&#39; &#39;, &#39;0&#39;));
+        System.out.println(String.format(&quot;%8s&quot;, Integer.toBinaryString(d &amp; 0xFF)).replace(&#39; &#39;, &#39;0&#39;));
+</code></pre>
 <p>输出</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">00000000</span><br><span class="line">01111111</span><br><span class="line">10000000</span><br><span class="line">11111111</span><br></pre></td></tr></table></figure>
-
+<pre><code class="shell">00000000
+01111111
+10000000
+11111111
+</code></pre>
 <h2 id="原码，反码，补码"><a href="#原码，反码，补码" class="headerlink" title="原码，反码，补码"></a>原码，反码，补码</h2><p>注意：我们这里举列的原码和反码只是为了求负数的补码，在计算机中没有原码，反码的存在，只有补码。</p>
 <h3 id="一-原码"><a href="#一-原码" class="headerlink" title="一.原码"></a>一.原码</h3><p>1.正数的原码就是它的本身</p>
 <p>假设使用一个字节存储整数，整数10的原码是：0000 1010</p>
@@ -1187,16 +1204,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>假设使用一个字节存储整数，整数-10的补码是：1111 0110（第三次强调：这一串是-10这个整数在计算机中存储形式）</p>
 <h3 id="四-在计算机中，为什么不用原码和反码，而是用补码呢？"><a href="#四-在计算机中，为什么不用原码和反码，而是用补码呢？" class="headerlink" title="四.在计算机中，为什么不用原码和反码，而是用补码呢？"></a>四.在计算机中，为什么不用原码和反码，而是用补码呢？</h3><p>因为在使用原码，反码在计算时不准确，使用补码计算时才准确。</p>
 <p>1.使用原码计算10-10</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  0000 1010  #（10的原码）</span><br><span class="line">+ 1000 1010  #（-10的原码）</span><br><span class="line">------------------------------------------------------------</span><br><span class="line">  1001 0100   #（结果为：-20，很显然按照原码计算答案是否定的。）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
+<pre><code class="shell">
+  0000 1010  #（10的原码）
++ 1000 1010  #（-10的原码）
+------------------------------------------------------------
+  1001 0100   #（结果为：-20，很显然按照原码计算答案是否定的。）
+</code></pre>
 <p>2.使用反码计算10-10</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  0000 1010 #（10的反码）</span><br><span class="line">+ 1111 0101 #（-10的反码）</span><br><span class="line">------------------------------------------------------------</span><br><span class="line">  1111 1111 #（计算的结果为反码，我们转换为原码的结果为：1000 0000，最终的结果为：-0，很显然按照反码计算答案也是否定的。）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
+<pre><code class="shell">
+  0000 1010 #（10的反码）
++ 1111 0101 #（-10的反码）
+------------------------------------------------------------
+  1111 1111 #（计算的结果为反码，我们转换为原码的结果为：1000 0000，最终的结果为：-0，很显然按照反码计算答案也是否定的。）
+</code></pre>
 <p>3.使用补码计算10-10</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  0000 1010 # （10的补码）</span><br><span class="line">+ 1111 0110 # （-10的补码）</span><br><span class="line">------------------------------------------------------------</span><br><span class="line">1 0000 0000 # （由于我们这里使用了的1个字节存储，因此只能存储8位，最高位（第九位）那个1没有地方存，就被丢弃了。因此，结果为：0）</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="shell">
+  0000 1010 # （10的补码）
++ 1111 0110 # （-10的补码）
+------------------------------------------------------------
+1 0000 0000 # （由于我们这里使用了的1个字节存储，因此只能存储8位，最高位（第九位）那个1没有地方存，就被丢弃了。因此，结果为：0）
 
+</code></pre>
 
   
   
@@ -1231,10 +1259,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-10-12T03:00:08+00:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-10-20T06:33:36+00:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年10月12日</p>
+    <p>更新于：2021年10月20日</p>
   </a>
 </div>
 
@@ -1313,12 +1341,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/post/2021/10/12/1b559a5909e9af1a/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>记录一次NPM发包，以及NPM账号邮箱验证问题</p>
-          <p class='content'>记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。
-
-
-一、发包①切换仓库需...</p>
+        <a class='prev' href='/post/2021/10/20/ebe0fd672cfa55b6/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>SpringBoot集成Nacos2.0.3</p>
+          <p class='content'>本篇记录了关于Nacos-server2.0.3的搭建过程（VMware和CentOS7），以及SpringBoot整合Nacos，已搭建的可以跳过第一节看第三节的整合过程。
+记录和分享也是一种...</p>
         </a>
       
       
@@ -1790,6 +1816,8 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
+  loadCSS("https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/styles/atom-one-dark.css", window.volantis.loadcss);
+  
 </script>
 <!-- required -->
 
@@ -2259,7 +2287,7 @@ var loadCSS = function( href, before, media, attributes ){
   // rightmenu see: layout/_partial/rightmenu.ejs
 
   
-    loadScript("//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/aplayer.js")
+    loadScript("/js/aplayer.js")
   
 
 </script>
@@ -2269,7 +2297,7 @@ var loadCSS = function( href, before, media, attributes ){
 
   
   
-<script src="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/valine.js"></script>
+<script src="/js/valine.js"></script>
 
 
 <script>
@@ -2323,7 +2351,7 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-<script src="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/app.js"></script>
+<script src="/js/app.js"></script>
 
 
 
@@ -2359,6 +2387,20 @@ function setSearchService() {
 
 
 
+
+  
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+volantis.pjax.push(()=>{
+	document.querySelectorAll('pre code').forEach((block) => {
+	  hljs.highlightBlock(block);
+	});
+},"highlightjs")
+</script>
 
 
 

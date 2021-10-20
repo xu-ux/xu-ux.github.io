@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-    <meta name="robots" content="index, follow">
+    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -26,14 +26,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>hexo常用命令和Front-matter以及配置 - 因吹斯汀</title>
-  <meta name="title" content="hexo常用命令和Front-matter以及配置 - 因吹斯汀">
+  <title>记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀</title>
+  <meta name="title" content="记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀">
   
-    <meta name="keywords" content="hexo,博客搭建">
+    <meta name="keywords" content="npm,npm publish,npm发包,邮箱验证问题">
   
 
   
-    <meta name="description" content="这篇文章主要是记载Hexo的一些命令，以及Front-matter，还有就是config文件，方便后续查询使用">
+    <meta name="description" content="记录一次NPM发包，以及NPM账号邮箱验证问题">
   
 
   <!-- feed -->
@@ -151,7 +151,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -1013,7 +1013,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper post featured' style="display: ;">
+        <div id="full" class='cover-wrapper post featured' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://api.xuux.top/open/bg?type=location"></div>
           
@@ -1084,16 +1084,32 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class='headimg-div'>
       <a class='headimg-a'>
-        <img class='headimg' src='https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110120922796.jpg'/>
+        <img class='headimg' src='https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110121006872.png'/>
       </a>
     </div>
   
   <div class="article-meta" id="top">
     
+      
+
+  
+    <meting-js
+      mini='true'
+      volume='0.7'
+      loop='all'
+      order='list'
+      server='netease'
+      type='song'
+      id='16846091'>
+    </meting-js>
+  
+
+
+    
     
     
       <h1 class="title">
-        hexo常用命令和Front-matter以及配置
+        记录一次NPM发包，以及NPM账号邮箱验证问题
       </h1>
       <div class='new-meta-box'>
         
@@ -1113,7 +1129,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E5%8D%9A%E6%96%87/">博文</a>
+      <a class="category-link" href="/categories/%E5%BC%80%E5%8F%91/">开发</a>
     </a>
   </div>
 
@@ -1124,7 +1140,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2021年10月10日</p>
+    <p>发布于：2021年10月20日</p>
   </a>
 </div>
 
@@ -1135,7 +1151,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="hexo常用命令和Front-matter以及配置" data-path="/post/2021/10/10/fac9d98ac9d768af/">
+      <div id="lc-pv" data-title="记录一次NPM发包，以及NPM账号邮箱验证问题" data-path="/post/2021/10/20/1b559a5909e9af1a/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -1153,245 +1169,146 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <p>这篇文章主要是记载Hexo的一些命令，以及Front-matter，还有就是config文件，方便后续查询使用</p>
+  <p>记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。</p>
 <span id="more"></span>
 
-<blockquote>
-<p>Hexo网址</p>
-<p>指令：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">https://hexo.io/zh-cn/docs/commands</a></p>
-<p>Front-matter: <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter">https://hexo.io/zh-cn/docs/front-matter</a></p>
+<h2 id="一、发包"><a href="#一、发包" class="headerlink" title="一、发包"></a>一、发包</h2><h3 id="①切换仓库"><a href="#①切换仓库" class="headerlink" title="①切换仓库"></a>①切换仓库</h3><p>需要使用官方的仓库，而不是镜像仓库<code>https://registry.npm.taobao.org/</code>，需要设置<code>https</code>而不是<code>http</code></p>
+<pre><code class="shell">npm config set registry=https://registry.npmjs.org
+</code></pre>
+<h3 id="②-发布"><a href="#②-发布" class="headerlink" title="② 发布"></a>② 发布</h3><ol>
+<li><p>登录</p>
+<p><code>npm login</code></p>
+</li>
+<li><p>发布命令</p>
+<p><code>npm publish</code></p>
+</li>
+<li><p>发布成功后切换为镜像</p>
+<p><code>npm config set registry=https://registry.npm.taobao.org/</code></p>
+</li>
+<li><p>最终报错<strong>403问题</strong></p>
+<p>结果如下：</p>
+</li>
+</ol>
+<pre><code class="shell">npm ERR! code E403
+npm ERR! 403 403 Forbidden - PUT https://registry.npmjs.org/hexo-tag-codepen-x - Forbidden
+npm ERR! 403 In most cases, you or one of your dependencies are requesting
+npm ERR! 403 a package version that is forbidden by your security policy.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     D:\Program Files\nodejs\node_cache\_logs\2021-09-24T23_45_16_660Z-debug.log
+</code></pre>
+<ol start="5">
+<li><p>403问题：npm未完成邮箱验证</p>
+<p>百度了一下，应该是注册账户时，没有去激活邮箱导致的。</p>
+<p>所以我立马去<a target="_blank" rel="noopener" href="https://www.npmjs.com/">NPM</a>进行再次邮箱验证，npm发送了一封验证邮件（此时是在windows上操作的）</p>
+<pre><code>邮件中存在激活地址：
+https://www.npmjs.com/verify/f932abfa-63f3-415c-9213-88236039af03
+</code></pre>
+</li>
+</ol>
+<h2 id="二、-NPM账户邮箱激活失败"><a href="#二、-NPM账户邮箱激活失败" class="headerlink" title="二、 NPM账户邮箱激活失败"></a>二、 NPM账户邮箱激活失败</h2><p>在手机的邮箱APP内找到邮件</p>
+<p>点击激活地址后出现</p>
+<img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903631.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903631.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210925075241731" style="zoom: 67%;" />
+
+<pre><code class="text">looks like something unexpected occurred!
+diagnostics id: 693fe9a57df761ac~2c11
+</code></pre>
+<p>实际时没有激活成功的，此时<code>npm publish</code>还是会失败</p>
+<h2 id="三、解决方案"><a href="#三、解决方案" class="headerlink" title="三、解决方案"></a>三、解决方案</h2><p>最终，将链接复制到已登录npm账户的windows浏览器中，才完成激活邮箱</p>
+<p>再次尝试<code>npm publish</code>，发布成功！</p>
+<pre><code class="shell">npm notice package: hexo-tag-codepen-x@1.0.0
+npm notice === Tarball Contents ===
+npm notice 1.1kB LICENSE
+npm notice 1.8kB index.js
+npm notice 675B  package.json
+npm notice 2.4kB README.md
+npm notice 2.3kB zh/README.md
+npm notice === Tarball Details ===
+npm notice name:          hexo-tag-codepen-x
+npm notice version:       1.0.0
+npm notice package size:  3.4 kB
+npm notice unpacked size: 8.3 kB
+npm notice shasum:        872e466bab2a7e8be9a3df9aca9431e847047160
+npm notice integrity:     sha512-GN9ssDQ/Uy7SG[...]kfrgF6YXiOodw==
+npm notice total files:   5
+npm notice
++ hexo-tag-codepen-x@1.0.0
+</code></pre>
+<h2 id="四、其他，尝试发布到Github-Packages"><a href="#四、其他，尝试发布到Github-Packages" class="headerlink" title="四、其他，尝试发布到Github Packages"></a>四、其他，尝试发布到Github Packages</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.github.com/cn/packages/working-with-a-github-packages-registry/working-with-the-npm-registry">Github发包</a></p>
+<p>注意： GitHub Packages 只支持作用域内的 npm 包。 作用域内的包具有名称格式 <code>@owner/name</code>。 作用域内的包总是以 <code>@</code> 符号开头。 您可能需要更新 <em>package.json</em> 中的名称以使用作用域内的名称。 例如，<code>&quot;name&quot;: &quot;@codertocat/hello-world-npm&quot;</code>。</p>
 </blockquote>
-<h2 id="部分指令"><a href="#部分指令" class="headerlink" title="部分指令"></a>部分指令</h2><h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><pre><code class="bash">$ hexo new [layout] &lt;title&gt;
+<h3 id="㈠-命令式发布"><a href="#㈠-命令式发布" class="headerlink" title="㈠ 命令式发布"></a>㈠ 命令式发布</h3><h4 id="首先需要配置package-json"><a href="#首先需要配置package-json" class="headerlink" title="首先需要配置package.json"></a>首先需要配置<code>package.json</code></h4><pre><code class="json">&quot;publishConfig&quot;: &#123;
+　　&quot;registry&quot;: &quot;https://npm.pkg.github.com/&quot;
+&#125;,
 </code></pre>
-<p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用 <a href="configuration.html">_config.yml</a> 中的 <code>default_layout</code> 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
-<pre><code class="bash">$ hexo new &quot;post title with whitespace&quot;
+<h4 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h4><p>这里的密码是Personal access tokens</p>
+<p>需要的权限为：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903543.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903543.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210925084509943"></p>
+<pre><code class="shell">npm login --registry=https://npm.pkg.github.com
+Username: [USERNAME] # 如：xu-ux
+Password: [TOKEN] # 如：****************
+Email: (this IS public) [PUBLIC-EMAIL-ADDRESS] # 如：xu_uxo@163.com
+Logged in as xu-ux on https://npm.pkg.github.com/.
 </code></pre>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>-p</code>, <code>--path</code></td>
-<td>自定义新文章的路径</td>
-</tr>
-<tr>
-<td><code>-r</code>, <code>--replace</code></td>
-<td>如果存在同名文章，将其替换</td>
-</tr>
-<tr>
-<td><code>-s</code>, <code>--slug</code></td>
-<td>文章的 Slug，作为新文章的文件名和发布后的 URL</td>
-</tr>
-</tbody></table>
-<p>默认情况下，Hexo 会使用文章的标题来决定文章文件的路径。对于独立页面来说，Hexo 会创建一个以标题为名字的目录，并在目录中放置一个 <code>index.md</code> 文件。你可以使用 <code>--path</code> 参数来覆盖上述行为、自行决定文件的目录：</p>
-<pre><code class="bash">hexo new page --path about/me &quot;About me&quot;
+<h4 id="发布报错"><a href="#发布报错" class="headerlink" title="发布报错"></a>发布报错</h4><pre><code class="shell">npm ERR! code E404
+npm ERR! 404 Not Found - PUT https://npm.pkg.github.com/hexo-tag-codepen-x
+npm ERR! 404
+npm ERR! 404  &#39;hexo-tag-codepen-x@1.0.0&#39; is not in the npm registry.
+npm ERR! 404 You should bug the author to publish it (or use the name yourself!)
+npm ERR! 404
+npm ERR! 404 Note that you can also install from a
+npm ERR! 404 tarball, folder, http url, or git url.
 </code></pre>
-<p>以上命令会创建一个 <code>source/about/me.md</code> 文件，同时 Front Matter 中的 title 为 <code>&quot;About me&quot;</code></p>
-<p>注意！title 是必须指定的！如果你这么做并不能达到你的目的：</p>
-<pre><code class="bash">hexo new page --path about/me
+<h4 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h4><p><strong>GitHub Packages 只支持作用域内的 npm 包</strong></p>
+<p>所以修改包名</p>
+<pre><code>  &quot;name&quot;: &quot;@xu-ux/hexo-tag-codepen-x&quot;,
 </code></pre>
-<p>此时 Hexo 会创建 <code>source/_posts/about/me.md</code>，同时 <code>me.md</code> 的 Front Matter 中的 title 为 <code>&quot;page&quot;</code>。这是因为在上述命令中，hexo-cli 将 <code>page</code> 视为指定文章的标题、并采用默认的 <code>layout</code>。</p>
-<h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3><pre><code class="bash">$ hexo generate
+<p>再次发布，成功</p>
+<pre><code class="shell">npm notice package: @xu-ux/hexo-tag-codepen-x@1.0.0
+npm notice === Tarball Contents ===
+npm notice 1.1kB LICENSE
+npm notice 1.8kB index.js
+npm notice 756B  package.json
+npm notice 2.5kB README.md
+npm notice 2.4kB zh/README.md
+npm notice === Tarball Details ===
+npm notice name:          @xu-ux/hexo-tag-codepen-x
+npm notice version:       1.0.0
+npm notice package size:  3.4 kB
+npm notice unpacked size: 8.5 kB
+npm notice shasum:        6a387fe4e65edeb8c8e2111fb267c1e4c3032313
+npm notice integrity:     sha512-bjL6fWv1AazIb[...]iIHOVQ7iefKVQ==
+npm notice total files:   5
+npm notice
++ @xu-ux/hexo-tag-codepen-x@1.0.0
 </code></pre>
-<p>生成静态文件。</p>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>-d</code>, <code>--deploy</code></td>
-<td>文件生成后立即部署网站</td>
-</tr>
-<tr>
-<td><code>-w</code>, <code>--watch</code></td>
-<td>监视文件变动</td>
-</tr>
-<tr>
-<td><code>-b</code>, <code>--bail</code></td>
-<td>生成过程中如果发生任何未处理的异常则抛出异常</td>
-</tr>
-<tr>
-<td><code>-f</code>, <code>--force</code></td>
-<td>强制重新生成文件<br>Hexo 引入了差分机制，如果 <code>public</code> 目录存在，那么 <code>hexo g</code> 只会重新生成改动的文件。<br>使用该参数的效果接近 <code>hexo clean &amp;&amp; hexo generate</code></td>
-</tr>
-<tr>
-<td><code>-c</code>, <code>--concurrency</code></td>
-<td>最大同时生成文件的数量，默认无限制</td>
-</tr>
-</tbody></table>
-<p>该命令可以简写为</p>
-<pre><code class="bash">$ hexo g
+<h3 id="㈡-配置发布"><a href="#㈡-配置发布" class="headerlink" title="㈡ 配置发布"></a>㈡ 配置发布</h3><p>除了使用命令式输入<code>Token</code>外(每次都要输入比较麻烦)</p>
+<ol>
+<li><p>还可以将<code>Token</code>添加至<code>~/.npmrc</code>，<code>win</code>用户是路径<code>C://users/current-user</code></p>
+<pre><code>//npm.pkg.github.com/:_authToken=TOKEN
 </code></pre>
-<h3 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h3><pre><code class="bash">$ hexo publish [layout] &lt;filename&gt;
+</li>
+<li><p>在<code>package.json</code>所在目录创建一个<code>.npmrc</code>文件，并添加以下内容</p>
+<pre><code>registry=https://npm.pkg.github.com/GitHub用户名
 </code></pre>
-<p>发表草稿。</p>
-<h3 id="server"><a href="#server" class="headerlink" title="server"></a>server</h3><pre><code class="bash">$ hexo server
+</li>
+<li><p>发布</p>
+<p>可以直接使用<code>npm publish</code>，也不用在<code>package.json</code>填写<code>publishConfig</code></p>
+</li>
+</ol>
+<h3 id="㈢-安装"><a href="#㈢-安装" class="headerlink" title="㈢ 安装"></a>㈢ 安装</h3><p>需要注意的是，无论发布包还是安装包都需要授权，也就是上述生成<code>Token</code>以及配置的过程，否则无法安装指定的包。</p>
+<h4 id="Ⅰ-已配置-npmrc"><a href="#Ⅰ-已配置-npmrc" class="headerlink" title="Ⅰ.已配置~/.npmrc"></a>Ⅰ.已配置<code>~/.npmrc</code></h4><p>已经配置了<code>.npmrc</code>文件的，可以直接使用如下命令</p>
+<pre><code class="shell">npm install @xu-ux/hexo-tag-codepen-x@1.0.0 --registry=https://npm.pkg.github.com/
 </code></pre>
-<p>启动服务器。默认情况下，访问网址为： <code>http://localhost:4000/</code>。</p>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>-p</code>, <code>--port</code></td>
-<td>重设端口</td>
-</tr>
-<tr>
-<td><code>-s</code>, <code>--static</code></td>
-<td>只使用静态文件</td>
-</tr>
-<tr>
-<td><code>-l</code>, <code>--log</code></td>
-<td>启动日记记录，使用覆盖记录格式</td>
-</tr>
-</tbody></table>
-<h2 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h2><pre><code class="bash">$ hexo deploy
+<h4 id="Ⅱ-使用命令方式"><a href="#Ⅱ-使用命令方式" class="headerlink" title="Ⅱ.使用命令方式"></a>Ⅱ.使用命令方式</h4><p>首先登录</p>
+<pre><code class="shell">npm login --registry=https://npm.pkg.github.com
+&gt; Username: USERNAME
+&gt; Password: TOKEN
+&gt; Email: PUBLIC-EMAIL-ADDRESS
 </code></pre>
-<p>部署网站。</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>-g</code>, <code>--generate</code></td>
-<td>部署之前预先生成静态文件</td>
-</tr>
-</tbody></table>
-<p>该命令可以简写为：</p>
-<pre><code class="bash">$ hexo d
-</code></pre>
-<h3 id="render"><a href="#render" class="headerlink" title="render"></a>render</h3><pre><code class="bash">$ hexo render &lt;file1&gt; [file2] ...
-</code></pre>
-<p>渲染文件。</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>-o</code>, <code>--output</code></td>
-<td>设置输出路径</td>
-</tr>
-</tbody></table>
-<h3 id="migrate"><a href="#migrate" class="headerlink" title="migrate"></a>migrate</h3><pre><code class="bash">$ hexo migrate &lt;type&gt;
-</code></pre>
-<p>从其他博客系统 <a href="migration.html">迁移内容</a>。</p>
-<h3 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h3><pre><code class="bash">$ hexo clean
-</code></pre>
-<p>清除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。</p>
-<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-<p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，举例来说：</p>
-<pre><code class="yaml">---
-title: Hello World
-date: 2013/7/13 20:46:25
----
-</code></pre>
-<h2 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h2><p>以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>layout</code></td>
-<td>布局</td>
-<td><a href="/zh-cn/docs/configuration#%E6%96%87%E7%AB%A0"><code>config.default_layout</code></a></td>
-</tr>
-<tr>
-<td><code>title</code></td>
-<td>标题</td>
-<td>文章的文件名</td>
-</tr>
-<tr>
-<td><code>date</code></td>
-<td>建立日期</td>
-<td>文件建立日期</td>
-</tr>
-<tr>
-<td><code>updated</code></td>
-<td>更新日期</td>
-<td>文件更新日期</td>
-</tr>
-<tr>
-<td><code>comments</code></td>
-<td>开启文章的评论功能</td>
-<td>true</td>
-</tr>
-<tr>
-<td><code>tags</code></td>
-<td>标签（不适用于分页）</td>
-<td></td>
-</tr>
-<tr>
-<td><code>categories</code></td>
-<td>分类（不适用于分页）</td>
-<td></td>
-</tr>
-<tr>
-<td><code>permalink</code></td>
-<td>覆盖文章网址</td>
-<td></td>
-</tr>
-<tr>
-<td><code>excerpt</code></td>
-<td>Page excerpt in plain text. Use <a href="/docs/tag-plugins#Post-Excerpt">this plugin</a> to format the text</td>
-<td></td>
-</tr>
-<tr>
-<td><code>disableNunjucks</code></td>
-<td>Disable rendering of Nunjucks tag <code>&#123;&#123; &#125;&#125;</code>/<code>&#123;% %&#125;</code> and <a href="/docs/tag-plugins">tag plugins</a> when enabled</td>
-<td></td>
-</tr>
-<tr>
-<td><code>lang</code></td>
-<td>Set the language to override <a href="/docs/internationalization#Path">auto-detection</a></td>
-<td>Inherited from <code>_config.yml</code></td>
-</tr>
-</tbody></table>
-<h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h3><p>The default layout is <code>post</code>, in accordance to the value of <a href="(/docs/configuration#Writing)"><code>default_layout</code></a> setting in <code>_config.yml</code>. When the layout is disabled (<code>layout: false</code>) in an article, it will not be processed with a theme. However, it will still be rendered by any available renderer: if an article is written in Markdown and a Markdown renderer (like the default <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-marked">hexo-renderer-marked</a>) is installed, it will be rendered to HTML.</p>
-<p><a href="/docs/tag-plugins">Tag plugins</a> are always processed regardless of layout, unless disabled by the <code>disableNunjucks</code> setting or <a href="/api/renderer#Disable-Nunjucks-tags">renderer</a>.</p>
-<h3 id="分类和标签"><a href="#分类和标签" class="headerlink" title="分类和标签"></a>分类和标签</h3><p>只有文章支持分类和标签，您可以在 Front-matter 中设置。在其他系统中，分类和标签听起来很接近，但是在 Hexo 中两者有着明显的差别：分类具有顺序性和层次性，也就是说 <code>Foo, Bar</code> 不等于 <code>Bar, Foo</code>；而标签没有顺序和层次。</p>
-<pre><code class="yaml">categories:
-- Diary
-tags:
-- PS3
-- Games
-</code></pre>
-<div class="note"><p>warn 分类方法的分歧</p></div>
-<p>如果您有过使用 WordPress 的经验，就很容易误解 Hexo 的分类方式。WordPress 支持对一篇文章设置多个分类，而且这些分类可以是同级的，也可以是父子分类。但是 Hexo 不支持指定多个同级分类。下面的指定方法：</p>
-<pre><code class="yaml">categories:
-  - Diary
-  - Life
-</code></pre>
-<p>会使分类<code>Life</code>成为<code>Diary</code>的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。</p>
-<p>如果你需要为文章添加多个分类，可以尝试以下 list 中的方法。</p>
-<pre><code class="yaml">categories:
-- [Diary, PlayStation]
-- [Diary, Games]
-- [Life]
-</code></pre>
-<p>此时这篇文章同时包括三个分类： <code>PlayStation</code> 和 <code>Games</code> 分别都是父分类 <code>Diary</code> 的子分类，同时 <code>Life</code> 是一个没有子分类的分类。</p>
-<h3 id="JSON-Front-matter"><a href="#JSON-Front-matter" class="headerlink" title="JSON Front-matter"></a>JSON Front-matter</h3><p>除了 YAML 外，你也可以使用 JSON 来编写 Front-matter，只要将 <code>---</code> 代换成 <code>;;;</code> 即可。</p>
-<pre><code class="json">&quot;title&quot;: &quot;Hello World&quot;,
-&quot;date&quot;: &quot;2013/7/13 20:46:25&quot;
-;;;
+<p>再安装</p>
+<pre><code class="shell">npm install @xu-ux/hexo-tag-codepen-x@1.0.0
 </code></pre>
 
   
@@ -1410,7 +1327,7 @@ tags:
               
             
               
-                <p>本文永久链接是：<a href=https://xu-ux.github.io/post/2021/10/10/fac9d98ac9d768af/>https://xu-ux.github.io/post/2021/10/10/fac9d98ac9d768af/</a></p>
+                <p>本文永久链接是：<a href=https://xu-ux.github.io/post/2021/10/20/1b559a5909e9af1a/>https://xu-ux.github.io/post/2021/10/20/1b559a5909e9af1a/</a></p>
               
             
           </blockquote>
@@ -1439,7 +1356,7 @@ tags:
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/hexo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>hexo,博客搭建</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/npm/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>npm</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/nodejs/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>nodejs</p></a></div>
 
 
         
@@ -1452,7 +1369,7 @@ tags:
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xu-ux.github.io/post/2021/10/10/fac9d98ac9d768af/&title=hexo常用命令和Front-matter以及配置 - 因吹斯汀&summary=这篇文章主要是记载Hexo的一些命令，以及Front-matter，还有就是config文件，方便后续查询使用"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xu-ux.github.io/post/2021/10/20/1b559a5909e9af1a/&title=记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀&summary=记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。"
           
           >
           
@@ -1464,7 +1381,7 @@ tags:
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xu-ux.github.io/post/2021/10/10/fac9d98ac9d768af/&title=hexo常用命令和Front-matter以及配置 - 因吹斯汀&summary=这篇文章主要是记载Hexo的一些命令，以及Front-matter，还有就是config文件，方便后续查询使用"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xu-ux.github.io/post/2021/10/20/1b559a5909e9af1a/&title=记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀&summary=记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。"
           
           >
           
@@ -1476,7 +1393,7 @@ tags:
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://xu-ux.github.io/post/2021/10/10/fac9d98ac9d768af/&title=hexo常用命令和Front-matter以及配置 - 因吹斯汀&summary=这篇文章主要是记载Hexo的一些命令，以及Front-matter，还有就是config文件，方便后续查询使用"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://xu-ux.github.io/post/2021/10/20/1b559a5909e9af1a/&title=记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀&summary=记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。"
           
           >
           
@@ -1506,17 +1423,11 @@ tags:
   
     <div class="prev-next">
       
-        <a class='prev' href='/post/2021/10/12/ecd6c7b9993a66f4/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>详解java中的byte类型</p>
-          <p class='content'>byte，即字节，由8位的二进制组成。在Java中，byte类型的数据是8位带符号的二进制数。
-在计算机中，8位带符号二进制数的取值范围是[-128, 127]，所以在Java中，byte类型的...</p>
-        </a>
       
-      
-        <a class='next' href='/post/2021/09/27/8686122d46a23fb2/'>
-          <p class='title'>hexo使用grunt实现自动化<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>
-  24d155d77c74164c84884574dc36d69d5fe7507516e04088336adedaa71532c11433f56aa4b34faec180a09f60db03...</p>
+        <a class='next' href='/post/2021/10/20/ebe0fd672cfa55b6/'>
+          <p class='title'>SpringBoot集成Nacos2.0.3<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>本篇记录了关于Nacos-server2.0.3的搭建过程（VMware和CentOS7），以及SpringBoot整合Nacos，已搭建的可以跳过第一节看第三节的整合过程。
+记录和分享也是一种...</p>
         </a>
       
     </div>
@@ -1547,58 +1458,6 @@ tags:
     
     
 
-<section class="widget grid shadow desktop mobile">
-  
-  <header>
-    
-      <a href='/'><i class="fad fa-map-signs fa-fw" aria-hidden="true"></i><span class='name'>导航</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="grid navigation">
-      
-        <a class="flat-box" title="/about/" href="/about/"
-          
-          
-          id="about">
-          
-            <i class="fad faa-ring faa-slow fa-address-card fa-fw" aria-hidden="true"></i>
-          
-          关于
-        </a>
-      
-        <a class="flat-box" title="/p/messages/" href="/p/messages/"
-          
-          
-          id="pmessages">
-          
-            <i class="fad fa-comment-alt-dots fa-fw" aria-hidden="true"></i>
-          
-          留言
-        </a>
-      
-        <a class="flat-box" title="/other/covid-19/" href="/other/covid-19/"
-          
-          
-          id="othercovid-19">
-          
-            <i class="fad fa-chart-line-down fa-fw" aria-hidden="true"></i>
-          
-          新冠
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
 
 
   <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
@@ -1611,7 +1470,7 @@ tags:
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E5%88%86%E6%8C%87%E4%BB%A4"><span class="toc-text">部分指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#new"><span class="toc-text">new</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#generate"><span class="toc-text">generate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#publish"><span class="toc-text">publish</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#server"><span class="toc-text">server</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#deploy"><span class="toc-text">deploy</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#render"><span class="toc-text">render</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#migrate"><span class="toc-text">migrate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#clean"><span class="toc-text">clean</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Front-matter"><span class="toc-text">Front-matter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%83%E5%B1%80"><span class="toc-text">布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE"><span class="toc-text">分类和标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSON-Front-matter"><span class="toc-text">JSON Front-matter</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%8F%91%E5%8C%85"><span class="toc-text">一、发包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%91%A0%E5%88%87%E6%8D%A2%E4%BB%93%E5%BA%93"><span class="toc-text">①切换仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%91%A1-%E5%8F%91%E5%B8%83"><span class="toc-text">② 发布</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81-NPM%E8%B4%A6%E6%88%B7%E9%82%AE%E7%AE%B1%E6%BF%80%E6%B4%BB%E5%A4%B1%E8%B4%A5"><span class="toc-text">二、 NPM账户邮箱激活失败</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">三、解决方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%85%B6%E4%BB%96%EF%BC%8C%E5%B0%9D%E8%AF%95%E5%8F%91%E5%B8%83%E5%88%B0Github-Packages"><span class="toc-text">四、其他，尝试发布到Github Packages</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%88%A0-%E5%91%BD%E4%BB%A4%E5%BC%8F%E5%8F%91%E5%B8%83"><span class="toc-text">㈠ 命令式发布</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E9%9C%80%E8%A6%81%E9%85%8D%E7%BD%AEpackage-json"><span class="toc-text">首先需要配置package.json</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96token"><span class="toc-text">获取token</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%91%E5%B8%83%E6%8A%A5%E9%94%99"><span class="toc-text">发布报错</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3"><span class="toc-text">解决</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%88%A1-%E9%85%8D%E7%BD%AE%E5%8F%91%E5%B8%83"><span class="toc-text">㈡ 配置发布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%88%A2-%E5%AE%89%E8%A3%85"><span class="toc-text">㈢ 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%85%A0-%E5%B7%B2%E9%85%8D%E7%BD%AE-npmrc"><span class="toc-text">Ⅰ.已配置~&#x2F;.npmrc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%85%A1-%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E6%96%B9%E5%BC%8F"><span class="toc-text">Ⅱ.使用命令方式</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -1630,20 +1489,20 @@ tags:
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="hexo常用命令和Front-matter以及配置";
+  pdata.postTitle="记录一次NPM发包，以及NPM账号邮箱验证问题";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="half";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>
