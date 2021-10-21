@@ -17,12 +17,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <link rel="preload" href="/css/first.css" as="style">
+  <link rel="preload" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/first.css" as="style">
   
-  
-<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/lib/languages/powershell.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/lib/languages/shell.js"></script>
-
 
   <!-- 页面元数据 -->
   
@@ -75,8 +71,8 @@
   
 
   
-  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/style.css"></noscript>
   
 
   <script id="loadcss"></script>
@@ -145,7 +141,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script src='/js/debuggerSafe.js'></script>
+  <!--<script src='//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/debuggerSafe.js'></script>-->
+
+  <!-- fancybox support -->
+  
+
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/fancybox/jquery.fancybox.min.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.9.1/jquery.min.js"  ></script>
+    <script src='//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/fancybox/jquery.fancybox.min.js' ></script>
+    <script src='//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/fancybox/wrapImage.js' ></script>
+    <!-- fancybox end -->
+
 </head>
 
   <body>
@@ -1221,23 +1228,23 @@ nacos/nacos
 <h3 id="VMware设置"><a href="#VMware设置" class="headerlink" title="VMware设置"></a>VMware设置</h3><p>由于我的CentOS7是安装在虚拟机内（需要设置静态IP），若要宿主机所在局域网其他用户访问使用，还需要使用NAT功能，<strong>如果仅仅是个人测试，可以忽略该步骤</strong></p>
 <p><strong>选择编辑-虚拟网络编辑器</strong></p>
 <p>选择<strong>更改设置</strong>，授权</p>
-<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245433.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245433.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020093340398"></p>
+<p><a data-fancybox="images" data-caption="image-20211020093340398" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245433.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245433.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245433.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020093340398"></a></p>
 <p>选择<strong>NAT模式</strong>下的<strong>NAT</strong>设置</p>
-<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245998.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245998.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020093456456"></p>
+<p><a data-fancybox="images" data-caption="image-20211020093456456" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245998.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245998.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245998.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020093456456"></a></p>
 <p><strong>添加端口映射</strong></p>
 <p>使用添加按钮，增加端口映射，另外需要<strong>额外开放9848 9849端口</strong>，我的虚拟机是192.168.122.22，大家的可能有所不同，如果是动态分配的，还请将centos设置为静态ip，再尝试NAT</p>
 <blockquote>
 <p>当nacos客户端升级为2.x版本后，新增了gRPC的通信方式，新增了两个端口。这两个端口在nacos原先的端口上(默认8848)，进行一定偏移量自动生成.</p>
 <p>端口    与主端口的偏移量    描述<br>9848    1000    客户端gRPC请求服务端端口，用于客户端向服务端发起连接和请求<br>9849    1001    服务端gRPC请求服务端端口，用于服务间同步等</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245145.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245145.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020093629368"></p>
+<p><a data-fancybox="images" data-caption="image-20211020093629368" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245145.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245145.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245145.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020093629368"></a></p>
 <h2 id="二、Nacos简单使用"><a href="#二、Nacos简单使用" class="headerlink" title="二、Nacos简单使用"></a>二、Nacos简单使用</h2><p>登录上我们刚刚启动的nacos（nacos/nacos），大概界面如下</p>
-<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245990.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245990.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020094818100"></p>
+<p><a data-fancybox="images" data-caption="image-20211020094818100" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245990.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245990.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245990.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020094818100"></a></p>
 <p>由于我们是单机版，所以集群列表里面只有一台服务器</p>
-<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245031.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245031.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020094908090"></p>
+<p><a data-fancybox="images" data-caption="image-20211020094908090" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245031.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245031.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245031.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020094908090"></a></p>
 <h3 id="2-1-新建命名空间"><a href="#2-1-新建命名空间" class="headerlink" title="2.1 新建命名空间"></a>2.1 新建命名空间</h3><p>新建一个命名空间，待会儿，我们整合时就使用这个名为<code>springboot</code>的命名空间</p>
-<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245246.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245246.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020095028546"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245209.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245209.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020095132408"></p>
+<p><a data-fancybox="images" data-caption="image-20211020095028546" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245246.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245246.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245246.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020095028546"></a></p>
+<p><a data-fancybox="images" data-caption="image-20211020095132408" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245209.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245209.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201245209.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020095132408"></a></p>
 <h3 id="2-2-新增配置"><a href="#2-2-新增配置" class="headerlink" title="2.2 新增配置"></a>2.2 新增配置</h3><h4 id="Data-ID"><a href="#Data-ID" class="headerlink" title="Data ID"></a>Data ID</h4><p>在 Nacos Spring Cloud 中，<code>dataId</code> 的完整格式如下：</p>
 <pre><code class="yaml">$&#123;prefix&#125;-$&#123;spring.profiles.active&#125;.$&#123;file-extension&#125;
 </code></pre>
@@ -1249,9 +1256,9 @@ nacos/nacos
 <h4 id="Group"><a href="#Group" class="headerlink" title="Group"></a>Group</h4><p>默认为DEFAULT_GROUP,可以对不同类型的微服务配置文件进行分组管理。配置文件通过，可以用作多环境、多模块、多版本之间区分配置。<br>SpringCloud<code>spring.cloud.nacos.config.group=GROUP</code></p>
 <p>SpringBoot<code>nacos.config.group=GROUP</code></p>
 <h4 id="Namespace"><a href="#Namespace" class="headerlink" title="Namespace"></a>Namespace</h4><p>推荐使用命名空间来区分不同环境的配置，因为使用<code>profiles</code>或<code>group</code>会是不同环境的配置展示到一个页面，而Nacos控制台对不同的<code>Namespace</code>做了Tab栏分组展示</p>
-<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246414.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246414.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020100455356"></p>
+<p><a data-fancybox="images" data-caption="image-20211020100455356" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246414.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246414.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246414.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020100455356"></a></p>
 <p>添加如下配置：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246688.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246688.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020101502465"></p>
+<p><a data-fancybox="images" data-caption="image-20211020101502465" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246688.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246688.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246688.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020101502465"></a></p>
 <p>yaml文件如下：</p>
 <pre><code class="yaml">server:
   port: 8082
@@ -1266,7 +1273,7 @@ nacos/nacos
     min-response-size: 2KB
 </code></pre>
 <p>添加完成，为后面整合做准备</p>
-<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246687.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246687.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020101601866"></p>
+<p><a data-fancybox="images" data-caption="image-20211020101601866" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246687.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246687.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246687.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020101601866"></a></p>
 <h2 id="三、SpringBoot整合Nacos2-0-3"><a href="#三、SpringBoot整合Nacos2-0-3" class="headerlink" title="三、SpringBoot整合Nacos2.0.3"></a>三、SpringBoot整合Nacos2.0.3</h2><blockquote>
 <p>[官方文档](<a target="_blank" rel="noopener" href="https://nacos.io/zh-cn/docs/quick-start-spring-boot.html">Nacos Spring Boot 快速开始</a>)</p>
 <p><a target="_blank" rel="noopener" href="https://nacos.io/zh-cn/blog/2.0.3-release.html">Nacos 2.0.3版本发布，继续提升集群稳定性及升级稳定性</a></p>
@@ -1344,7 +1351,7 @@ nacos/nacos
       log-enable: true
 </code></pre>
 <p>启动项目，控制台输出</p>
-<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246719.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246719.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020113255129"></p>
+<p><a data-fancybox="images" data-caption="image-20211020113255129" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246719.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246719.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246719.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020113255129"></a></p>
 <h3 id="3-3-服务注册"><a href="#3-3-服务注册" class="headerlink" title="3.3 服务注册"></a>3.3 服务注册</h3><p>使用注解@PostConstruct，在服务启动后自动向Nacos服务注册</p>
 <pre><code class="java">@Configuration
 public class NacosRegisterConfiguration &#123;
@@ -1365,13 +1372,13 @@ public class NacosRegisterConfiguration &#123;
 &#125;
 </code></pre>
 <p>启动应用后，在Nacos管理界面可以看到新注册的服务实例</p>
-<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246794.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246794.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020104109153"></p>
+<p><a data-fancybox="images" data-caption="image-20211020104109153" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246794.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246794.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201246794.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020104109153"></a></p>
 <h3 id="3-4-服务调用"><a href="#3-4-服务调用" class="headerlink" title="3.4 服务调用"></a>3.4 服务调用</h3><p>模拟调用获取学生信息</p>
 <p>创建一个项目<code>nacos-config-discovery-producer</code></p>
 <p>详细工程地址：<a target="_blank" rel="noopener" href="https://github.com/xucux/nacos-config-discovery-demo">https://github.com/xucux/nacos-config-discovery-demo</a></p>
 <p>主要使用<code>nacos-config-discovery-springboot</code>调用<code>nacos-config-discovery-producer</code></p>
 <p>启动两个工程，可以发现nacos上已经出现了两个服务：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201247119.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201247119.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020123913609"></p>
+<p><a data-fancybox="images" data-caption="image-20211020123913609" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201247119.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201247119.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110201247119.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20211020123913609"></a></p>
 <p>在<code>nacos-config-discovery-springboot</code>中创建一个Controller，作为对外api和接口消费者</p>
 <pre><code class="java">@Slf4j
 @RestController
@@ -1478,10 +1485,10 @@ public class StudentController &#123;
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-10-20T06:33:36+00:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-10-21T03:21:12+00:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年10月20日</p>
+    <p>更新于：2021年10月21日</p>
   </a>
 </div>
 
@@ -1557,7 +1564,7 @@ public class StudentController &#123;
   
     <div class="prev-next">
       
-        <a class='prev' href='/post/2021/10/20/1b559a5909e9af1a/'>
+        <a class='prev' href='/post/2021/10/21/1b559a5909e9af1a/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>记录一次NPM发包，以及NPM账号邮箱验证问题</p>
           <p class='content'>记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。
 
@@ -2501,7 +2508,7 @@ var loadCSS = function( href, before, media, attributes ){
   // rightmenu see: layout/_partial/rightmenu.ejs
 
   
-    loadScript("/js/aplayer.js")
+    loadScript("//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/aplayer.js")
   
 
 </script>
@@ -2511,7 +2518,7 @@ var loadCSS = function( href, before, media, attributes ){
 
   
   
-<script src="/js/valine.js"></script>
+<script src="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/valine.js"></script>
 
 
 <script>
@@ -2565,7 +2572,7 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-<script src="/js/app.js"></script>
+<script src="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/app.js"></script>
 
 
 
@@ -2607,6 +2614,13 @@ function setSearchService() {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
 
 <script>hljs.initHighlightingOnLoad();</script>
+
+
+<!-- hjs其他语言 -->
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/languages/powershell.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/languages/shell.min.js"></script>
+
 
 <script>
 volantis.pjax.push(()=>{

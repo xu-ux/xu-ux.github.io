@@ -17,12 +17,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <link rel="preload" href="/css/first.css" as="style">
+  <link rel="preload" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/first.css" as="style">
   
-  
-<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/lib/languages/powershell.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/lib/languages/shell.js"></script>
-
 
   <!-- 页面元数据 -->
   
@@ -75,8 +71,8 @@
   
 
   
-  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/style.css"></noscript>
   
 
   <script id="loadcss"></script>
@@ -145,7 +141,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script src='/js/debuggerSafe.js'></script>
+  <!--<script src='//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/debuggerSafe.js'></script>-->
+
+  <!-- fancybox support -->
+  
+
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/css/fancybox/jquery.fancybox.min.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.9.1/jquery.min.js"  ></script>
+    <script src='//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/fancybox/jquery.fancybox.min.js' ></script>
+    <script src='//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/fancybox/wrapImage.js' ></script>
+    <!-- fancybox end -->
+
 </head>
 
   <body>
@@ -1140,7 +1147,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2021年10月20日</p>
+    <p>发布于：2021年10月21日</p>
   </a>
 </div>
 
@@ -1151,7 +1158,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="记录一次NPM发包，以及NPM账号邮箱验证问题" data-path="/post/2021/10/20/1b559a5909e9af1a/">
+      <div id="lc-pv" data-title="记录一次NPM发包，以及NPM账号邮箱验证问题" data-path="/post/2021/10/21/1b559a5909e9af1a/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -1244,7 +1251,7 @@ npm notice
 </code></pre>
 <h4 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h4><p>这里的密码是Personal access tokens</p>
 <p>需要的权限为：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903543.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903543.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210925084509943"></p>
+<p><a data-fancybox="images" data-caption="image-20210925084509943" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903543.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903543.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903543.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210925084509943"></a></p>
 <pre><code class="shell">npm login --registry=https://npm.pkg.github.com
 Username: [USERNAME] # 如：xu-ux
 Password: [TOKEN] # 如：****************
@@ -1327,7 +1334,7 @@ npm notice
               
             
               
-                <p>本文永久链接是：<a href=https://xu-ux.github.io/post/2021/10/20/1b559a5909e9af1a/>https://xu-ux.github.io/post/2021/10/20/1b559a5909e9af1a/</a></p>
+                <p>本文永久链接是：<a href=https://xu-ux.github.io/post/2021/10/21/1b559a5909e9af1a/>https://xu-ux.github.io/post/2021/10/21/1b559a5909e9af1a/</a></p>
               
             
           </blockquote>
@@ -1344,10 +1351,10 @@ npm notice
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-10-20T06:33:36+00:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-10-21T03:21:12+00:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年10月20日</p>
+    <p>更新于：2021年10月21日</p>
   </a>
 </div>
 
@@ -1369,7 +1376,7 @@ npm notice
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xu-ux.github.io/post/2021/10/20/1b559a5909e9af1a/&title=记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀&summary=记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xu-ux.github.io/post/2021/10/21/1b559a5909e9af1a/&title=记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀&summary=记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。"
           
           >
           
@@ -1381,7 +1388,7 @@ npm notice
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xu-ux.github.io/post/2021/10/20/1b559a5909e9af1a/&title=记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀&summary=记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xu-ux.github.io/post/2021/10/21/1b559a5909e9af1a/&title=记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀&summary=记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。"
           
           >
           
@@ -1393,7 +1400,7 @@ npm notice
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://xu-ux.github.io/post/2021/10/20/1b559a5909e9af1a/&title=记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀&summary=记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://xu-ux.github.io/post/2021/10/21/1b559a5909e9af1a/&title=记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀&summary=记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。"
           
           >
           
@@ -2307,7 +2314,7 @@ var loadCSS = function( href, before, media, attributes ){
   // rightmenu see: layout/_partial/rightmenu.ejs
 
   
-    loadScript("/js/aplayer.js")
+    loadScript("//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/aplayer.js")
   
 
 </script>
@@ -2317,7 +2324,7 @@ var loadCSS = function( href, before, media, attributes ){
 
   
   
-<script src="/js/valine.js"></script>
+<script src="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/valine.js"></script>
 
 
 <script>
@@ -2371,7 +2378,7 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-<script src="/js/app.js"></script>
+<script src="//cdn.jsdelivr.net/gh/xu-ux/xu-ux.github.io@main/js/app.js"></script>
 
 
 
@@ -2413,6 +2420,13 @@ function setSearchService() {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
 
 <script>hljs.initHighlightingOnLoad();</script>
+
+
+<!-- hjs其他语言 -->
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/languages/powershell.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/languages/shell.min.js"></script>
+
 
 <script>
 volantis.pjax.push(()=>{
