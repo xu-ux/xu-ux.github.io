@@ -1167,7 +1167,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><a target="_blank" rel="noopener" href="https://github.com/spotify/docker-maven-plugin">docker-maven-plugin文档</a><br><a target="_blank" rel="noopener" href="https://github.com/spotify/dockerfile-maven">dockerfile-maven-plugin文档</a><br>禁止转载！！！禁止转载！！！禁止转载！！！<br>首发地址：<a target="_blank" rel="noopener" href="https://xu.vercel.app/post/2021/11/17/f5a0556a47d149a3/">xu.vercel.app</a></p>
 </blockquote>
 <h2 id="一、修改docker配置"><a href="#一、修改docker配置" class="headerlink" title="一、修改docker配置"></a>一、修改docker配置</h2><p>修改宿主机的docker配置，让其可以远程访问</p>
-<pre><code class="shell">vi /lib/systemd/system/docker.service
+<pre><code class="shell">
+vi /lib/systemd/system/docker.service
 # 在ExecStart=后添加配置 
 ‐H tcp://0.0.0.0:2375 ‐H unix:///var/run/docker.sock
 </code></pre>
@@ -1184,7 +1185,6 @@ systemctl restart docker
 <pre><code class="shell">ps -ef | grep docker 
 [root@localhost ~]# curl -X GET http://192.168.122.22:2375/info
 &#123;&quot;ID&quot;:&quot;XHRK:S4AH:7YDS:X43Y:BFCZ:XQ5N:VBIV:K6V4:SUVK:VFPM:JJYS:KZBB&quot;,&quot;Containers&quot;:7,&quot;ContainersRunning&quot;:4,&quot;ContainersPaused&quot;:0,&quot;ContainersStopped&quot;:3,&quot;Images&quot;:7,&quot;Driver&quot;:&quot;overlay2&quot;,&quot;DriverStatus&quot;:[[&quot;Backing Filesystem&quot;,&quot;xfs&quot;],[&quot;Supports d_type&quot;,&quot;true&quot;],[&quot;Native Overlay Diff&quot;,&quot;true&quot;],[&quot;userxattr&quot;,&quot;false&quot;]],&quot;Plugins&quot;:&#123;&quot;Volume&quot;:[&quot;local&quot;],&quot;Network&quot;:[&quot;bridge&quot;,&quot;host&quot;,&quot;ipvlan&quot;,&quot;macvlan&quot;,&quot;null&quot;,&quot;overlay&quot;],&quot;Authorization&quot;:null,&quot;Log&quot;:[&quot;awslogs&quot;,&quot;fluentd&quot;,&quot;gcplogs&quot;,&quot;gelf&quot;,&quot;journald&quot;,&quot;json-file&quot;,&quot;local&quot;,&quot;logentries&quot;,&quot;splunk&quot;,&quot;syslog&quot;]&#125;,&quot;MemoryLimit&quot;:true,&quot;SwapLimit&quot;:true,&quot;KernelMemory&quot;:true,&quot;KernelMemoryTCP&quot;:true,&quot;CpuCfsPeriod&quot;:true,&quot;CpuCfsQuota&quot;:true,&quot;CPUShares&quot;:true,&quot;CPUSet&quot;:true,&quot;PidsLimit&quot;:true,&quot;IPv4Forwarding&quot;:true,&quot;BridgeNfIptables&quot;:false,&quot;BridgeNfIp6tables&quot;:false,&quot;Debug&quot;:false,&quot;NFd&quot;:50,&quot;OomKillDisable&quot;:true,&quot;NGoroutines&quot;:55,&quot;SystemTime&quot;:&quot;2021-11-11T15:21:22.728142607+08:00&quot;,&quot;LoggingDriver&quot;:&quot;json-file&quot;,&quot;CgroupDriver&quot;:&quot;cgroupfs&quot;,&quot;CgroupVersion&quot;:&quot;1&quot;,&quot;NEventsListener&quot;:0,&quot;KernelVersion&quot;:&quot;3.10.0-957.el7.x86_64&quot;,&quot;OperatingSystem&quot;:&quot;CentOS Linux 7 (Core)&quot;,&quot;OSVersion&quot;:&quot;7&quot;,&quot;OSType&quot;:&quot;linux&quot;,&quot;Architecture&quot;:&quot;x86_64&quot;,&quot;IndexServerAddress&quot;:&quot;https://index.docker.io/v1/&quot;,&quot;RegistryConfig&quot;:&#123;&quot;AllowNondistributableArtifactsCIDRs&quot;:[],&quot;AllowNondistributableArtifactsHostnames&quot;:[],&quot;InsecureRegistryCIDRs&quot;:[&quot;127.0.0.0/8&quot;],&quot;IndexConfigs&quot;:&#123;&quot;docker.io&quot;:&#123;&quot;Name&quot;:&quot;docker.io&quot;,&quot;Mirrors&quot;:[&quot;https://pee6w651.mirror.aliyuncs.com/&quot;],&quot;Secure&quot;:true,&quot;Official&quot;:true&#125;&#125;,&quot;Mirrors&quot;:[&quot;https://pee6w651.mirror.aliyuncs.com/&quot;]&#125;,&quot;NCPU&quot;:2,&quot;MemTotal&quot;:2928689152,&quot;GenericResources&quot;:null,&quot;DockerRootDir&quot;:&quot;/var/lib/docker&quot;,&quot;HttpProxy&quot;:&quot;&quot;,&quot;HttpsProxy&quot;:&quot;&quot;,&quot;NoProxy&quot;:&quot;&quot;,&quot;Name&quot;:&quot;localhost.localdomain&quot;,&quot;Labels&quot;:[],&quot;ExperimentalBuild&quot;:false,&quot;ServerVersion&quot;:&quot;20.10.7&quot;,&quot;Runtimes&quot;:&#123;&quot;io.containerd.runc.v2&quot;:&#123;&quot;path&quot;:&quot;runc&quot;&#125;,&quot;io.containerd.runtime.v1.linux&quot;:&#123;&quot;path&quot;:&quot;runc&quot;&#125;,&quot;runc&quot;:&#123;&quot;path&quot;:&quot;runc&quot;&#125;&#125;,&quot;DefaultRuntime&quot;:&quot;runc&quot;,&quot;Swarm&quot;:&#123;&quot;NodeID&quot;:&quot;&quot;,&quot;NodeAddr&quot;:&quot;&quot;,&quot;LocalNodeState&quot;:&quot;inactive&quot;,&quot;ControlAvailable&quot;:false,&quot;Error&quot;:&quot;&quot;,&quot;RemoteManagers&quot;:null&#125;,&quot;LiveRestoreEnabled&quot;:false,&quot;Isolation&quot;:&quot;&quot;,&quot;InitBinary&quot;:&quot;docker-init&quot;,&quot;ContainerdCommit&quot;:&#123;&quot;ID&quot;:&quot;d71fcd7d8303cbf684402823e425e9dd2e99285d&quot;,&quot;Expected&quot;:&quot;d71fcd7d8303cbf684402823e425e9dd2e99285d&quot;&#125;,&quot;RuncCommit&quot;:&#123;&quot;ID&quot;:&quot;b9ee9c6314599f1b4a7f497e1f1f856fe433d3b7&quot;,&quot;Expected&quot;:&quot;b9ee9c6314599f1b4a7f497e1f1f856fe433d3b7&quot;&#125;,&quot;InitCommit&quot;:&#123;&quot;ID&quot;:&quot;de40ad0&quot;,&quot;Expected&quot;:&quot;de40ad0&quot;&#125;,&quot;SecurityOptions&quot;:[&quot;name=seccomp,profile=default&quot;],&quot;Warnings&quot;:[&quot;WARNING: API is accessible on http://0.0.0.0:2375 without encryption.\n         Access to the remote API is equivalent to root access on the host. Refer\n         to the &#39;Docker daemon attack surface&#39; section in the documentation for\n         more information: https://docs.docker.com/go/attack-surface/&quot;,&quot;WARNING: bridge-nf-call-iptables is disabled&quot;,&quot;WARNING: bridge-nf-call-ip6tables is disabled&quot;]&#125;
-
 </code></pre>
 <h4 id="1-2-启动失败的问题"><a href="#1-2-启动失败的问题" class="headerlink" title="1.2 启动失败的问题"></a>1.2 启动失败的问题</h4><p>启动报错<code>Job for docker.service failed because the control process exited with error code. See &quot;systemctl status docker.service&quot; and &quot;journalctl -xe&quot; for details.</code></p>
 <pre><code class="shell">[root@localhost ~]# systemctl start docker
@@ -1302,61 +1302,62 @@ firewall-cmd --zone=public --list-ports
 </blockquote>
 <p>指定方式有两种：</p>
 <ol>
-<li>命令行指定如下：<code>mvn clean package docker:build -DpushImageTags -DdockerImageTags=imageTag_1 -DdockerImageTags=imageTag_2</code></li>
-<li>POM 文件中指定：<br>```xml<build>
-<plugins>
-             <plugin>
-             <groupId>com.spotify</groupId>
-             <artifactId>docker-maven-plugin</artifactId>
-             <version>1.2.2</version>
-             <configuration>
-                 <imageName>${project.artifactId}:${project.version}</imageName>
-                 <baseImage>xuux/small-jre8:1.0</baseImage>
-                 <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
-                 <resources>
-                     <resource>
-                         <targetPath>/</targetPath>
-                         <directory>${project.build.directory}</directory>
-                         <include>${project.build.finalName}.jar</include>
-                     </resource>
-                 </resources>
-                 <dockerHost>http://192.168.122.22:2375</dockerHost>
-                 <!--指定tag-->
-                 <imageTags>
-                     <imageTag>imageTag_1</imageTag>
-                     <imageTag>imageTag_2</imageTag>
-                 </imageTags>
-             </configuration>
-         </plugin></li>
+<li><p>命令行指定如下：<code>mvn clean package docker:build -DpushImageTags -DdockerImageTags=imageTag_1 -DdockerImageTags=imageTag_2</code></p>
+</li>
+<li><p>POM 文件中指定：</p>
+</li>
 </ol>
-  </plugins>
-</build>
-```
-#### (2) 使用Dockerfile
-
-<pre><code class="xml">            &lt;plugin&gt;
-                &lt;groupId&gt;com.spotify&lt;/groupId&gt;
-                &lt;artifactId&gt;docker-maven-plugin&lt;/artifactId&gt;
-                &lt;version&gt;1.2.2&lt;/version&gt;
-                &lt;configuration&gt;
-                    &lt;imageName&gt;$&#123;project.artifactId&#125;:$&#123;project.version&#125;&lt;/imageName&gt;
-                    &lt;!-- 指定 Dockerfile 路径--&gt;
-                    &lt;dockerDirectory&gt;$&#123;basedir&#125;/docker&lt;/dockerDirectory&gt;
-                    &lt;!-- 这里是复制 jar 包到 docker 容器指定目录配置，也可以写到 Docokerfile 中 --&gt;
-                    &lt;resources&gt;
-                        &lt;resource&gt;
-                            &lt;targetPath&gt;/&lt;/targetPath&gt;
-                            &lt;directory&gt;$&#123;project.build.directory&#125;&lt;/directory&gt;
-                            &lt;include&gt;$&#123;project.build.finalName&#125;.jar&lt;/include&gt;
-                        &lt;/resource&gt;
-                    &lt;/resources&gt;
-                    &lt;dockerHost&gt;http://192.168.122.22:2375&lt;/dockerHost&gt;
-                    &lt;!--指定tag--&gt;
-                    &lt;imageTags&gt;
-                        &lt;imageTag&gt;1.0.1&lt;/imageTag&gt;
-                    &lt;/imageTags&gt;
-                &lt;/configuration&gt;
-            &lt;/plugin&gt;
+<pre><code class="xml">&lt;build&gt;
+  &lt;plugins&gt;
+        &lt;plugin&gt;
+        &lt;groupId&gt;com.spotify&lt;/groupId&gt;
+        &lt;artifactId&gt;docker-maven-plugin&lt;/artifactId&gt;
+        &lt;version&gt;1.2.2&lt;/version&gt;
+        &lt;configuration&gt;
+            &lt;imageName&gt;$&#123;project.artifactId&#125;:$&#123;project.version&#125;&lt;/imageName&gt;
+            &lt;baseImage&gt;xuux/small-jre8:1.0&lt;/baseImage&gt;
+            &lt;entryPoint&gt;[&quot;java&quot;, &quot;-jar&quot;, &quot;/$&#123;project.build.finalName&#125;.jar&quot;]&lt;/entryPoint&gt;
+            &lt;resources&gt;
+                &lt;resource&gt;
+                    &lt;targetPath&gt;/&lt;/targetPath&gt;
+                    &lt;directory&gt;$&#123;project.build.directory&#125;&lt;/directory&gt;
+                    &lt;include&gt;$&#123;project.build.finalName&#125;.jar&lt;/include&gt;
+                &lt;/resource&gt;
+            &lt;/resources&gt;
+            &lt;dockerHost&gt;http://192.168.122.22:2375&lt;/dockerHost&gt;
+            &lt;!--指定tag--&gt;
+            &lt;imageTags&gt;
+                &lt;imageTag&gt;imageTag_1&lt;/imageTag&gt;
+                &lt;imageTag&gt;imageTag_2&lt;/imageTag&gt;
+            &lt;/imageTags&gt;
+        &lt;/configuration&gt;
+    &lt;/plugin&gt;
+  &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+<h4 id="2-使用Dockerfile"><a href="#2-使用Dockerfile" class="headerlink" title="(2) 使用Dockerfile"></a>(2) 使用Dockerfile</h4><pre><code class="xml">&lt;plugin&gt;
+    &lt;groupId&gt;com.spotify&lt;/groupId&gt;
+    &lt;artifactId&gt;docker-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;1.2.2&lt;/version&gt;
+    &lt;configuration&gt;
+        &lt;imageName&gt;$&#123;project.artifactId&#125;:$&#123;project.version&#125;&lt;/imageName&gt;
+        &lt;!-- 指定 Dockerfile 路径--&gt;
+        &lt;dockerDirectory&gt;$&#123;basedir&#125;/docker&lt;/dockerDirectory&gt;
+        &lt;!-- 这里是复制 jar 包到 docker 容器指定目录配置，也可以写到 Docokerfile 中 --&gt;
+        &lt;resources&gt;
+            &lt;resource&gt;
+                &lt;targetPath&gt;/&lt;/targetPath&gt;
+                &lt;directory&gt;$&#123;project.build.directory&#125;&lt;/directory&gt;
+                &lt;include&gt;$&#123;project.build.finalName&#125;.jar&lt;/include&gt;
+            &lt;/resource&gt;
+        &lt;/resources&gt;
+        &lt;dockerHost&gt;http://192.168.122.22:2375&lt;/dockerHost&gt;
+        &lt;!--指定tag--&gt;
+        &lt;imageTags&gt;
+            &lt;imageTag&gt;1.0.1&lt;/imageTag&gt;
+        &lt;/imageTags&gt;
+    &lt;/configuration&gt;
+&lt;/plugin&gt;
 </code></pre>
 <p>Dockerfile文件：</p>
 <pre><code class="shell">FROM xuux/small-jre8:1.0
@@ -1454,18 +1455,18 @@ demo                           1.0.1            07c262894893   About a minute ag
 <pre><code class="shell">export DOCKER_HOST=tcp://localhost:2375
 </code></pre>
 <p><a data-fancybox="images" data-caption="" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/11/202111171009775.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/11/202111171009775.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/11/202111171009775.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></a></p>
-<h4 id="2-xml配置"><a href="#2-xml配置" class="headerlink" title="2. xml配置"></a>2. xml配置</h4><pre><code class="xml">            &lt;plugin&gt;
-                &lt;groupId&gt;com.spotify&lt;/groupId&gt;
-                &lt;artifactId&gt;dockerfile-maven-plugin&lt;/artifactId&gt;
-                &lt;version&gt;1.4.13&lt;/version&gt;
-                &lt;configuration&gt;
-                    &lt;repository&gt;$&#123;project.artifactId&#125;&lt;/repository&gt;
-                    &lt;tag&gt;$&#123;project.version&#125;&lt;/tag&gt;
-                    &lt;buildArgs&gt;
-                        &lt;JAR_FILE&gt;target/$&#123;project.build.finalName&#125;.jar&lt;/JAR_FILE&gt;
-                    &lt;/buildArgs&gt;
-                &lt;/configuration&gt;
-            &lt;/plugin&gt;
+<h4 id="2-xml配置"><a href="#2-xml配置" class="headerlink" title="2. xml配置"></a>2. xml配置</h4><pre><code class="xml">    &lt;plugin&gt;
+        &lt;groupId&gt;com.spotify&lt;/groupId&gt;
+        &lt;artifactId&gt;dockerfile-maven-plugin&lt;/artifactId&gt;
+        &lt;version&gt;1.4.13&lt;/version&gt;
+        &lt;configuration&gt;
+            &lt;repository&gt;$&#123;project.artifactId&#125;&lt;/repository&gt;
+            &lt;tag&gt;$&#123;project.version&#125;&lt;/tag&gt;
+            &lt;buildArgs&gt;
+                &lt;JAR_FILE&gt;target/$&#123;project.build.finalName&#125;.jar&lt;/JAR_FILE&gt;
+            &lt;/buildArgs&gt;
+        &lt;/configuration&gt;
+    &lt;/plugin&gt;
 </code></pre>
 <p>或者</p>
 <pre><code class="xml">&lt;plugin&gt;
@@ -1550,7 +1551,7 @@ docker pull xuux/small-jre8
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-11-17T02:49:32+00:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-11-17T02:55:40+00:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2021年11月17日</p>
@@ -1739,7 +1740,7 @@ docker pull xuux/small-jre8
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BF%AE%E6%94%B9docker%E9%85%8D%E7%BD%AE"><span class="toc-text">一、修改docker配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">1.2 启动失败的问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E8%A7%A3%E5%86%B3%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5"><span class="toc-text">1.3 解决启动失败</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BF%AE%E6%94%B9%E9%98%B2%E7%81%AB%E5%A2%99"><span class="toc-text">二、修改防火墙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BD%BF%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="toc-text">三、使用插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-docker-maven-plugin%E6%8F%92%E4%BB%B6"><span class="toc-text">3.1 docker-maven-plugin插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%B8%8D%E4%BD%BF%E7%94%A8Dockerfile"><span class="toc-text">(1) 不使用Dockerfile</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E7%BB%91%E5%AE%9A-Docker-%E5%91%BD%E4%BB%A4%E5%88%B0-Maven%E5%90%84%E4%B8%AA%E9%98%B6%E6%AE%B5"><span class="toc-text">（3）绑定 Docker 命令到 Maven各个阶段</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-dockerfile-maven-plugin%E6%8F%92%E4%BB%B6"><span class="toc-text">3.2 dockerfile-maven-plugin插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F-%E5%BF%85%E9%A1%BB"><span class="toc-text">1.设置环境变量(必须)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-xml%E9%85%8D%E7%BD%AE"><span class="toc-text">2. xml配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%88%9B%E5%BB%BADockerfile%E6%96%87%E4%BB%B6"><span class="toc-text">3. 创建Dockerfile文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%85%B6%E4%BB%96%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">4. 其他使用方法：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E9%97%AE%E9%A2%98"><span class="toc-text">四、问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%EF%BC%9A"><span class="toc-text">参考：</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BF%AE%E6%94%B9docker%E9%85%8D%E7%BD%AE"><span class="toc-text">一、修改docker配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">1.2 启动失败的问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E8%A7%A3%E5%86%B3%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5"><span class="toc-text">1.3 解决启动失败</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BF%AE%E6%94%B9%E9%98%B2%E7%81%AB%E5%A2%99"><span class="toc-text">二、修改防火墙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BD%BF%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="toc-text">三、使用插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-docker-maven-plugin%E6%8F%92%E4%BB%B6"><span class="toc-text">3.1 docker-maven-plugin插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%B8%8D%E4%BD%BF%E7%94%A8Dockerfile"><span class="toc-text">(1) 不使用Dockerfile</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8Dockerfile"><span class="toc-text">(2) 使用Dockerfile</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E7%BB%91%E5%AE%9A-Docker-%E5%91%BD%E4%BB%A4%E5%88%B0-Maven%E5%90%84%E4%B8%AA%E9%98%B6%E6%AE%B5"><span class="toc-text">（3）绑定 Docker 命令到 Maven各个阶段</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-dockerfile-maven-plugin%E6%8F%92%E4%BB%B6"><span class="toc-text">3.2 dockerfile-maven-plugin插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F-%E5%BF%85%E9%A1%BB"><span class="toc-text">1.设置环境变量(必须)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-xml%E9%85%8D%E7%BD%AE"><span class="toc-text">2. xml配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%88%9B%E5%BB%BADockerfile%E6%96%87%E4%BB%B6"><span class="toc-text">3. 创建Dockerfile文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%85%B6%E4%BB%96%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">4. 其他使用方法：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E9%97%AE%E9%A2%98"><span class="toc-text">四、问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%EF%BC%9A"><span class="toc-text">参考：</span></a></li></ol>
     </div>
   </section>
 
