@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,10 +22,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>标签：运维 - 因吹斯汀</title>
-  <meta name="title" content="标签：运维 - 因吹斯汀">
+  <title>记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀</title>
+  <meta name="title" content="记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀">
+  
+    <meta name="keywords" content="npm,npm publish,npm发包,邮箱验证问题">
   
 
+  
+    <meta name="description" content="记录一次NPM发包，以及NPM账号邮箱验证问题">
   
 
   <!-- feed -->
@@ -1018,7 +1020,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  featured' style="display: none;">
+        <div id="full" class='cover-wrapper post featured' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://api.xuux.top/open/bg?type=location"></div>
           
@@ -1081,84 +1083,382 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img class='headimg' src='https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202110121006872.png'/>
+      </a>
+    </div>
+  
+  <div class="article-meta" id="top">
     
       
-  <section class="post-list">
+
+  
+    <meting-js
+      mini='true'
+      volume='0.7'
+      loop='all'
+      order='list'
+      server='netease'
+      type='song'
+      id='16846091'>
+    </meting-js>
+  
+
+
     
+    
+    
+      <h1 class="title">
+        记录一次NPM发包，以及NPM账号邮箱验证问题
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' target="_blank" href="https://github.com/xu-ux" rel="nofollow noopener">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/avatar/xiaoxiong32x32.svg">
+    <p>因吹斯汀</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E5%BC%80%E5%8F%91/">开发</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年12月3日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="记录一次NPM发包，以及NPM账号邮箱验证问题" data-path="/post/2021/12/03/1b559a5909e9af1a/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p>记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。</p>
+<span id="more"></span>
+
+<h2 id="一、发包"><a href="#一、发包" class="headerlink" title="一、发包"></a>一、发包</h2><h3 id="①切换仓库"><a href="#①切换仓库" class="headerlink" title="①切换仓库"></a>①切换仓库</h3><p>需要使用官方的仓库，而不是镜像仓库<code>https://registry.npm.taobao.org/</code>，需要设置<code>https</code>而不是<code>http</code></p>
+<pre><code class="shell">npm config set registry=https://registry.npmjs.org
+</code></pre>
+<h3 id="②-发布"><a href="#②-发布" class="headerlink" title="② 发布"></a>② 发布</h3><ol>
+<li><p>登录</p>
+<p><code>npm login</code></p>
+</li>
+<li><p>发布命令</p>
+<p><code>npm publish</code></p>
+</li>
+<li><p>发布成功后切换为镜像</p>
+<p><code>npm config set registry=https://registry.npm.taobao.org/</code></p>
+</li>
+<li><p>最终报错<strong>403问题</strong></p>
+<p>结果如下：</p>
+</li>
+</ol>
+<pre><code class="shell">npm ERR! code E403
+npm ERR! 403 403 Forbidden - PUT https://registry.npmjs.org/hexo-tag-codepen-x - Forbidden
+npm ERR! 403 In most cases, you or one of your dependencies are requesting
+npm ERR! 403 a package version that is forbidden by your security policy.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     D:\Program Files\nodejs\node_cache\_logs\2021-09-24T23_45_16_660Z-debug.log
+</code></pre>
+<ol start="5">
+<li><p>403问题：npm未完成邮箱验证</p>
+<p>百度了一下，应该是注册账户时，没有去激活邮箱导致的。</p>
+<p>所以我立马去<a target="_blank" rel="noopener" href="https://www.npmjs.com/">NPM</a>进行再次邮箱验证，npm发送了一封验证邮件（此时是在windows上操作的）</p>
+<pre><code>邮件中存在激活地址：
+https://www.npmjs.com/verify/f932abfa-63f3-415c-9213-88236039af03
+</code></pre>
+</li>
+</ol>
+<h2 id="二、-NPM账户邮箱激活失败"><a href="#二、-NPM账户邮箱激活失败" class="headerlink" title="二、 NPM账户邮箱激活失败"></a>二、 NPM账户邮箱激活失败</h2><p>在手机的邮箱APP内找到邮件</p>
+<p>点击激活地址后出现</p>
+<img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903631.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903631.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210925075241731" style="zoom: 67%;" />
+
+<pre><code class="text">looks like something unexpected occurred!
+diagnostics id: 693fe9a57df761ac~2c11
+</code></pre>
+<p>实际时没有激活成功的，此时<code>npm publish</code>还是会失败</p>
+<h2 id="三、解决方案"><a href="#三、解决方案" class="headerlink" title="三、解决方案"></a>三、解决方案</h2><p>最终，将链接复制到已登录npm账户的windows浏览器中，才完成激活邮箱</p>
+<p>再次尝试<code>npm publish</code>，发布成功！</p>
+<pre><code class="shell">npm notice package: hexo-tag-codepen-x@1.0.0
+npm notice === Tarball Contents ===
+npm notice 1.1kB LICENSE
+npm notice 1.8kB index.js
+npm notice 675B  package.json
+npm notice 2.4kB README.md
+npm notice 2.3kB zh/README.md
+npm notice === Tarball Details ===
+npm notice name:          hexo-tag-codepen-x
+npm notice version:       1.0.0
+npm notice package size:  3.4 kB
+npm notice unpacked size: 8.3 kB
+npm notice shasum:        872e466bab2a7e8be9a3df9aca9431e847047160
+npm notice integrity:     sha512-GN9ssDQ/Uy7SG[...]kfrgF6YXiOodw==
+npm notice total files:   5
+npm notice
++ hexo-tag-codepen-x@1.0.0
+</code></pre>
+<h2 id="四、其他，尝试发布到Github-Packages"><a href="#四、其他，尝试发布到Github-Packages" class="headerlink" title="四、其他，尝试发布到Github Packages"></a>四、其他，尝试发布到Github Packages</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.github.com/cn/packages/working-with-a-github-packages-registry/working-with-the-npm-registry">Github发包</a></p>
+<p>注意： GitHub Packages 只支持作用域内的 npm 包。 作用域内的包具有名称格式 <code>@owner/name</code>。 作用域内的包总是以 <code>@</code> 符号开头。 您可能需要更新 <em>package.json</em> 中的名称以使用作用域内的名称。 例如，<code>&quot;name&quot;: &quot;@codertocat/hello-world-npm&quot;</code>。</p>
+</blockquote>
+<h3 id="㈠-命令式发布"><a href="#㈠-命令式发布" class="headerlink" title="㈠ 命令式发布"></a>㈠ 命令式发布</h3><h4 id="首先需要配置package-json"><a href="#首先需要配置package-json" class="headerlink" title="首先需要配置package.json"></a>首先需要配置<code>package.json</code></h4><pre><code class="json">&quot;publishConfig&quot;: &#123;
+　　&quot;registry&quot;: &quot;https://npm.pkg.github.com/&quot;
+&#125;,
+</code></pre>
+<h4 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h4><p>这里的密码是Personal access tokens</p>
+<p>需要的权限为：</p>
+<p><a data-fancybox="images" data-caption="image-20210925084509943" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903543.png" ><img src="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903543.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/09/202109250903543.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210925084509943"></a></p>
+<pre><code class="shell">npm login --registry=https://npm.pkg.github.com
+Username: [USERNAME] # 如：xu-ux
+Password: [TOKEN] # 如：****************
+Email: (this IS public) [PUBLIC-EMAIL-ADDRESS] # 如：xu_uxo@163.com
+Logged in as xu-ux on https://npm.pkg.github.com/.
+</code></pre>
+<h4 id="发布报错"><a href="#发布报错" class="headerlink" title="发布报错"></a>发布报错</h4><pre><code class="shell">npm ERR! code E404
+npm ERR! 404 Not Found - PUT https://npm.pkg.github.com/hexo-tag-codepen-x
+npm ERR! 404
+npm ERR! 404  &#39;hexo-tag-codepen-x@1.0.0&#39; is not in the npm registry.
+npm ERR! 404 You should bug the author to publish it (or use the name yourself!)
+npm ERR! 404
+npm ERR! 404 Note that you can also install from a
+npm ERR! 404 tarball, folder, http url, or git url.
+</code></pre>
+<h4 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h4><p><strong>GitHub Packages 只支持作用域内的 npm 包</strong></p>
+<p>所以修改包名</p>
+<pre><code>  &quot;name&quot;: &quot;@xu-ux/hexo-tag-codepen-x&quot;,
+</code></pre>
+<p>再次发布，成功</p>
+<pre><code class="shell">npm notice package: @xu-ux/hexo-tag-codepen-x@1.0.0
+npm notice === Tarball Contents ===
+npm notice 1.1kB LICENSE
+npm notice 1.8kB index.js
+npm notice 756B  package.json
+npm notice 2.5kB README.md
+npm notice 2.4kB zh/README.md
+npm notice === Tarball Details ===
+npm notice name:          @xu-ux/hexo-tag-codepen-x
+npm notice version:       1.0.0
+npm notice package size:  3.4 kB
+npm notice unpacked size: 8.5 kB
+npm notice shasum:        6a387fe4e65edeb8c8e2111fb267c1e4c3032313
+npm notice integrity:     sha512-bjL6fWv1AazIb[...]iIHOVQ7iefKVQ==
+npm notice total files:   5
+npm notice
++ @xu-ux/hexo-tag-codepen-x@1.0.0
+</code></pre>
+<h3 id="㈡-配置发布"><a href="#㈡-配置发布" class="headerlink" title="㈡ 配置发布"></a>㈡ 配置发布</h3><p>除了使用命令式输入<code>Token</code>外(每次都要输入比较麻烦)</p>
+<ol>
+<li><p>还可以将<code>Token</code>添加至<code>~/.npmrc</code>，<code>win</code>用户是路径<code>C://users/current-user</code></p>
+<pre><code>//npm.pkg.github.com/:_authToken=TOKEN
+</code></pre>
+</li>
+<li><p>在<code>package.json</code>所在目录创建一个<code>.npmrc</code>文件，并添加以下内容</p>
+<pre><code>registry=https://npm.pkg.github.com/GitHub用户名
+</code></pre>
+</li>
+<li><p>发布</p>
+<p>可以直接使用<code>npm publish</code>，也不用在<code>package.json</code>填写<code>publishConfig</code></p>
+</li>
+</ol>
+<h3 id="㈢-安装"><a href="#㈢-安装" class="headerlink" title="㈢ 安装"></a>㈢ 安装</h3><p>需要注意的是，无论发布包还是安装包都需要授权，也就是上述生成<code>Token</code>以及配置的过程，否则无法安装指定的包。</p>
+<h4 id="Ⅰ-已配置-npmrc"><a href="#Ⅰ-已配置-npmrc" class="headerlink" title="Ⅰ.已配置~/.npmrc"></a>Ⅰ.已配置<code>~/.npmrc</code></h4><p>已经配置了<code>.npmrc</code>文件的，可以直接使用如下命令</p>
+<pre><code class="shell">npm install @xu-ux/hexo-tag-codepen-x@1.0.0 --registry=https://npm.pkg.github.com/
+</code></pre>
+<h4 id="Ⅱ-使用命令方式"><a href="#Ⅱ-使用命令方式" class="headerlink" title="Ⅱ.使用命令方式"></a>Ⅱ.使用命令方式</h4><p>首先登录</p>
+<pre><code class="shell">npm login --registry=https://npm.pkg.github.com
+&gt; Username: USERNAME
+&gt; Password: TOKEN
+&gt; Email: PUBLIC-EMAIL-ADDRESS
+</code></pre>
+<p>再安装</p>
+<pre><code class="shell">npm install @xu-ux/hexo-tag-codepen-x@1.0.0
+</code></pre>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://xu-ux.github.io/post/2021/12/03/1b559a5909e9af1a/>https://xu-ux.github.io/post/2021/12/03/1b559a5909e9af1a/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-12-03T06:19:02+00:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年12月3日</p>
+  </a>
+</div>
+
+        
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/npm/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>npm</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/nodejs/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>nodejs</p></a></div>
+
+
         
       
-    
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/post/2021/11/09/81320b01bb9f163c/">
-        <img class='headimg' src='https://cdn.jsdelivr.net/gh/xu-ux/static/img/blog/2021/10/202111090943430.jpg'/>
-      </a>
-    </div>
-  
-  
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xu-ux.github.io/post/2021/12/03/1b559a5909e9af1a/&title=记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀&summary=记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
     
-    <h2 class="article-title" >
-      <a href="/post/2021/11/09/81320b01bb9f163c/">
-        SpringBoot集成企业微信群机器人（运维报警）
-      </a>
-    </h2>
-  
-  <div class='md'>
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://xu-ux.github.io/post/2021/12/03/1b559a5909e9af1a/&title=记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀&summary=记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
     
-      <p>之前有集成过钉钉群机器人🤖报警，这次主要是SpringBoot集成企业微信群机器人报警。</p>
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://xu-ux.github.io/post/2021/12/03/1b559a5909e9af1a/&title=记录一次NPM发包，以及NPM账号邮箱验证问题 - 因吹斯汀&summary=记录一次NPM发包，以及NPM账号邮箱验证问题。主要是点击确认邮箱地址时，还得使用上次登录成功的会话，这点没注意到，浪费了很多时间。并且导致push npm时一直失败。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-11-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="sep"></span><a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%90%8E%E7%AB%AF/">后端</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/post/2021/11/09/81320b01bb9f163c/'>
-              <span>
-                  <i class='far fa-book-spells'></i>
-                   阅读全文
-              </span>
+</div>
 
-          </a>
-        </div>
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/post/2021/12/03/088468ced2772298/'>
+          <p class='title'>LocalDate、LocalTime、LocalDateTime的常用API和计算<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>LocalDate、LocalTime、LocalDateTime的常用API和计算从Java 8开始，java.time包提供了新的日期和时间API，主要涉及的类型有：
+
+本地日期和时间：Lo...</p>
+        </a>
       
     </div>
   
+</article>
 
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-    
-  
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -1166,361 +1466,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget text shadow desktop">
-  
-  <header>
-    
-      <i class="fad fa-ghost fa-fw" aria-hidden="true"></i><span class='name'>公告</span>
-    
-  </header>
 
 
-  <div class='content'>
-    
-      <p>测试阶段，部署中……</p>
-
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/xu-ux/static/img/avatar/xiaoxiong128x128.svg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>因吹斯汀</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">因吹斯汀</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:xu_uxo@163.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/xu-ux"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fad fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fad fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%8D%9A%E6%96%87/" href="/categories/%E5%8D%9A%E6%96%87/"
-            id="categoriesE58D9AE69687"
-            ><div class='name'>博文</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%BC%80%E5%8F%91/" href="/categories/%E5%BC%80%E5%8F%91/"
-            id="categoriesE5BC80E58F91"
-            ><div class='name'>开发</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BC%96%E7%A8%8B/" href="/categories/%E7%BC%96%E7%A8%8B/"
-            id="categoriesE7BC96E7A88B"
-            ><div class='name'>编程</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E7%BC%96%E7%A8%8B/%E5%90%8E%E7%AB%AF/" href="/categories/%E7%BC%96%E7%A8%8B/%E5%90%8E%E7%AB%AF/"
-            id="categoriesE7BC96E7A88BE5908EE7ABAF"
-            ><div class='name'>后端</div><div class='badge'>(5)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%8F%91%E5%8C%85"><span class="toc-text">一、发包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%91%A0%E5%88%87%E6%8D%A2%E4%BB%93%E5%BA%93"><span class="toc-text">①切换仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%91%A1-%E5%8F%91%E5%B8%83"><span class="toc-text">② 发布</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81-NPM%E8%B4%A6%E6%88%B7%E9%82%AE%E7%AE%B1%E6%BF%80%E6%B4%BB%E5%A4%B1%E8%B4%A5"><span class="toc-text">二、 NPM账户邮箱激活失败</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">三、解决方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%85%B6%E4%BB%96%EF%BC%8C%E5%B0%9D%E8%AF%95%E5%8F%91%E5%B8%83%E5%88%B0Github-Packages"><span class="toc-text">四、其他，尝试发布到Github Packages</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%88%A0-%E5%91%BD%E4%BB%A4%E5%BC%8F%E5%8F%91%E5%B8%83"><span class="toc-text">㈠ 命令式发布</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E9%9C%80%E8%A6%81%E9%85%8D%E7%BD%AEpackage-json"><span class="toc-text">首先需要配置package.json</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96token"><span class="toc-text">获取token</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%91%E5%B8%83%E6%8A%A5%E9%94%99"><span class="toc-text">发布报错</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3"><span class="toc-text">解决</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%88%A1-%E9%85%8D%E7%BD%AE%E5%8F%91%E5%B8%83"><span class="toc-text">㈡ 配置发布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%88%A2-%E5%AE%89%E8%A3%85"><span class="toc-text">㈢ 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%85%A0-%E5%B7%B2%E9%85%8D%E7%BD%AE-npmrc"><span class="toc-text">Ⅰ.已配置~&#x2F;.npmrc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%85%A1-%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E6%96%B9%E5%BC%8F"><span class="toc-text">Ⅱ.使用命令方式</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fad fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Docker/" style="font-size: 14px; color: #999">Docker</a> <a href="/tags/JavaSE/" style="font-size: 14px; color: #999">JavaSE</a> <a href="/tags/Jdk1-8-%E6%97%B6%E9%97%B4%E7%B1%BB/" style="font-size: 14px; color: #999">Jdk1.8,时间类</a> <a href="/tags/Maven/" style="font-size: 14px; color: #999">Maven</a> <a href="/tags/Nacos/" style="font-size: 14px; color: #999">Nacos</a> <a href="/tags/SpringBoot/" style="font-size: 24px; color: #555">SpringBoot</a> <a href="/tags/hexo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 14px; color: #999">hexo,博客搭建</a> <a href="/tags/nodejs/" style="font-size: 14px; color: #999">nodejs</a> <a href="/tags/npm/" style="font-size: 14px; color: #999">npm</a> <a href="/tags/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1/" style="font-size: 14px; color: #999">企业微信</a> <a href="/tags/%E5%8A%A0%E5%AF%86/" style="font-size: 19px; color: #777">加密</a> <a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 14px; color: #999">运维</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget grid shadow desktop mobile">
-  
-  <header>
-    
-      <a href='/'><i class="fad fa-map-signs fa-fw" aria-hidden="true"></i><span class='name'>导航</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="grid navigation">
-      
-        <a class="flat-box" title="/about/" href="/about/"
-          
-          
-          id="about">
-          
-            <i class="fad faa-ring faa-slow fa-address-card fa-fw" aria-hidden="true"></i>
-          
-          关于
-        </a>
-      
-        <a class="flat-box" title="/p/messages/" href="/p/messages/"
-          
-          
-          id="pmessages">
-          
-            <i class="fad fa-comment-alt-dots fa-fw" aria-hidden="true"></i>
-          
-          留言
-        </a>
-      
-        <a class="flat-box" title="/other/covid-19/" href="/other/covid-19/"
-          
-          
-          id="othercovid-19">
-          
-            <i class="fad fa-chart-line-down fa-fw" aria-hidden="true"></i>
-          
-          新冠
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget text shadow desktop mobile">
-  
-  <header>
-    
-      <i class="fad fa-cloud-sun fa-fw" aria-hidden="true"></i><span class='name'>天气</span>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <iframe id="simple-weather" name="simple-weather" scrolling="no" src="https://tianqiapi.com/api.php?style=tf&skin=orange" frameborder="0" width="200" height="24" allowtransparency="true"></iframe>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget shadow desktop">
-  
-  <header>
-    
-      <i class="fad fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>9 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
-        </div>
-        <script>
-          var BirthDay = new Date(new Date('2021/09/01'));
-          var today = new Date();
-          var timeold = (today.getTime() - BirthDay.getTime());
-          var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
-          document.getElementById('webinfo-runtime-count').innerHTML = daysold + ' 天';
-        </script>
-      
-
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="lc-uv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="lc-sv"><span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          
-            <div id="last-update" style="display: none;">Fri Dec 03 2021 06:19:19 GMT+0000 (Coordinated Universal Time)</div>
-            <div id="last-update-show">2021-12-03 日</div>
-          
-        </div>
-        
-        <script>
-          function timeago(dateTimeStamp) {
-              var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示
-              var hour = minute * 60;
-              var day = hour * 24;
-              var week = day * 7;
-              var month = day * 30;
-              var now = new Date().getTime(); //获取当前时间毫秒
-              var diffValue = now - dateTimeStamp; //时间差
-              if (diffValue < 0) {
-                  return;
-              }
-              var minC = diffValue / minute; //计算时间差的分，时，天，周，月
-              var hourC = diffValue / hour;
-              var dayC = diffValue / day;
-              var weekC = diffValue / week;
-              var monthC = diffValue / month;
-              if (monthC >= 1 && monthC <= 3) {
-                  result = " " + parseInt(monthC) + " 月前"
-              } else if (weekC >= 1 && weekC <= 3) {
-                  result = " " + parseInt(weekC) + " 周前"
-              } else if (dayC >= 1 && dayC <= 6) {
-                  result = " " + parseInt(dayC) + " 天前"
-              } else if (hourC >= 1 && hourC <= 23) {
-                  result = " " + parseInt(hourC) + " 小时前"
-              } else if (minC >= 1 && minC <= 59) {
-                  result = " " + parseInt(minC) + " 分钟前"
-              } else if (diffValue >= 0 && diffValue <= minute) {
-                  result = "刚刚"
-              } else {
-                  var datetime = new Date();
-                  datetime.setTime(dateTimeStamp);
-                  var Nyear = datetime.getFullYear();
-                  var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
-                  var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-                  var Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
-                  var Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
-                  var Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
-                  result = Nyear + "-" + Nmonth + "-" + Ndate
-              }
-              return result;
-          }
-          var lastUpDate = document.getElementById('last-update').innerHTML;
-          try {
-            document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate));
-          } catch (error) {
-            document.getElementById('last-update-show').innerHTML = '2021-12-03 日';
-          }
-        </script>
-        
-      
-    </div>
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
 		  
@@ -1529,8 +1496,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="记录一次NPM发包，以及NPM账号邮箱验证问题";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
