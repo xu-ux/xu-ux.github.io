@@ -3,7 +3,6 @@ https://xu-ux.github.io/other/covid-19/index.html
 https://xu-ux.github.io/tags/index.html
 https://xu-ux.github.io/more/catchCat/index.html
 https://xu-ux.github.io/p/messages/index.html
-https://xu-ux.github.io/post/2021/10/12/ecd6c7b9993a66f4/
 https://xu-ux.github.io/about/index.html
 https://xu-ux.github.io/artitalk/index.html
 https://xu-ux.github.io/categories/index.html
@@ -12,6 +11,7 @@ https://xu-ux.github.io/post/2021/11/09/81320b01bb9f163c/
 https://xu-ux.github.io/post/2021/09/27/8686122d46a23fb2/
 https://xu-ux.github.io/post/2021/10/10/fac9d98ac9d768af/
 https://xu-ux.github.io/post/2021/09/25/1b559a5909e9af1a/
+https://xu-ux.github.io/post/2021/10/12/ecd6c7b9993a66f4/
 https://xu-ux.github.io/post/2021/12/03/088468ced2772298/
 https://xu-ux.github.io/post/2021/11/17/f5a0556a47d149a3/
 https://xu-ux.github.io/post/2021/10/20/ebe0fd672cfa55b6/
