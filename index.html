@@ -16,7 +16,6 @@
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="msvalidate.01" content="BBF34646EFB62A378FFF6EE0E48B5268" />
   <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -2264,7 +2263,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1675413919452),
+    lastupdate: new Date(1675414075884),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2318,13 +2317,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
   <!-- import head_end begin -->
   <!-- import head_end end -->
-  <!-- import hfweather begin -->
-  <script src="/js/plugins/weather.js"></script>
-<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
-
   <!-- Custom Files headEnd begin-->
   
   <!-- Custom Files headEnd end-->
+  <!-- Custom Files headextend -->
   <!--浏览器搞笑标题-->
 <script type="text/javascript" src="/js/plugins/funnyTitle.js"></script>
 
@@ -2713,9 +2709,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 				</ul>
 			</div>
-      
-      
-
       
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
@@ -3220,6 +3213,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/post/2021/09/25/1b559a5909e9af1a/' itemprop="url">
+            <i class='fa-duotone fa-book-open-cover'></i>
             阅读全文
           </a>
         </div>
@@ -3298,6 +3292,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/post/2021/12/03/088468ced2772298/' itemprop="url">
+            <i class='fa-duotone fa-book-open-cover'></i>
             阅读全文
           </a>
         </div>
@@ -3363,6 +3358,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/post/2021/11/17/f5a0556a47d149a3/' itemprop="url">
+            <i class='fa-duotone fa-book-open-cover'></i>
             阅读全文
           </a>
         </div>
@@ -3428,6 +3424,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/post/2021/11/09/81320b01bb9f163c/' itemprop="url">
+            <i class='fa-duotone fa-book-open-cover'></i>
             阅读全文
           </a>
         </div>
@@ -3493,6 +3490,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/post/2021/10/20/ebe0fd672cfa55b6/' itemprop="url">
+            <i class='fa-duotone fa-book-open-cover'></i>
             阅读全文
           </a>
         </div>
@@ -3559,6 +3557,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/post/2021/10/12/ecd6c7b9993a66f4/' itemprop="url">
+            <i class='fa-duotone fa-book-open-cover'></i>
             阅读全文
           </a>
         </div>
@@ -3620,6 +3619,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/post/2021/10/10/fac9d98ac9d768af/' itemprop="url">
+            <i class='fa-duotone fa-book-open-cover'></i>
             阅读全文
           </a>
         </div>
@@ -3686,6 +3686,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/post/2021/09/27/8686122d46a23fb2/' itemprop="url">
+            <i class='fa-duotone fa-book-open-cover'></i>
             阅读全文
           </a>
         </div>
@@ -4085,47 +4086,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files footer begin-->
     
     <!-- Custom Files footer end-->
-    <!-- <script>
+    
+      <script>
+    document.onkeydown=function (e){let currKey=0,evt=e||window.event;currKey=evt.keyCode||evt.which||evt.charCode;if (currKey == 123) {window.event.cancelBubble = true;window.event.returnValue = false;}}
+    /** 安全文件禁止debugger调试 */
+    eval(function (p, a, c, k, e, r) { e = function (c) { return c.toString(a) }; if (!''.replace(/^/, String)) { while (c--) r[e(c)] = k[c] || e(c); k = [function (e) { return r[e] }]; e = function () { return '\\w+' }; c = 1 }; while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]); return p }('2 i=\'\',3=["e",""];(4(a){a[3[0]]=3[1]})(8);2 9=["g"];!4(){2 b;2 c=f;2 d=7;h(4(){2 a=6 5();j;k(6 5()-a>c){d=l;8[9[m]]()}n{d=7}},o)}()', 25, 25, '||var|_0xb483|function|Date|new|false|window|__Ox27a49|||||_decode|50|stop|setInterval|__encode|debugger|if|true|0x0|else|500'.split('|'), 0, {}))
 
-    var tempTitle = "";
-
-    window.onblur = function() {
-        document.title="w(ﾟДﾟ)w 快回来呀！";
-    }
-
-    window.onfocus = function () {
-        document.title = "✧(≖ ◡ ≖✿)";
-        let t = document.querySelector('meta[property="og:title"]').getAttribute('content');
-        setTimeout(()=>{document.title = t},1500)
-    }
-
-    window.onload  = function () {
-        document.title="(๑•̀ㅂ•́)و✧";
-        let t = document.querySelector('meta[property="og:title"]').getAttribute('content');
-        setTimeout(()=>{document.title = t},2000)
-    }
-
-</script> -->
-<!-- 运行时长 -->
-<script async type="text/javascript" src="/js/plugins/runDate.js"></script>
-
-    <script>
-    /**
-     * 控制台打印
-     */
-    if (window.console) {
-        let cons = console;
-        if (cons) {
-            console.log('%c🎉欢迎来到本站 「xucux\'s blog」🚀', 'color:#fff; background: #5e72e4;font-size: 12px;border-radius:5px;padding:5px 10px 5px 10px;');
-            console.log('%c🌏本站基于 Hexo 驱动，🐳托管于 Github', 'color:#fff; background: #5e72e4;font-size: 12px;border-radius:5px;padding:5px 10px 5px 10px;');
-            console.log('%c🎨主题采用 Volantis 6 版本', 'font-size: 12px;border-radius:5px;padding:5px 10px 5px 10px;border:1px solid #5e72e4;');
-            console.log('%c🌈感兴趣的话，可以访问我的Github 🔗 https://github.com/xucux', 'color:#fff; background: #5e72e4;font-size: 12px;border-radius:5px;padding:5px 10px 5px 10px;');
-            console.log('%c📧也可以邮件联系我 Email: mailto://xu_uxo@163.com','font-size: 12px;border-radius:5px;border:1px solid #5e72e4;padding:5px 10px 5px 10px;');
-            console.log('%c🈲 本站禁止调试，谢谢！🈲','color:#fff; background: #d53d3d;font-size: 25px; font-wight: 700;  font-family:SimHei,STHeiti,Times New Roman,Georgia,Serif; border-radius:5px;padding:5px 10px 5px 10px;')
-        }
-    }
 </script>
-
+    
   </footer>
 
 
@@ -4911,9 +4879,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  
-
-<script>
+  <script>
 
   volantis.css("https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.7.0/styles/vs2015.min.css");
 
@@ -4933,6 +4899,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
   volantis.requestAnimationFrame(p_highlightjs_copyCode)
 
 </script>
+
 
 
 
