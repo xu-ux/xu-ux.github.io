@@ -6,7 +6,7 @@
   <link href="https://xu-ux.github.io/atom.xml" rel="self"/>
   
   <link href="https://xu-ux.github.io/"/>
-  <updated>2023-02-03T09:40:29.623Z</updated>
+  <updated>2023-02-07T04:07:21.523Z</updated>
   <id>https://xu-ux.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>折腾路由器FIR302M,刷Breed固件</title>
+    <link href="https://xu-ux.github.io/post/2edf191f/"/>
+    <id>https://xu-ux.github.io/post/2edf191f/</id>
+    <published>2022-12-07T11:27:15.000Z</published>
+    <updated>2023-02-07T04:07:21.523Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;闲来无事，折腾下这个从箱子底翻出来的路由器FIR302M，应该是7年前买的，致逝去的青春&lt;br&gt;买来好像是为了中继Wifi吧，2015年的事情了&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="生活" scheme="https://xu-ux.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="数码" scheme="https://xu-ux.github.io/categories/%E7%94%9F%E6%B4%BB/%E6%95%B0%E7%A0%81/"/>
+    
+    
+    <category term="技术" scheme="https://xu-ux.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="数码" scheme="https://xu-ux.github.io/tags/%E6%95%B0%E7%A0%81/"/>
+    
+    <category term="路由器" scheme="https://xu-ux.github.io/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>LocalDate、LocalTime、LocalDateTime的常用API和计算</title>
-    <link href="https://xu-ux.github.io/post/2021/12/03/088468ced2772298/"/>
-    <id>https://xu-ux.github.io/post/2021/12/03/088468ced2772298/</id>
+    <link href="https://xu-ux.github.io/post/8f766de6/"/>
+    <id>https://xu-ux.github.io/post/8f766de6/</id>
     <published>2021-12-03T06:07:09.000Z</published>
-    <updated>2023-02-03T09:40:29.623Z</updated>
+    <updated>2023-02-07T04:07:21.519Z</updated>
     
     
       
@@ -36,28 +61,32 @@
     
     <category term="编程" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="后端" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/%E5%90%8E%E7%AB%AF/"/>
+    <category term="Java" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/Java/"/>
     
     
-    <category term="Jdk1.8,时间类" scheme="https://xu-ux.github.io/tags/Jdk1-8-%E6%97%B6%E9%97%B4%E7%B1%BB/"/>
+    <category term="Java" scheme="https://xu-ux.github.io/tags/Java/"/>
+    
+    <category term="java.time包" scheme="https://xu-ux.github.io/tags/java-time%E5%8C%85/"/>
     
   </entry>
   
   <entry>
     <title>Maven插件之spotify的docker-maven-plugin和dockerfile-maven-plugin，docker部署</title>
-    <link href="https://xu-ux.github.io/post/2021/11/17/f5a0556a47d149a3/"/>
-    <id>https://xu-ux.github.io/post/2021/11/17/f5a0556a47d149a3/</id>
+    <link href="https://xu-ux.github.io/post/dbaa3326/"/>
+    <id>https://xu-ux.github.io/post/dbaa3326/</id>
     <published>2021-11-17T02:38:59.000Z</published>
-    <updated>2023-02-03T09:40:29.623Z</updated>
+    <updated>2023-02-07T04:07:21.519Z</updated>
     
     
     <summary type="html">&lt;p&gt;docker-maven-plugin能有效帮助我们在面对数量众多的微服务项目时，自动化构建和容器化部署，提高部署效率。&lt;/p&gt;</summary>
     
     
     
-    <category term="编程" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    <category term="开发" scheme="https://xu-ux.github.io/categories/%E5%BC%80%E5%8F%91/"/>
     
-    <category term="后端" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/%E5%90%8E%E7%AB%AF/"/>
+    <category term="工具" scheme="https://xu-ux.github.io/categories/%E5%BC%80%E5%8F%91/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Maven" scheme="https://xu-ux.github.io/categories/%E5%BC%80%E5%8F%91/%E5%B7%A5%E5%85%B7/Maven/"/>
     
     
     <category term="SpringBoot" scheme="https://xu-ux.github.io/tags/SpringBoot/"/>
@@ -70,10 +99,10 @@
   
   <entry>
     <title>SpringBoot集成企业微信群机器人（运维报警）</title>
-    <link href="https://xu-ux.github.io/post/2021/11/09/81320b01bb9f163c/"/>
-    <id>https://xu-ux.github.io/post/2021/11/09/81320b01bb9f163c/</id>
+    <link href="https://xu-ux.github.io/post/7160ab8a/"/>
+    <id>https://xu-ux.github.io/post/7160ab8a/</id>
     <published>2021-11-09T01:40:40.000Z</published>
-    <updated>2023-02-03T09:40:29.627Z</updated>
+    <updated>2023-02-07T04:07:21.523Z</updated>
     
     
     <summary type="html">&lt;p&gt;之前有集成过钉钉群机器人🤖报警，这次主要是SpringBoot集成企业微信群机器人报警。&lt;/p&gt;</summary>
@@ -82,7 +111,7 @@
     
     <category term="编程" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="后端" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/%E5%90%8E%E7%AB%AF/"/>
+    <category term="SpringBoot" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/SpringBoot/"/>
     
     
     <category term="SpringBoot" scheme="https://xu-ux.github.io/tags/SpringBoot/"/>
@@ -95,10 +124,10 @@
   
   <entry>
     <title>SpringBoot集成Nacos2.0.3</title>
-    <link href="https://xu-ux.github.io/post/2021/10/20/ebe0fd672cfa55b6/"/>
-    <id>https://xu-ux.github.io/post/2021/10/20/ebe0fd672cfa55b6/</id>
+    <link href="https://xu-ux.github.io/post/1828d9c7/"/>
+    <id>https://xu-ux.github.io/post/1828d9c7/</id>
     <published>2021-10-20T01:10:50.000Z</published>
-    <updated>2023-02-03T09:40:29.623Z</updated>
+    <updated>2023-02-07T04:07:21.519Z</updated>
     
     
     <summary type="html">关于Nacos-server2.0.3的搭建过程，以及SpringBoot整合Nacos</summary>
@@ -107,7 +136,7 @@
     
     <category term="编程" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="后端" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/%E5%90%8E%E7%AB%AF/"/>
+    <category term="SpringBoot" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/SpringBoot/"/>
     
     
     <category term="SpringBoot" scheme="https://xu-ux.github.io/tags/SpringBoot/"/>
@@ -118,10 +147,10 @@
   
   <entry>
     <title>详解java中的byte类型</title>
-    <link href="https://xu-ux.github.io/post/2021/10/12/ecd6c7b9993a66f4/"/>
-    <id>https://xu-ux.github.io/post/2021/10/12/ecd6c7b9993a66f4/</id>
+    <link href="https://xu-ux.github.io/post/a1877a46/"/>
+    <id>https://xu-ux.github.io/post/a1877a46/</id>
     <published>2021-10-12T01:10:57.000Z</published>
-    <updated>2023-02-03T09:40:29.631Z</updated>
+    <updated>2023-02-07T04:07:21.551Z</updated>
     
     
     <summary type="html">&lt;p&gt;byte，即字节，由8位的二进制组成。在Java中，byte类型的数据是8位带符号的二进制数。&lt;/p&gt;
@@ -131,29 +160,35 @@
     
     <category term="编程" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="后端" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/%E5%90%8E%E7%AB%AF/"/>
+    <category term="Java" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/Java/"/>
     
     
-    <category term="JavaSE" scheme="https://xu-ux.github.io/tags/JavaSE/"/>
+    <category term="Java" scheme="https://xu-ux.github.io/tags/Java/"/>
+    
+    <category term="Byte" scheme="https://xu-ux.github.io/tags/Byte/"/>
     
   </entry>
   
   <entry>
     <title>hexo常用命令和Front-matter以及配置</title>
-    <link href="https://xu-ux.github.io/post/2021/10/10/fac9d98ac9d768af/"/>
-    <id>https://xu-ux.github.io/post/2021/10/10/fac9d98ac9d768af/</id>
+    <link href="https://xu-ux.github.io/post/c541a81d/"/>
+    <id>https://xu-ux.github.io/post/c541a81d/</id>
     <published>2021-10-10T01:20:35.000Z</published>
-    <updated>2023-02-03T09:40:29.627Z</updated>
+    <updated>2023-02-07T04:07:21.523Z</updated>
     
     
     <summary type="html">有东西被加密了, 请输入密码查看.</summary>
     
     
     
-    <category term="博文" scheme="https://xu-ux.github.io/categories/%E5%8D%9A%E6%96%87/"/>
+    <category term="搭建" scheme="https://xu-ux.github.io/categories/%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="博客" scheme="https://xu-ux.github.io/categories/%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2/"/>
     
     
-    <category term="hexo,博客搭建" scheme="https://xu-ux.github.io/tags/hexo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="Hexo" scheme="https://xu-ux.github.io/tags/Hexo/"/>
+    
+    <category term="Blog" scheme="https://xu-ux.github.io/tags/Blog/"/>
     
     <category term="加密" scheme="https://xu-ux.github.io/tags/%E5%8A%A0%E5%AF%86/"/>
     
@@ -161,10 +196,10 @@
   
   <entry>
     <title>hexo使用grunt实现自动化</title>
-    <link href="https://xu-ux.github.io/post/2021/09/27/8686122d46a23fb2/"/>
-    <id>https://xu-ux.github.io/post/2021/09/27/8686122d46a23fb2/</id>
+    <link href="https://xu-ux.github.io/post/47fc5844/"/>
+    <id>https://xu-ux.github.io/post/47fc5844/</id>
     <published>2021-09-27T07:28:03.000Z</published>
-    <updated>2023-02-03T09:40:29.627Z</updated>
+    <updated>2023-02-07T04:07:21.523Z</updated>
     
     
       
@@ -179,17 +214,23 @@
     
     
     
-    <category term="博文" scheme="https://xu-ux.github.io/categories/%E5%8D%9A%E6%96%87/"/>
+    <category term="搭建" scheme="https://xu-ux.github.io/categories/%E6%90%AD%E5%BB%BA/"/>
     
+    <category term="博客" scheme="https://xu-ux.github.io/categories/%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="Hexo" scheme="https://xu-ux.github.io/tags/Hexo/"/>
+    
+    <category term="Blog" scheme="https://xu-ux.github.io/tags/Blog/"/>
     
   </entry>
   
   <entry>
     <title>记录一次NPM发包，以及NPM账号邮箱验证问题</title>
-    <link href="https://xu-ux.github.io/post/2021/09/25/1b559a5909e9af1a/"/>
-    <id>https://xu-ux.github.io/post/2021/09/25/1b559a5909e9af1a/</id>
+    <link href="https://xu-ux.github.io/post/e7f1ea75/"/>
+    <id>https://xu-ux.github.io/post/e7f1ea75/</id>
     <published>2021-09-25T01:20:35.000Z</published>
-    <updated>2023-02-03T09:40:29.627Z</updated>
+    <updated>2023-02-07T04:07:21.551Z</updated>
     
     
     <summary type="html">记录一次NPM发包，以及NPM账号邮箱验证问题</summary>
@@ -198,10 +239,12 @@
     
     <category term="开发" scheme="https://xu-ux.github.io/categories/%E5%BC%80%E5%8F%91/"/>
     
+    <category term="工具" scheme="https://xu-ux.github.io/categories/%E5%BC%80%E5%8F%91/%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="npm" scheme="https://xu-ux.github.io/tags/npm/"/>
     
-    <category term="nodejs" scheme="https://xu-ux.github.io/tags/nodejs/"/>
+    <category term="Npm" scheme="https://xu-ux.github.io/tags/Npm/"/>
+    
+    <category term="NodeJs" scheme="https://xu-ux.github.io/tags/NodeJs/"/>
     
   </entry>
   
