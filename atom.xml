@@ -6,7 +6,7 @@
   <link href="https://xu-ux.github.io/atom.xml" rel="self"/>
   
   <link href="https://xu-ux.github.io/"/>
-  <updated>2023-02-13T08:15:58.336Z</updated>
+  <updated>2023-02-13T08:17:59.875Z</updated>
   <id>https://xu-ux.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://xu-ux.github.io/post/2ffe26de/"/>
     <id>https://xu-ux.github.io/post/2ffe26de/</id>
     <published>2023-02-13T07:52:32.000Z</published>
-    <updated>2023-02-13T08:15:58.336Z</updated>
+    <updated>2023-02-13T08:17:59.875Z</updated>
     
     
     <summary type="html">&lt;p&gt;中国大陆访问&lt;code&gt;www.bing.com/new&lt;/code&gt;却被重定向到&lt;code&gt;cn.bing.com&lt;/code&gt;，使用gooreplacer浏览器插件避免重定向&lt;/p&gt;</summary>
@@ -33,13 +33,13 @@
     <category term="AI" scheme="https://xu-ux.github.io/categories/%E6%8A%80%E6%9C%AF/AI/"/>
     
     
-    <category term="技术" scheme="https://xu-ux.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
-    
     <category term="AI" scheme="https://xu-ux.github.io/tags/AI/"/>
     
     <category term="NewBing" scheme="https://xu-ux.github.io/tags/NewBing/"/>
     
     <category term="ChatGPT" scheme="https://xu-ux.github.io/tags/ChatGPT/"/>
+    
+    <category term="浏览器插件" scheme="https://xu-ux.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
@@ -48,7 +48,7 @@
     <link href="https://xu-ux.github.io/post/2edf191f/"/>
     <id>https://xu-ux.github.io/post/2edf191f/</id>
     <published>2022-12-07T11:27:15.000Z</published>
-    <updated>2023-02-13T08:15:58.312Z</updated>
+    <updated>2023-02-13T08:17:59.847Z</updated>
     
     
     <summary type="html">&lt;p&gt;闲来无事，折腾下这个从箱子底翻出来的路由器FIR302M，应该是7年前买的，致逝去的青春&lt;br&gt;买来好像是为了中继Wifi吧，2015年的事情了&lt;/p&gt;</summary>
@@ -73,7 +73,7 @@
     <link href="https://xu-ux.github.io/post/8f766de6/"/>
     <id>https://xu-ux.github.io/post/8f766de6/</id>
     <published>2021-12-03T06:07:09.000Z</published>
-    <updated>2023-02-13T08:15:58.308Z</updated>
+    <updated>2023-02-13T08:17:59.839Z</updated>
     
     
       
@@ -102,7 +102,7 @@
     <link href="https://xu-ux.github.io/post/dbaa3326/"/>
     <id>https://xu-ux.github.io/post/dbaa3326/</id>
     <published>2021-11-17T02:38:59.000Z</published>
-    <updated>2023-02-13T08:15:58.308Z</updated>
+    <updated>2023-02-13T08:17:59.839Z</updated>
     
     
     <summary type="html">&lt;p&gt;docker-maven-plugin能有效帮助我们在面对数量众多的微服务项目时，自动化构建和容器化部署，提高部署效率。&lt;/p&gt;</summary>
@@ -129,7 +129,7 @@
     <link href="https://xu-ux.github.io/post/7160ab8a/"/>
     <id>https://xu-ux.github.io/post/7160ab8a/</id>
     <published>2021-11-09T01:40:40.000Z</published>
-    <updated>2023-02-13T08:15:58.312Z</updated>
+    <updated>2023-02-13T08:17:59.847Z</updated>
     
     
     <summary type="html">&lt;p&gt;之前有集成过钉钉群机器人🤖报警，这次主要是SpringBoot集成企业微信群机器人报警。&lt;/p&gt;</summary>
@@ -154,7 +154,7 @@
     <link href="https://xu-ux.github.io/post/1828d9c7/"/>
     <id>https://xu-ux.github.io/post/1828d9c7/</id>
     <published>2021-10-20T01:10:50.000Z</published>
-    <updated>2023-02-13T08:15:58.308Z</updated>
+    <updated>2023-02-13T08:17:59.839Z</updated>
     
     
     <summary type="html">关于Nacos-server2.0.3的搭建过程，以及SpringBoot整合Nacos</summary>
@@ -177,7 +177,7 @@
     <link href="https://xu-ux.github.io/post/a1877a46/"/>
     <id>https://xu-ux.github.io/post/a1877a46/</id>
     <published>2021-10-12T01:10:57.000Z</published>
-    <updated>2023-02-13T08:15:58.340Z</updated>
+    <updated>2023-02-13T08:17:59.875Z</updated>
     
     
     <summary type="html">&lt;p&gt;byte，即字节，由8位的二进制组成。在Java中，byte类型的数据是8位带符号的二进制数。&lt;/p&gt;
@@ -201,7 +201,7 @@
     <link href="https://xu-ux.github.io/post/c541a81d/"/>
     <id>https://xu-ux.github.io/post/c541a81d/</id>
     <published>2021-10-10T01:20:35.000Z</published>
-    <updated>2023-02-13T08:15:58.312Z</updated>
+    <updated>2023-02-13T08:17:59.847Z</updated>
     
     
     <summary type="html">有东西被加密了, 请输入密码查看.</summary>
@@ -226,7 +226,7 @@
     <link href="https://xu-ux.github.io/post/47fc5844/"/>
     <id>https://xu-ux.github.io/post/47fc5844/</id>
     <published>2021-09-27T07:28:03.000Z</published>
-    <updated>2023-02-13T08:15:58.312Z</updated>
+    <updated>2023-02-13T08:17:59.847Z</updated>
     
     
       
@@ -257,7 +257,7 @@
     <link href="https://xu-ux.github.io/post/e7f1ea75/"/>
     <id>https://xu-ux.github.io/post/e7f1ea75/</id>
     <published>2021-09-25T01:20:35.000Z</published>
-    <updated>2023-02-13T08:15:58.340Z</updated>
+    <updated>2023-02-13T08:17:59.875Z</updated>
     
     
     <summary type="html">记录一次NPM发包，以及NPM账号邮箱验证问题</summary>
