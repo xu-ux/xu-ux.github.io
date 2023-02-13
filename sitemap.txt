@@ -9,13 +9,14 @@ https://xu-ux.github.io/about/index.html
 https://xu-ux.github.io/artitalk/index.html
 https://xu-ux.github.io/categories/index.html
 https://xu-ux.github.io/friends/index.html
+https://xu-ux.github.io/post/2ffe26de/
 https://xu-ux.github.io/post/7160ab8a/
 https://xu-ux.github.io/post/47fc5844/
 https://xu-ux.github.io/post/c541a81d/
 https://xu-ux.github.io/post/2edf191f/
+https://xu-ux.github.io/post/8f766de6/
 https://xu-ux.github.io/post/dbaa3326/
 https://xu-ux.github.io/post/1828d9c7/
-https://xu-ux.github.io/post/8f766de6/
 https://xu-ux.github.io/
 https://xu-ux.github.io/tags/Java/
 https://xu-ux.github.io/tags/java-time%E5%8C%85/
@@ -31,6 +32,9 @@ https://xu-ux.github.io/tags/%E5%8A%A0%E5%AF%86/
 https://xu-ux.github.io/tags/%E6%8A%80%E6%9C%AF/
 https://xu-ux.github.io/tags/%E6%95%B0%E7%A0%81/
 https://xu-ux.github.io/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/
+https://xu-ux.github.io/tags/AI/
+https://xu-ux.github.io/tags/NewBing/
+https://xu-ux.github.io/tags/ChatGPT/
 https://xu-ux.github.io/tags/Npm/
 https://xu-ux.github.io/tags/NodeJs/
 https://xu-ux.github.io/tags/Byte/
@@ -41,6 +45,8 @@ https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/Java/
 https://xu-ux.github.io/categories/%E6%90%AD%E5%BB%BA/
 https://xu-ux.github.io/categories/%E5%BC%80%E5%8F%91/%E5%B7%A5%E5%85%B7/
 https://xu-ux.github.io/categories/%E7%94%9F%E6%B4%BB/
+https://xu-ux.github.io/categories/%E6%8A%80%E6%9C%AF/
 https://xu-ux.github.io/categories/%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2/
 https://xu-ux.github.io/categories/%E5%BC%80%E5%8F%91/%E5%B7%A5%E5%85%B7/Maven/
 https://xu-ux.github.io/categories/%E7%94%9F%E6%B4%BB/%E6%95%B0%E7%A0%81/
+https://xu-ux.github.io/categories/%E6%8A%80%E6%9C%AF/AI/
