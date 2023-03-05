@@ -1,9 +1,9 @@
-https://xu-ux.github.io/tags/index.html
-https://xu-ux.github.io/p/bookmarks/index.html
-https://xu-ux.github.io/p/messages/index.html
 https://xu-ux.github.io/mylist/index.html
 https://xu-ux.github.io/other/covid-19/index.html
+https://xu-ux.github.io/tags/index.html
 https://xu-ux.github.io/more/catchCat/index.html
+https://xu-ux.github.io/p/bookmarks/index.html
+https://xu-ux.github.io/p/messages/index.html
 https://xu-ux.github.io/post/2ffe26de/
 https://xu-ux.github.io/post/e7f1ea75/
 https://xu-ux.github.io/post/a1877a46/
