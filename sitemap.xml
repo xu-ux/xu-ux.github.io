@@ -2,34 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://xu-ux.github.io/mylist/index.html</loc>
-    
-    <lastmod>2023-03-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xu-ux.github.io/other/covid-19/index.html</loc>
-    
-    <lastmod>2023-03-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://xu-ux.github.io/tags/index.html</loc>
-    
-    <lastmod>2023-03-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xu-ux.github.io/more/catchCat/index.html</loc>
     
     <lastmod>2023-03-05</lastmod>
     
@@ -48,6 +21,33 @@
   
   <url>
     <loc>https://xu-ux.github.io/p/messages/index.html</loc>
+    
+    <lastmod>2023-03-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xu-ux.github.io/mylist/index.html</loc>
+    
+    <lastmod>2023-03-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xu-ux.github.io/other/covid-19/index.html</loc>
+    
+    <lastmod>2023-03-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xu-ux.github.io/more/catchCat/index.html</loc>
     
     <lastmod>2023-03-05</lastmod>
     
@@ -119,6 +119,15 @@
   </url>
   
   <url>
+    <loc>https://xu-ux.github.io/post/7160ab8a/</loc>
+    
+    <lastmod>2023-03-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://xu-ux.github.io/post/47fc5844/</loc>
     
     <lastmod>2023-03-05</lastmod>
@@ -138,15 +147,6 @@
   
   <url>
     <loc>https://xu-ux.github.io/post/2edf191f/</loc>
-    
-    <lastmod>2023-03-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xu-ux.github.io/post/7160ab8a/</loc>
     
     <lastmod>2023-03-05</lastmod>
     
