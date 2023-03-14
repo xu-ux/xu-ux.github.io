@@ -18,6 +18,7 @@ https://xu-ux.github.io/post/2edf191f/
 https://xu-ux.github.io/post/8f766de6/
 https://xu-ux.github.io/post/dbaa3326/
 https://xu-ux.github.io/post/1828d9c7/
+https://xu-ux.github.io/post/2d5c3914/
 https://xu-ux.github.io/post/b81a54e5/
 https://xu-ux.github.io/
 https://xu-ux.github.io/tags/AI/
@@ -25,6 +26,10 @@ https://xu-ux.github.io/tags/NewBing/
 https://xu-ux.github.io/tags/ChatGPT/
 https://xu-ux.github.io/tags/OpenAPI/
 https://xu-ux.github.io/tags/NLP/
+https://xu-ux.github.io/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/
+https://xu-ux.github.io/tags/CloudFlare/
+https://xu-ux.github.io/tags/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/
+https://xu-ux.github.io/tags/%E4%BB%A3%E7%90%86/
 https://xu-ux.github.io/tags/Java/
 https://xu-ux.github.io/tags/java-time%E5%8C%85/
 https://xu-ux.github.io/tags/SpringBoot/
@@ -47,6 +52,7 @@ https://xu-ux.github.io/categories/%E6%8A%80%E6%9C%AF/
 https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/
 https://xu-ux.github.io/categories/%E5%BC%80%E5%8F%91/
 https://xu-ux.github.io/categories/%E6%8A%80%E6%9C%AF/AI/
+https://xu-ux.github.io/categories/%E6%8A%80%E6%9C%AF/%E4%BA%91%E6%9C%8D%E5%8A%A1/
 https://xu-ux.github.io/categories/%E6%90%AD%E5%BB%BA/
 https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/Java/
 https://xu-ux.github.io/categories/%E7%94%9F%E6%B4%BB/
