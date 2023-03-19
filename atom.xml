@@ -6,7 +6,7 @@
   <link href="https://xu-ux.github.io/atom.xml" rel="self"/>
   
   <link href="https://xu-ux.github.io/"/>
-  <updated>2023-03-14T13:22:39.410Z</updated>
+  <updated>2023-03-19T10:25:47.699Z</updated>
   <id>https://xu-ux.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Java VisualVM 插件</title>
+    <link href="https://xu-ux.github.io/post/89d77c24/"/>
+    <id>https://xu-ux.github.io/post/89d77c24/</id>
+    <published>2023-03-19T09:44:35.000Z</published>
+    <updated>2023-03-19T10:25:47.699Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在我们安装的JDK中，提供了一个很棒的JVM调优工具，也就是 Java VisualVM，通过它我们能够看到很多关于我们Java程序的信息。当然借助插件可以实现更为强大的调测功能，比如使用VisualGC查看 Eden，Survivor From, Survivor To区的空间使用情况，以及排查程序中那些对象造成OOM。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="编程" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Java" scheme="https://xu-ux.github.io/categories/%E7%BC%96%E7%A8%8B/Java/"/>
+    
+    
+    <category term="Java" scheme="https://xu-ux.github.io/tags/Java/"/>
+    
+    <category term="Jvm" scheme="https://xu-ux.github.io/tags/Jvm/"/>
+    
+    <category term="VisualVM" scheme="https://xu-ux.github.io/tags/VisualVM/"/>
+    
+    <category term="插件" scheme="https://xu-ux.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CloudFlare接管域名，并搭建代理</title>
     <link href="https://xu-ux.github.io/post/2d5c3914/"/>
     <id>https://xu-ux.github.io/post/2d5c3914/</id>
     <published>2023-03-14T12:27:23.000Z</published>
-    <updated>2023-03-14T13:22:39.410Z</updated>
+    <updated>2023-03-19T10:25:47.679Z</updated>
     
     
     <summary type="html">&lt;p&gt;我手上只有阿里云的域名，所以这里我将使用阿里云的域名，作为cloudflare接管的域名；并将演示如何设置代理Worker&lt;/p&gt;</summary>
@@ -48,7 +75,7 @@
     <link href="https://xu-ux.github.io/post/b81a54e5/"/>
     <id>https://xu-ux.github.io/post/b81a54e5/</id>
     <published>2023-03-04T08:27:08.000Z</published>
-    <updated>2023-03-14T13:22:39.402Z</updated>
+    <updated>2023-03-19T10:25:47.667Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近是ChatGPT大火的一段时间，我当然也趁着空闲时间，体验了一把AI带来的自然语言处理的震撼。在网上冲浪时简单使用了一下ChatGPT和New Bing，第一眼，技术革命！&lt;/p&gt;</summary>
@@ -77,7 +104,7 @@
     <link href="https://xu-ux.github.io/post/2ffe26de/"/>
     <id>https://xu-ux.github.io/post/2ffe26de/</id>
     <published>2023-02-13T07:52:32.000Z</published>
-    <updated>2023-03-14T13:22:39.454Z</updated>
+    <updated>2023-03-19T10:25:47.743Z</updated>
     
     
     <summary type="html">&lt;p&gt;中国大陆访问&lt;code&gt;www.bing.com/new&lt;/code&gt;却被重定向到&lt;code&gt;cn.bing.com&lt;/code&gt;，使用gooreplacer浏览器插件避免重定向&lt;/p&gt;</summary>
@@ -104,7 +131,7 @@
     <link href="https://xu-ux.github.io/post/2edf191f/"/>
     <id>https://xu-ux.github.io/post/2edf191f/</id>
     <published>2022-12-07T11:27:15.000Z</published>
-    <updated>2023-03-14T13:22:39.430Z</updated>
+    <updated>2023-03-19T10:25:47.711Z</updated>
     
     
     <summary type="html">&lt;p&gt;闲来无事，折腾下这个从箱子底翻出来的路由器FIR302M，应该是7年前买的，致逝去的青春&lt;br&gt;买来好像是为了中继Wifi吧，2015年的事情了&lt;/p&gt;</summary>
@@ -129,7 +156,7 @@
     <link href="https://xu-ux.github.io/post/8f766de6/"/>
     <id>https://xu-ux.github.io/post/8f766de6/</id>
     <published>2021-12-03T06:07:09.000Z</published>
-    <updated>2023-03-14T13:22:39.426Z</updated>
+    <updated>2023-03-19T10:25:47.707Z</updated>
     
     
       
@@ -158,7 +185,7 @@
     <link href="https://xu-ux.github.io/post/dbaa3326/"/>
     <id>https://xu-ux.github.io/post/dbaa3326/</id>
     <published>2021-11-17T02:38:59.000Z</published>
-    <updated>2023-03-14T13:22:39.426Z</updated>
+    <updated>2023-03-19T10:25:47.707Z</updated>
     
     
     <summary type="html">&lt;p&gt;docker-maven-plugin能有效帮助我们在面对数量众多的微服务项目时，自动化构建和容器化部署，提高部署效率。&lt;/p&gt;</summary>
@@ -185,7 +212,7 @@
     <link href="https://xu-ux.github.io/post/7160ab8a/"/>
     <id>https://xu-ux.github.io/post/7160ab8a/</id>
     <published>2021-11-09T01:40:40.000Z</published>
-    <updated>2023-03-14T13:22:39.430Z</updated>
+    <updated>2023-03-19T10:25:47.711Z</updated>
     
     
     <summary type="html">&lt;p&gt;之前有集成过钉钉群机器人🤖报警，这次主要是SpringBoot集成企业微信群机器人报警。&lt;/p&gt;</summary>
@@ -210,7 +237,7 @@
     <link href="https://xu-ux.github.io/post/1828d9c7/"/>
     <id>https://xu-ux.github.io/post/1828d9c7/</id>
     <published>2021-10-20T01:10:50.000Z</published>
-    <updated>2023-03-14T13:22:39.426Z</updated>
+    <updated>2023-03-19T10:25:47.707Z</updated>
     
     
     <summary type="html">关于Nacos-server2.0.3的搭建过程，以及SpringBoot整合Nacos</summary>
@@ -233,7 +260,7 @@
     <link href="https://xu-ux.github.io/post/a1877a46/"/>
     <id>https://xu-ux.github.io/post/a1877a46/</id>
     <published>2021-10-12T01:10:57.000Z</published>
-    <updated>2023-03-14T13:22:39.454Z</updated>
+    <updated>2023-03-19T10:25:47.747Z</updated>
     
     
     <summary type="html">&lt;p&gt;byte，即字节，由8位的二进制组成。在Java中，byte类型的数据是8位带符号的二进制数。&lt;/p&gt;
@@ -257,7 +284,7 @@
     <link href="https://xu-ux.github.io/post/c541a81d/"/>
     <id>https://xu-ux.github.io/post/c541a81d/</id>
     <published>2021-10-10T01:20:35.000Z</published>
-    <updated>2023-03-14T13:22:39.430Z</updated>
+    <updated>2023-03-19T10:25:47.711Z</updated>
     
     
     <summary type="html">有东西被加密了, 请输入密码查看.</summary>
@@ -282,7 +309,7 @@
     <link href="https://xu-ux.github.io/post/47fc5844/"/>
     <id>https://xu-ux.github.io/post/47fc5844/</id>
     <published>2021-09-27T07:28:03.000Z</published>
-    <updated>2023-03-14T13:22:39.430Z</updated>
+    <updated>2023-03-19T10:25:47.711Z</updated>
     
     
       
@@ -313,7 +340,7 @@
     <link href="https://xu-ux.github.io/post/e7f1ea75/"/>
     <id>https://xu-ux.github.io/post/e7f1ea75/</id>
     <published>2021-09-25T01:20:35.000Z</published>
-    <updated>2023-03-14T13:22:39.454Z</updated>
+    <updated>2023-03-19T10:25:47.747Z</updated>
     
     
     <summary type="html">记录一次NPM发包，以及NPM账号邮箱验证问题</summary>
